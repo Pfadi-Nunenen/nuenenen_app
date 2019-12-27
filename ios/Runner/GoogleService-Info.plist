@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>799623663201-trtlu2i24gm52uokjll5pcttifleo2tj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.799623663201-trtlu2i24gm52uokjll5pcttifleo2tj</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>799623663201-cjqs8krfd1r0gmh8t68e3tsfg28hjepi.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBhOO5dff9AjTpx1ZpglifC2Ll522qBJ7U</string>
+	<key>GCM_SENDER_ID</key>
+	<string>799623663201</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ch.vtcloud.nuenenen</string>
+	<key>PROJECT_ID</key>
+	<string>pfadinue</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pfadinue.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:799623663201:ios:a8abc9bf7cc9fb3cce6420</string>
+	<key>DATABASE_URL</key>
+	<string>https://pfadinue.firebaseio.com</string>
+</dict>
+</plist>

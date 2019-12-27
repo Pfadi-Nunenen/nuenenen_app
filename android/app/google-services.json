@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "799623663201",
+    "firebase_url": "https://pfadinue.firebaseio.com",
+    "project_id": "pfadinue",
+    "storage_bucket": "pfadinue.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799623663201:android:cbdee72ba3d35c33",
+        "android_client_info": {
+          "package_name": "ch.vtcloud.nuenenen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799623663201-cjqs8krfd1r0gmh8t68e3tsfg28hjepi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ch.vtcloud.nuenenen",
+            "certificate_hash": "088dea6e8bd0d105cf3e3ac0f5d3a8d7602766c1"
+          }
+        },
+        {
+          "client_id": "799623663201-9qps21ckgojsr0b0dccs33d1oiofdn2o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPeGAbuc9BZs6fgAIJ_lbPaLK2hHmxk7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799623663201-9qps21ckgojsr0b0dccs33d1oiofdn2o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "799623663201-trtlu2i24gm52uokjll5pcttifleo2tj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ch.vtcloud.nuenenen"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
