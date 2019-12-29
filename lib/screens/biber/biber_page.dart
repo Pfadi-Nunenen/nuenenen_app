@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:fluro/fluro.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nuenenen/theme/colors.dart';
@@ -14,7 +15,7 @@ class BiberPage extends StatefulWidget{
 }
 
 class _BiberPage extends State<BiberPage>{
-	List<Kastenzettel> kastenzettel = new List();
+	List<Kastenzettel> kastenzettelList = new List();
 
 	@override
 	void initState(){
@@ -24,14 +25,14 @@ class _BiberPage extends State<BiberPage>{
 
 	Future onRefresh() async{
 		print("Lade Daten für den Kastenzettel herunter");
-		kastenzettel.clear();
+		kastenzettelList.clear();
 		var URL = "${baseURI}/node/${biberID}/json";
 
 		try{
 			await http.get(URL).then((response){
 				var json = jsonDecode(response.body);
 				setState(() {
-				  kastenzettel.add(new Kastenzettel(json['title'], json['body']['und'][0]['value']));
+					kastenzettelList.add(new Kastenzettel(json['title'].toString(), json['body']['und'][0]['value'].toString()));
 				});
 			});
 			setState(() {});
@@ -44,15 +45,33 @@ class _BiberPage extends State<BiberPage>{
   Widget build(BuildContext context) {
     // TODO: implement build
 	  return Scaffold(
-		  body: Container(
-			  color: currBackgroundColor,
-			  child: new Center(
-				  child: new Text(
-					  "This will become the Biber-Section",
-					  style: TextStyle(color: currTextColor),
+		  body: RefreshIndicator(
+			  onRefresh: onRefresh,
+			  color: darkTextColor,
+			  backgroundColor: mainColor,
+			  child: new Container(
+					color: currBackgroundColor,
+				  padding: EdgeInsets.all(16.0),
+				  child: new Container(
+					  child: new Column(
+						  children: <Widget>[
+						  	new Text(
+								  "${kastenzettelList[0].title}",
+								  style: new TextStyle(
+									  color: darkTextColor,
+									  fontSize: 30,
+									  fontWeight: FontWeight.bold,
+								  ),
+							  ),
+							  new Html(
+								  data: "${kastenzettelList[0].content}",
+								  renderNewlines: true,
+							  )
+						  ],
+					  ),
 				  ),
 			  ),
-		  ),
+		  )
 	  );
   }
 
