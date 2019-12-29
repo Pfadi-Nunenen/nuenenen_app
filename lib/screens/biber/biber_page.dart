@@ -54,7 +54,20 @@ class _BiberPage extends State<BiberPage>{
 
   @override
   Widget build(BuildContext context) {
-	  return new Scaffold(
+	  return NestedScrollView(
+		  headerSliverBuilder: (BuildContext context, bool isScrolled) {
+			  return [
+				  new CupertinoSliverNavigationBar(
+					  largeTitle: new Text(
+						  "Settings",
+						  style: TextStyle(
+								  color: Colors.white
+						  ),
+					  ),
+					  backgroundColor: mainColor,
+				  ),
+			  ];
+		  },
 		  body: isLoading ?
 				  new Container(
 					  color: currBackgroundColor,

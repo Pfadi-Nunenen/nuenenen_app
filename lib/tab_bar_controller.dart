@@ -2,14 +2,11 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:nuenenen/screens/pfadi/aetna_page.dart';
-import 'package:nuenenen/screens/settings/settings_page.dart';
-import 'package:nuenenen/screens/wolf/wolf_page.dart';
 import 'package:nuenenen/theme/colors.dart';
 import 'package:nuenenen/user_info.dart';
 import 'package:nuenenen/screens/home/home_page.dart';
-import 'package:nuenenen/screens/biber/biber_page.dart';
-import 'package:nuenenen/screens/pfadi/saturn_page.dart';
+import 'package:nuenenen/screens/overview/stufen_page.dart';
+import 'package:nuenenen/screens/settings/settings_page.dart';
 
 class TabBarController extends StatefulWidget{
 	@override
@@ -63,28 +60,13 @@ class _TabBarControllerState extends State<TabBarController>{
 			});
 		}else if (index == 1) {
 			setState(() {
-				_currentWidget = new BiberPage();
+				_currentWidget = new StufenPage();
 				_title = "Biberstein";
 			});
 		}else if (index == 2) {
 			setState(() {
-				_currentWidget = new WolfPage();
-				_title = "Phönix";
-			});
-		}else if (index == 3) {
-			setState(() {
-				_currentWidget = new AetnaPage();
-				_title = "Aetna";
-			});
-		} else if (index == 4) {
-			setState(() {
-				_currentWidget = new SaturnPage();
-				_title = "Saturn";
-			});
-		}else if (index == 5) {
-			setState(() {
 				_currentWidget = new SettingsPage();
-				_title = "Einstellungen";
+				_title = "Phönix";
 			});
 		}
 	}
@@ -104,25 +86,10 @@ class _TabBarControllerState extends State<TabBarController>{
 				});
 			}else if (lastPage == 1) {
 				setState(() {
-					_currentWidget = new BiberPage();
-					_title = "Biberstein";
+					_currentWidget = new StufenPage();
+					_title = "Stufen";
 				});
 			}else if (lastPage == 2) {
-				setState(() {
-					_currentWidget = new WolfPage();
-					_title = "Phönix";
-				});
-			}else if (lastPage == 3) {
-				setState(() {
-					_currentWidget = new AetnaPage();
-					_title = "Aetna";
-				});
-			}else if (lastPage == 4) {
-				setState(() {
-					_currentWidget = new SaturnPage();
-					_title = "Saturn";
-				});
-			}else if (lastPage == 5) {
 				setState(() {
 					_currentWidget = new SettingsPage();
 					_title = "Einstellungen";
@@ -134,45 +101,29 @@ class _TabBarControllerState extends State<TabBarController>{
 	@override
 	Widget build(BuildContext context) {
 		return Scaffold(
-			appBar: AppBar(title: new Text(_title),),
 			body: _currentWidget,
 			backgroundColor: currBackgroundColor,
 			bottomNavigationBar: new BottomNavigationBar(
 				onTap: onTabTapped,
 				currentIndex: _currentTab,
 				showSelectedLabels: true,
-				showUnselectedLabels: false,
+				showUnselectedLabels: true,
 				backgroundColor: tabBarColor,
 				items: [
 					new BottomNavigationBarItem(
-							icon: new Icon(Icons.timer, size: 30.0, color: Colors.grey,),
+							icon: new Icon(Icons.home, size: 30.0, color: Colors.grey,),
 							activeIcon: new Icon(Icons.home, size: 30.0, color: mainColor),
-							title: new Text("Home")
+							title: new Text("Home", style: TextStyle(color: Colors.grey),)
 					),
 					new BottomNavigationBarItem(
-							icon: new Icon(Icons.timer, size: 30.0, color: Colors.grey,),
-							activeIcon: new Icon(Icons.timer, size: 30.0, color: mainColor),
-							title: new Text("Biberstein")
+							icon: new Icon(Icons.info, size: 30.0, color: Colors.grey,),
+							activeIcon: new Icon(Icons.info, size: 30.0, color: mainColor),
+							title: new Text("Stufen", style: TextStyle(color: Colors.grey))
 					),
 					new BottomNavigationBarItem(
-							icon: new Icon(Icons.timer, size: 30.0, color: Colors.grey,),
-							activeIcon: new Icon(Icons.timer, size: 30.0, color: mainColor),
-							title: new Text("Phönix")
-					),
-					new BottomNavigationBarItem(
-							icon: new Icon(Icons.timer, size: 30.0, color: Colors.grey,),
-							activeIcon: new Icon(Icons.timer, size: 30.0, color: mainColor),
-							title: new Text("Aetna")
-					),
-					new BottomNavigationBarItem(
-							icon: new Icon(Icons.timer, size: 30.0, color: Colors.grey,),
-							activeIcon: new Icon(Icons.timer, size: 30.0, color: mainColor),
-							title: new Text("Saturn")
-					),
-					new BottomNavigationBarItem(
-							icon: new Icon(Icons.timer, size: 30.0, color: Colors.grey,),
-							activeIcon: new Icon(Icons.timer, size: 30.0, color: mainColor),
-							title: new Text("Einstellungen")
+							icon: new Icon(Icons.help, size: 30.0, color: Colors.grey,),
+							activeIcon: new Icon(Icons.help, size: 30.0, color: mainColor),
+							title: new Text("Einstellungen", style: TextStyle(color: Colors.grey))
 					),
 				],
 			),
