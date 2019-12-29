@@ -1,15 +1,15 @@
 import 'dart:io';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:nuenenen/screens/pfadi/aetna_page.dart';
+import 'package:nuenenen/screens/settings/settings_page.dart';
+import 'package:nuenenen/screens/wolf/wolf_page.dart';
 import 'package:nuenenen/theme/colors.dart';
 import 'package:nuenenen/user_info.dart';
-import 'package:nuenenen/app_drawer.dart';
 import 'package:nuenenen/screens/home/home_page.dart';
 import 'package:nuenenen/screens/biber/biber_page.dart';
-import 'package:nuenenen/screens/pfadi/pfadi_page.dart';
+import 'package:nuenenen/screens/pfadi/saturn_page.dart';
 
 class TabBarController extends StatefulWidget{
 	@override
@@ -68,22 +68,22 @@ class _TabBarControllerState extends State<TabBarController>{
 			});
 		}else if (index == 2) {
 			setState(() {
-				_currentWidget = new PfadiPage();
+				_currentWidget = new WolfPage();
 				_title = "Phönix";
 			});
 		}else if (index == 3) {
 			setState(() {
-				_currentWidget = new PfadiPage();
+				_currentWidget = new AetnaPage();
 				_title = "Aetna";
 			});
 		} else if (index == 4) {
 			setState(() {
-				_currentWidget = new PfadiPage();
+				_currentWidget = new SaturnPage();
 				_title = "Saturn";
 			});
 		}else if (index == 5) {
 			setState(() {
-				_currentWidget = new PfadiPage();
+				_currentWidget = new SettingsPage();
 				_title = "Einstellungen";
 			});
 		}
@@ -109,22 +109,22 @@ class _TabBarControllerState extends State<TabBarController>{
 				});
 			}else if (lastPage == 2) {
 				setState(() {
-					_currentWidget = new PfadiPage();
+					_currentWidget = new WolfPage();
 					_title = "Phönix";
 				});
 			}else if (lastPage == 3) {
 				setState(() {
-					_currentWidget = new PfadiPage();
+					_currentWidget = new AetnaPage();
 					_title = "Aetna";
 				});
 			}else if (lastPage == 4) {
 				setState(() {
-					_currentWidget = new PfadiPage();
+					_currentWidget = new SaturnPage();
 					_title = "Saturn";
 				});
 			}else if (lastPage == 5) {
 				setState(() {
-					_currentWidget = new PfadiPage();
+					_currentWidget = new SettingsPage();
 					_title = "Einstellungen";
 				});
 			}

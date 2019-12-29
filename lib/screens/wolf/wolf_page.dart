@@ -8,12 +8,12 @@ import 'package:nuenenen/models/kastenzettel.dart';
 import 'package:nuenenen/user_info.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class BiberPage extends StatefulWidget{
+class WolfPage extends StatefulWidget{
 	@override
-	_BiberPage createState() => _BiberPage();
+	_WolfPage createState() => _WolfPage();
 }
 
-class _BiberPage extends State<BiberPage>{
+class _WolfPage extends State<WolfPage>{
 	List<Kastenzettel> kastenzettelList = new List();
 	var isLoading = false;
 
@@ -30,7 +30,7 @@ class _BiberPage extends State<BiberPage>{
 
 		print("Lade Daten für den Kastenzettel herunter");
 		kastenzettelList.clear();
-		var URL = "${baseURI}/node/${biberID}/json";
+		var URL = "${baseURI}/node/${wolfID}/json";
 
 		try{
 			await http.get(URL).then((response){
