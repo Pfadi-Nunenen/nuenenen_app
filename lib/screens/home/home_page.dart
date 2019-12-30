@@ -29,7 +29,8 @@ class _HomePageState extends State<HomePage> {
 		    color: currBackgroundColor,
 		    child: new Center(
 			    child: new Text(
-				    "This will become the News-Section",
+				    "Wilkommen in der neuen App der Pfadi Nünenen. \n"
+								"Momentan können im Menüpunkt 'Stufen' die Kastenzettel ",
 				    style: TextStyle(color: currTextColor),
 			    ),
 		    ),

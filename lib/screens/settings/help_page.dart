@@ -15,7 +15,7 @@ class _HelpPageState extends State<HelpPage> {
 			appBar: CupertinoNavigationBar(
 				backgroundColor: mainColor,
 				actionsForegroundColor: Colors.white,
-				previousPageTitle: "Settings",
+				previousPageTitle: "Zurück",
 				middle: new Text(
 					"Hilfe",
 					style: TextStyle(
@@ -24,7 +24,7 @@ class _HelpPageState extends State<HelpPage> {
 				),
 			),
 			body: const WebView(
-				initialUrl: 'https://github.com/Team3256/myWB-flutter/wiki/Help',
+				initialUrl: 'https://github.com/Vento-Nuenenen/nuenenen/wiki/Help',
 				javaScriptMode: JavaScriptMode.unrestricted,
 			),
 		);

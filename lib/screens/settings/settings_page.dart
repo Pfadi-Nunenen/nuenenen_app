@@ -11,7 +11,15 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage>{
-	bool _notifs = true;
+	bool allowBiberNotification = false;
+	bool allowWolfNotification = false;
+	bool allowAetnaNotification = false;
+	bool allowSaturnNotification = false;
+	bool allowDevNotification = false;
+
+	void setPushAbo(){
+
+	}
 
 	@override
 	Widget build(BuildContext context) {
@@ -35,19 +43,6 @@ class _SettingsPageState extends State<SettingsPage>{
 				child: new SingleChildScrollView(
 					child: new Column(
 						children: <Widget>[
-							new Card(
-								color: currBackgroundColor,
-								child: Column(
-									children: <Widget>[
-										new Container(
-											child: new Column(
-												children: <Widget>[
-												],
-											),
-										)
-									],
-								),
-							),
 							new Padding(padding: EdgeInsets.all(8.0)),
 							new Card(
 								color: currBackgroundColor,
@@ -56,10 +51,10 @@ class _SettingsPageState extends State<SettingsPage>{
 									children: <Widget>[
 										new Container(
 											padding: EdgeInsets.all(16.0),
-											child: new Text("General", style: TextStyle(color: mainColor, fontFamily: "Product Sans", fontWeight: FontWeight.bold),),
+											child: new Text("Allgemeines", style: TextStyle(color: mainColor, fontFamily: "Product Sans", fontWeight: FontWeight.bold),),
 										),
 										new ListTile(
-											title: new Text("About", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
+											title: new Text("Über die APP", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
 											trailing: new Icon(Icons.navigate_next, color: mainColor),
 											onTap: () {
 												router.navigateTo(context, '/about', transition: TransitionType.native);
@@ -67,7 +62,7 @@ class _SettingsPageState extends State<SettingsPage>{
 										),
 										new Divider(height: 0.0, color: mainColor),
 										new ListTile(
-											title: new Text("Help", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
+											title: new Text("Hilfe", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
 											trailing: new Icon(Icons.navigate_next, color: mainColor),
 											onTap: () {
 												router.navigateTo(context, '/help', transition: TransitionType.native);
@@ -85,26 +80,15 @@ class _SettingsPageState extends State<SettingsPage>{
 									children: <Widget>[
 										new Container(
 											padding: EdgeInsets.all(16.0),
-											child: new Text("Preferences", style: TextStyle(color: mainColor, fontWeight: FontWeight.bold, fontFamily: "Product Sans"),),
+											child: new Text("Konfuguration", style: TextStyle(color: mainColor, fontWeight: FontWeight.bold, fontFamily: "Product Sans"),),
 										),
 										new SwitchListTile.adaptive(
-											title: new Text("Push Notifications", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
-											value: _notifs,
-											activeColor: mainColor,
-											onChanged: (bool value) {
-												setState(() {
-													_notifs = value;
-												});
-											},
-										),
-										new Divider(height: 0.0, color: mainColor),
-										new SwitchListTile.adaptive(
-											title: new Text("Dark Mode", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
+											title: new Text("Dunkles Design", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
 											value: darkMode,
 											activeColor: mainColor,
 											onChanged: (bool value) {
 												print("Dark Mode - $value");
-												setState(() {
+												setState((){
 													darkMode = value;
 													if (darkMode) {
 														currCardColor = darkCardColor;
@@ -112,8 +96,7 @@ class _SettingsPageState extends State<SettingsPage>{
 														currTextColor = darkTextColor;
 														currDividerColor = darkDividerColor;
 //                          mainColor = darkAccentColor;
-													}
-													else {
+													}else{
 														currCardColor = lightCardColor;
 														currBackgroundColor = lightBackgroundColor;
 														currTextColor = lightTextColor;
@@ -123,18 +106,59 @@ class _SettingsPageState extends State<SettingsPage>{
 												});
 											},
 										),
-										new Divider(height: 0.0, color: mainColor),
+										new Divider(height: 5.0, color: mainColor, thickness: 2.0,),
 										new SwitchListTile.adaptive(
-											title: new Text("Dark Mode", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
-											value: offlineMode,
+											title: new Text("Benachrichtigungen Biber", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
+											value: allowBiberNotification,
 											activeColor: mainColor,
 											onChanged: (bool value) {
-												print("Offline Mode - $value");
 												setState(() {
-													offlineMode = value;
+													allowBiberNotification = value;
 												});
 											},
 										),
+										new SwitchListTile.adaptive(
+											title: new Text("Benachrichtigungen Wölf", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
+											value: allowWolfNotification,
+											activeColor: mainColor,
+											onChanged: (bool value) {
+												setState(() {
+													allowWolfNotification = value;
+												});
+											},
+										),
+										new SwitchListTile.adaptive(
+											title: new Text("Benachrichtigungen Aetna", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
+											value: allowAetnaNotification,
+											activeColor: mainColor,
+											onChanged: (bool value) {
+												setState(() {
+													allowAetnaNotification = value;
+												});
+											},
+										),
+										new SwitchListTile.adaptive(
+											title: new Text("Benachrichtigungen Saturn", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
+											value: allowSaturnNotification,
+											activeColor: mainColor,
+											onChanged: (bool value) {
+												setState(() {
+													allowSaturnNotification = value;
+												});
+											},
+										),
+										new Divider(height: 5.0, color: mainColor, thickness: 1.0,),
+										new SwitchListTile.adaptive(
+											title: new Text("**Benachrichtigungen Test**", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
+											value: allowDevNotification,
+											activeColor: mainColor,
+											onChanged: (bool value) {
+												setState(() {
+													allowDevNotification = value;
+												});
+											},
+										),
+										new Divider(height: 0.0, color: mainColor),
 									],
 								),
 							),
@@ -149,10 +173,10 @@ class _SettingsPageState extends State<SettingsPage>{
 											child: new Text("Feedback", style: TextStyle(color: mainColor, fontWeight: FontWeight.bold, fontFamily: "Product Sans",),),
 										),
 										new ListTile(
-											title: new Text("Report a Bug", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
+											title: new Text("Einen Fehler melden", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
 											trailing: new Icon(Icons.navigate_next, color: mainColor),
 											onTap: () {
-												launch("https://github.com/Team3256/myWB-flutter/issues");
+												launch("https://github.com/Vento-Nuenenen/nuenenen/issues");
 											},
 										),
 									],

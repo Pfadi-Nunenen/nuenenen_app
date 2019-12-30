@@ -14,8 +14,6 @@ class _AboutPageState extends State<AboutPage> {
 	String devicePlatform = "";
 	String deviceName = "";
 
-	List<String> betaTestersList = new List();
-
 	@override
 	void initState() {
 		super.initState();
@@ -28,20 +26,20 @@ class _AboutPageState extends State<AboutPage> {
 	}
 
 	launchContributeUrl() async {
-		const url = 'https://github.com/Team3256/myWB-flutter/';
+		const url = 'https://github.com/Vento-Nuenenen/nuenenen/';
 		if (await canLaunch(url)) {
 			await launch(url);
 		} else {
-			throw 'Could not launch $url';
+			throw '$url kann nicht geöffnet werden.';
 		}
 	}
 
 	launchGuidelinesUrl() async {
-		const url = 'https://github.com/Team3256/myWB-flutter/wiki/Contributing';
+		const url = 'https://github.com/Vento-Nuenenen/nuenenen/wiki/Contributing';
 		if (await canLaunch(url)) {
 			await launch(url);
 		} else {
-			throw 'Could not launch $url';
+			throw '$url kann nicht geöffnet werden.';
 		}
 	}
 
@@ -51,7 +49,7 @@ class _AboutPageState extends State<AboutPage> {
 				appBar: CupertinoNavigationBar(
 					backgroundColor: mainColor,
 					actionsForegroundColor: Colors.white,
-					previousPageTitle: "Settings",
+					previousPageTitle: "Zurück",
 					middle: new Text(
 						"Über die APP",
 						style: TextStyle(
@@ -72,7 +70,7 @@ class _AboutPageState extends State<AboutPage> {
 										children: <Widget>[
 											new Container(
 												padding: EdgeInsets.all(16.0),
-												child: new Text("Device", style: TextStyle(
+												child: new Text("Gerät", style: TextStyle(
 														color: mainColor,
 														fontFamily: "Product Sans",
 														fontWeight: FontWeight.bold),),
@@ -86,7 +84,7 @@ class _AboutPageState extends State<AboutPage> {
 											),
 											new Divider(height: 0.0, color: mainColor),
 											new ListTile(
-												title: new Text("Device Name",
+												title: new Text("Gerätename",
 														style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
 												trailing: new Text("$deviceName", style: TextStyle(
 														fontFamily: "Product Sans", fontSize: 16.0, color: currTextColor)),
@@ -109,59 +107,20 @@ class _AboutPageState extends State<AboutPage> {
 										children: <Widget>[
 											new Container(
 												padding: EdgeInsets.all(16.0),
-												child: new Text("Credits", style: TextStyle(
+												child: new Text("Eintwicklung", style: TextStyle(
 														fontFamily: "Product Sans",
 														color: mainColor,
 														fontWeight: FontWeight.bold),),
 											),
 											new ListTile(
-												title: new Text("Bharat Kathi",
+												title: new Text("Caspar Brenneisen v/o Vento",
 														style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
 												subtitle: new Text("App Development",
 														style: TextStyle(fontFamily: "Product Sans", color: Colors.grey)),
 												onTap: () {
-													const url = 'https://github.com/bk1031';
+													const url = 'https://github.com/Vento-Nuenenen';
 													launch(url);
 												},
-											),
-											new Divider(height: 0.0, color: mainColor),
-											new ListTile(
-												title: new Text("John Panos",
-														style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
-												subtitle: new Text("Database Architecture",
-														style: TextStyle(fontFamily: "Product Sans", color: Colors.grey)),
-												onTap: () {
-													const url = 'https://github.com/johnpanos';
-													launch(url);
-												},
-											),
-											new Divider(height: 0.0, color: mainColor),
-											new ListTile(
-												title: new Text("Marc Liu",
-														style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
-												subtitle: new Text("Initial App Design",
-														style: TextStyle(fontFamily: "Product Sans", color: Colors.grey)),
-											),
-											new Divider(height: 0.0, color: mainColor),
-											new ListTile(
-												title: new Text("Kashyap Chaturvedula",
-														style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
-											),
-											new ListTile(
-												title: new Text("Samuel Stephen",
-														style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
-											),
-											new ListTile(
-												title: new Text("Flaumbert Ruas",
-														style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
-											),
-											new ListTile(
-												title: new Text("Bobby Daigle",
-														style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
-											),
-											new ListTile(
-												subtitle: new Text("Beta Testers\n",
-														style: TextStyle(fontFamily: "Product Sans", color: Colors.grey)),
 											),
 										],
 									),
@@ -180,22 +139,12 @@ class _AboutPageState extends State<AboutPage> {
 														fontWeight: FontWeight.bold),),
 											),
 											new ListTile(
-												title: new Text("View on GitHub",
+												title: new Text("Sourcecode",
 														style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
 												trailing: new Icon(
 														Icons.navigate_next, color: mainColor),
 												onTap: () {
 													launchContributeUrl();
-												},
-											),
-											new Divider(height: 0.0, color: mainColor),
-											new ListTile(
-												title: new Text("Contributing Guidelines",
-														style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
-												trailing: new Icon(
-														Icons.navigate_next, color: mainColor),
-												onTap: () {
-													launchGuidelinesUrl();
 												},
 											),
 										],
