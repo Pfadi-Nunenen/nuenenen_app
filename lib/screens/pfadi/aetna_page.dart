@@ -59,7 +59,7 @@ class _AetnaPage extends State<AetnaPage>{
 				return [
 					new CupertinoSliverNavigationBar(
 						largeTitle: new Text(
-							"Settings",
+							"Aetna",
 							style: TextStyle(
 									color: Colors.white
 							),

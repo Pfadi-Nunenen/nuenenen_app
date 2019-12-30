@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
 		    return [
 			    new CupertinoSliverNavigationBar(
 				    largeTitle: new Text(
-					    "Settings",
+					    "Pfadi Nünenen",
 					    style: TextStyle(
 							    color: Colors.white
 					    ),

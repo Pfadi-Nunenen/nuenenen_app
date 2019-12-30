@@ -20,7 +20,7 @@ class _SettingsPageState extends State<SettingsPage>{
 				return [
 					new CupertinoSliverNavigationBar(
 						largeTitle: new Text(
-							"Settings",
+							"Einstellungen",
 							style: TextStyle(
 									color: Colors.white
 							),

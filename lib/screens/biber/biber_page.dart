@@ -59,7 +59,7 @@ class _BiberPage extends State<BiberPage>{
 			  return [
 				  new CupertinoSliverNavigationBar(
 					  largeTitle: new Text(
-						  "Settings",
+						  "Biberstein",
 						  style: TextStyle(
 								  color: Colors.white
 						  ),

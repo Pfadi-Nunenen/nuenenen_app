@@ -59,7 +59,7 @@ class _WolfPage extends State<WolfPage>{
 			  return [
 				  new CupertinoSliverNavigationBar(
 					  largeTitle: new Text(
-						  "Saturn",
+						  "Phönix",
 						  style: TextStyle(
 								  color: Colors.white
 						  ),

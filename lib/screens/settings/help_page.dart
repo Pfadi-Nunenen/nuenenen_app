@@ -17,7 +17,7 @@ class _HelpPageState extends State<HelpPage> {
 				actionsForegroundColor: Colors.white,
 				previousPageTitle: "Settings",
 				middle: new Text(
-					"Help",
+					"Hilfe",
 					style: TextStyle(
 							color: Colors.white
 					),

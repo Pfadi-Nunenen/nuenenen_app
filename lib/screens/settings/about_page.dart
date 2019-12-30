@@ -53,7 +53,7 @@ class _AboutPageState extends State<AboutPage> {
 					actionsForegroundColor: Colors.white,
 					previousPageTitle: "Settings",
 					middle: new Text(
-						"About",
+						"Über die APP",
 						style: TextStyle(
 								color: Colors.white
 						),
