@@ -1,9 +1,12 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:nuenenen/screens/home/home_page.dart';
+import 'package:nuenenen/screens/biber/biber_page.dart';
+import 'package:nuenenen/screens/pfadi/aetna_page.dart';
+import 'package:nuenenen/screens/pfadi/saturn_page.dart';
 import 'package:nuenenen/screens/settings/about_page.dart';
 import 'package:nuenenen/screens/settings/help_page.dart';
+import 'package:nuenenen/screens/wolf/wolf_page.dart';
 import 'package:nuenenen/tab_bar_controller.dart';
 import 'package:nuenenen/theme/theme.dart';
 import 'package:nuenenen/user_info.dart';
@@ -23,16 +26,24 @@ void main(){
     return new HelpPage();
   }));
 
-  router.define('/help', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+  router.define('/stufen', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
     return new HelpPage();
   }));
 
-  router.define('/help', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return new HelpPage();
+  router.define('/biber', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new BiberPage();
   }));
 
-  router.define('/help', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return new HelpPage();
+  router.define('/wolf', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new WolfPage();
+  }));
+
+  router.define('/aetna', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new AetnaPage();
+  }));
+
+  router.define('/saturn', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new SaturnPage();
   }));
 
   runApp(new MaterialApp(
