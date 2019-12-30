@@ -75,7 +75,7 @@ class _TabBarControllerState extends State<TabBarController>{
 	void initState() {
 		super.initState();
 		firebaseCloudMessaging_Listeners();
-		_firebaseMessaging.subscribeToTopic("allDevices");
+		_firebaseMessaging.subscribeToTopic("any");
 
 		setState(() {
 			_currentTab = lastPage;
@@ -121,8 +121,8 @@ class _TabBarControllerState extends State<TabBarController>{
 							title: new Text("Stufen", style: TextStyle(color: Colors.grey))
 					),
 					new BottomNavigationBarItem(
-							icon: new Icon(Icons.help, size: 30.0, color: Colors.grey,),
-							activeIcon: new Icon(Icons.help, size: 30.0, color: mainColor),
+							icon: new Icon(Icons.settings, size: 30.0, color: Colors.grey,),
+							activeIcon: new Icon(Icons.settings, size: 30.0, color: mainColor),
 							title: new Text("Einstellungen", style: TextStyle(color: Colors.grey))
 					),
 				],
