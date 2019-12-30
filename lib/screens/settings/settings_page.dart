@@ -1,6 +1,9 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:nuenenen/theme/colors.dart';
 import 'package:nuenenen/user_info.dart';
@@ -11,15 +14,48 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage>{
+	FirebaseMessaging _firebaseMessaging =  FirebaseMessaging();
+
 	bool allowBiberNotification = false;
 	bool allowWolfNotification = false;
 	bool allowAetnaNotification = false;
 	bool allowSaturnNotification = false;
 	bool allowDevNotification = false;
 
-	void setPushAbo(){
-
+	savePref(String key, bool value) async {
+		final SharedPreferences sharedPrefs = await SharedPreferences.getInstance();
+		sharedPrefs.setBool(key, value);
 	}
+
+	restorePref() async {
+		final SharedPreferences sharedPrefs = await SharedPreferences.getInstance();
+		setState(() {
+			allowBiberNotification = (sharedPrefs.getBool('biberNot') ?? false);
+			allowWolfNotification = (sharedPrefs.getBool('wolfNot') ?? false);
+			allowAetnaNotification = (sharedPrefs.getBool('aetnaNot') ?? false);
+			allowSaturnNotification = (sharedPrefs.getBool('saturnNot') ?? false);
+			allowDevNotification = (sharedPrefs.getBool('devNot') ?? false);
+		});
+	}
+
+	setNotificationChannel(String channelKey, bool state, String what){
+		if(state == true){
+			_firebaseMessaging.subscribeToTopic(channelKey);
+			Fluttertoast.showToast(msg: "Benachrichtigungen welche ${what} betreffen werden nun angezeigt!");
+		}else if(state == false){
+			_firebaseMessaging.unsubscribeFromTopic(channelKey);
+			Fluttertoast.showToast(msg: "Benachrichtigungen welche ${what} betreffen werden nicht mehr angezeigt!");
+		}else{
+			print("WTF have you done? This is impossible...");
+		}
+	}
+
+	@override
+	void initState() {
+		super.initState();
+		restorePref();
+	}
+
 
 	@override
 	Widget build(BuildContext context) {
@@ -115,6 +151,8 @@ class _SettingsPageState extends State<SettingsPage>{
 												setState(() {
 													allowBiberNotification = value;
 												});
+												savePref('biberNot', value);
+												setNotificationChannel('biber', value, 'die Familie Biberstein');
 											},
 										),
 										new SwitchListTile.adaptive(
@@ -125,6 +163,8 @@ class _SettingsPageState extends State<SettingsPage>{
 												setState(() {
 													allowWolfNotification = value;
 												});
+												savePref('wolfNot', value);
+												setNotificationChannel('wolf', value, 'die Meute Phönix');
 											},
 										),
 										new SwitchListTile.adaptive(
@@ -135,6 +175,8 @@ class _SettingsPageState extends State<SettingsPage>{
 												setState(() {
 													allowAetnaNotification = value;
 												});
+												savePref('aetnaNot', value);
+												setNotificationChannel('aetna', value, 'den Stamm Aetna');
 											},
 										),
 										new SwitchListTile.adaptive(
@@ -145,6 +187,8 @@ class _SettingsPageState extends State<SettingsPage>{
 												setState(() {
 													allowSaturnNotification = value;
 												});
+												savePref('saturnNot', value);
+												setNotificationChannel('saturn', value, 'den Trupp Saturn');
 											},
 										),
 										new Divider(height: 5.0, color: mainColor, thickness: 1.0,),
@@ -156,6 +200,8 @@ class _SettingsPageState extends State<SettingsPage>{
 												setState(() {
 													allowDevNotification = value;
 												});
+												savePref('devNot', value);
+												setNotificationChannel('devel', value, 'die APP-Programmierer');
 											},
 										),
 										new Divider(height: 0.0, color: mainColor),
