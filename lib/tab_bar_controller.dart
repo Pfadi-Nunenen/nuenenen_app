@@ -25,7 +25,7 @@ class _TabBarControllerState extends State<TabBarController>{
 		if (Platform.isIOS) iOS_Permission();
 		_firebaseMessaging.configure(
 			onMessage: (Map<String, dynamic> message) async {
-				print('on message $message');
+				print('(APP is open) on message $message');
 			},
 			onResume: (Map<String, dynamic> message) async {
 				print('on resume $message');
@@ -75,7 +75,6 @@ class _TabBarControllerState extends State<TabBarController>{
 	void initState() {
 		super.initState();
 		firebaseCloudMessaging_Listeners();
-		_firebaseMessaging.subscribeToTopic("any");
 
 		setState(() {
 			_currentTab = lastPage;

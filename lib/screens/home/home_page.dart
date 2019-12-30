@@ -28,11 +28,15 @@ class _HomePageState extends State<HomePage> {
 	    body: Container(
 		    color: currBackgroundColor,
 		    child: new Center(
-			    child: new Text(
-				    "Wilkommen in der neuen App der Pfadi Nünenen. \n"
-								"Momentan können im Menüpunkt 'Stufen' die Kastenzettel ",
-				    style: TextStyle(color: currTextColor),
-			    ),
+			    child: new Padding(
+				    padding: EdgeInsets.all(20.0),
+			      child: new Text(
+				      "Wilkommen in der neuen App der Pfadi Nünenen. \n"
+						      "Momentan können im Menüpunkt 'Stufen' die Kastenzettel der Stufen abgerufen werden.\n"
+						     "Daneben kann in den Einstellungen festgelegt werden, von welchen Stufen Push-Benachrichtigungen empfangen werden sollen.",
+				      style: TextStyle(color: currTextColor),
+			      ),
+		      )
 		    ),
 	    ),
     );
