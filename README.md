@@ -2,15 +2,59 @@
 
 X-Platform App für die Pfadiabteilung Nünenen
 
-## Getting Started
+## Basis
+Dieses Projekt basiert auf der Flutter-Engine von Google. Dank Flutter wird der geschriebene Dart-Code in native Android- & iOS-Apps konvertiert.
 
-This project is a starting point for a Flutter application.
+Um die Grundlagen von Flutter zu verstehen, hab ich mich bei dieser App an der App https://github.com/Team3256/myWB-flutter Orientiert. Es besteht eine gewisse ähnlichkeit dazu.
 
-A few resources to get you started if this is your first Flutter project:
+In der App werden die Daten des Kastenzettels (aka Nächste Aktivität / Termine / Chästeler / Tägeler / Anschlag / )
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Dependencies
+### cupertino_icons
+
+
+### fluro
+
+
+### intro_views_flutter
+
+
+### progress_indicators
+
+
+### url_launcher
+
+
+### http
+
+
+### webview_flutter
+
+
+### shared_preferences
+
+
+### flutter_svg
+
+
+### navigation_dot_bar
+
+
+### firebase_messaging
+
+
+### pull_to_refresh
+
+
+### cached_network_image
+
+
+### flutter_html
+
+
+### fluttertoast
+
+
+### flutter_launcher_icons
+
