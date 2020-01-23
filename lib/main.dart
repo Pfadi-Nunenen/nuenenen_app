@@ -1,12 +1,12 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:nuenenen/screens/biber/biber_page.dart';
-import 'package:nuenenen/screens/pfadi/aetna_page.dart';
-import 'package:nuenenen/screens/pfadi/saturn_page.dart';
+import 'package:nuenenen/screens/kastenzettel/biber_page.dart';
+import 'package:nuenenen/screens/kastenzettel/aetna_page.dart';
+import 'package:nuenenen/screens/kastenzettel/saturn_page.dart';
 import 'package:nuenenen/screens/settings/about_page.dart';
 import 'package:nuenenen/screens/settings/help_page.dart';
-import 'package:nuenenen/screens/wolf/wolf_page.dart';
+import 'package:nuenenen/screens/kastenzettel/wolf_page.dart';
 import 'package:nuenenen/tab_bar_controller.dart';
 import 'package:nuenenen/theme/theme.dart';
 import 'package:nuenenen/user_info.dart';

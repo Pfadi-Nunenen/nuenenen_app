@@ -39,7 +39,7 @@ class _BiberPage extends State<BiberPage>{
 					setState(() {
 						kastenzettelList.add(new Kastenzettel(
 								json['title'].toString(),
-								json['body']['und'][0]['value'].toString()
+								json['body']['und'][0]['value'].toString(),
 						));
 					});
 				}

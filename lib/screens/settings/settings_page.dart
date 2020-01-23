@@ -16,6 +16,7 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage>{
 	FirebaseMessaging _firebaseMessaging =  FirebaseMessaging();
 
+	bool darkMode = false;
 	bool allowBiberNotification = false;
 	bool allowWolfNotification = false;
 	bool allowAetnaNotification = false;
@@ -30,6 +31,7 @@ class _SettingsPageState extends State<SettingsPage>{
 	restorePref() async {
 		final SharedPreferences sharedPrefs = await SharedPreferences.getInstance();
 		setState(() {
+			darkMode = (sharedPrefs.getBool('darkMode') ?? false);
 			allowBiberNotification = (sharedPrefs.getBool('biberNot') ?? false);
 			allowWolfNotification = (sharedPrefs.getBool('wolfNot') ?? false);
 			allowAetnaNotification = (sharedPrefs.getBool('aetnaNot') ?? false);
@@ -125,7 +127,6 @@ class _SettingsPageState extends State<SettingsPage>{
 											onChanged: (bool value) {
 												print("Dark Mode - $value");
 												setState((){
-													darkMode = value;
 													if (darkMode) {
 														currCardColor = darkCardColor;
 														currBackgroundColor = darkBackgroundColor;
@@ -139,6 +140,8 @@ class _SettingsPageState extends State<SettingsPage>{
 														currDividerColor = lightDividerColor;
 //                          mainColor = lightAccentColor;
 													}
+													darkMode = value;
+													savePref('darkMode', value);
 												});
 											},
 										),

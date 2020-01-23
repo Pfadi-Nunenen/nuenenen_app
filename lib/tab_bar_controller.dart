@@ -6,6 +6,7 @@ import 'package:nuenenen/theme/colors.dart';
 import 'package:nuenenen/user_info.dart';
 import 'package:nuenenen/screens/home/home_page.dart';
 import 'package:nuenenen/screens/overview/stufen_page.dart';
+import 'package:nuenenen/screens/overview/tools_page.dart';
 import 'package:nuenenen/screens/settings/settings_page.dart';
 
 class TabBarController extends StatefulWidget{
@@ -61,12 +62,17 @@ class _TabBarControllerState extends State<TabBarController>{
 		}else if (index == 1) {
 			setState(() {
 				_currentWidget = new StufenPage();
-				_title = "Biberstein";
+				_title = "Stufen";
 			});
 		}else if (index == 2) {
 			setState(() {
+				_currentWidget = new ToolsPage();
+				_title = "Tools";
+			});
+		}else if (index == 3) {
+			setState(() {
 				_currentWidget = new SettingsPage();
-				_title = "Phönix";
+				_title = "Einstellungen";
 			});
 		}
 	}
@@ -89,6 +95,11 @@ class _TabBarControllerState extends State<TabBarController>{
 					_title = "Stufen";
 				});
 			}else if (lastPage == 2) {
+				setState(() {
+					_currentWidget = new ToolsPage();
+					_title = "Tools";
+				});
+			}else if (lastPage == 3) {
 				setState(() {
 					_currentWidget = new SettingsPage();
 					_title = "Einstellungen";
@@ -118,6 +129,11 @@ class _TabBarControllerState extends State<TabBarController>{
 							icon: new Icon(Icons.info, size: 30.0, color: Colors.grey,),
 							activeIcon: new Icon(Icons.info, size: 30.0, color: mainColor),
 							title: new Text("Stufen", style: TextStyle(color: Colors.grey))
+					),
+					new BottomNavigationBarItem(
+							icon: new Icon(Icons.build, size: 30.0, color: Colors.grey,),
+							activeIcon: new Icon(Icons.build, size: 30.0, color: mainColor),
+							title: new Text("Tools", style: TextStyle(color: Colors.grey))
 					),
 					new BottomNavigationBarItem(
 							icon: new Icon(Icons.settings, size: 30.0, color: Colors.grey,),
