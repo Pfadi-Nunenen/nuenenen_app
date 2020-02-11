@@ -1,7 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:nuenenen/theme/colors.dart';
 import 'package:nuenenen/user_info.dart';
 
@@ -43,13 +42,13 @@ class _ToolsPage extends State<ToolsPage> {
                   children: <Widget>[
                     new Container(
                       padding: EdgeInsets.all(16.0),
-                      child: new Text("Biberstufe", style: TextStyle(color: mainColor, fontFamily: "Product Sans", fontWeight: FontWeight.bold),),
+                      child: new Text("QR Code Reader", style: TextStyle(color: mainColor, fontFamily: "Product Sans", fontWeight: FontWeight.bold),),
                     ),
                     new ListTile(
-                      title: new Text("Biberstein", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
+                      title: new Text("QR Code Reader", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
                       trailing: new Icon(Icons.navigate_next, color: mainColor),
                       onTap: () {
-                        router.navigateTo(context, '/biber', transition: TransitionType.native);
+                        router.navigateTo(context, '/qr-reader', transition: TransitionType.native);
                       },
                     ),
                     new Divider(height: 0.0, color: mainColor),
@@ -64,42 +63,13 @@ class _ToolsPage extends State<ToolsPage> {
                   children: <Widget>[
                     new Container(
                       padding: EdgeInsets.all(16.0),
-                      child: new Text("Wolfstufe", style: TextStyle(color: mainColor, fontWeight: FontWeight.bold, fontFamily: "Product Sans"),),
+                      child: new Text("Digitales Gästebuch", style: TextStyle(color: mainColor, fontWeight: FontWeight.bold, fontFamily: "Product Sans"),),
                     ),
                     new ListTile(
-                      title: new Text("Phönix", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
+                      title: new Text("Digitales Gästebuch", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
                       trailing: new Icon(Icons.navigate_next, color: mainColor),
                       onTap: () {
-                        router.navigateTo(context, '/wolf', transition: TransitionType.native);
-                      },
-                    ),
-                    new Divider(height: 0.0, color: mainColor),
-                  ],
-                ),
-              ),
-              new Padding(padding: EdgeInsets.all(8.0)),
-              new Card(
-                color: currBackgroundColor,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    new Container(
-                      padding: EdgeInsets.all(16.0),
-                      child: new Text("Pfadistufe", style: TextStyle(color: mainColor, fontWeight: FontWeight.bold, fontFamily: "Product Sans"),),
-                    ),
-                    new ListTile(
-                      title: new Text("Aetna", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
-                      trailing: new Icon(Icons.navigate_next, color: mainColor),
-                      onTap: () {
-                        router.navigateTo(context, '/aetna', transition: TransitionType.native);
-                      },
-                    ),
-                    new Divider(height: 0.0, color: mainColor),
-                    new ListTile(
-                      title: new Text("Saturn", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
-                      trailing: new Icon(Icons.navigate_next, color: mainColor),
-                      onTap: () {
-                        router.navigateTo(context, '/saturn', transition: TransitionType.native);
+                        router.navigateTo(context, '/guestbook', transition: TransitionType.native);
                       },
                     ),
                     new Divider(height: 0.0, color: mainColor),
