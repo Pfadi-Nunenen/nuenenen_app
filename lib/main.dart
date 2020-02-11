@@ -10,6 +10,7 @@ import 'package:nuenenen/screens/kastenzettel/wolf_page.dart';
 import 'package:nuenenen/tab_bar_controller.dart';
 import 'package:nuenenen/theme/theme.dart';
 import 'package:nuenenen/user_info.dart';
+import 'package:nuenenen/screens/tools/qr_page.dart';
 
 void main(){
   // Home Routes
@@ -44,6 +45,10 @@ void main(){
 
   router.define('/saturn', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
     return new SaturnPage();
+  }));
+
+  router.define('/qr-reader', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    return new QRReader();
   }));
 
   runApp(new MaterialApp(

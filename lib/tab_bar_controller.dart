@@ -2,9 +2,10 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:nuenenen/theme/colors.dart';
 import 'package:nuenenen/user_info.dart';
-import 'package:nuenenen/screens/home/home_page.dart';
+import 'package:nuenenen/screens/overview/home_page.dart';
 import 'package:nuenenen/screens/overview/stufen_page.dart';
 import 'package:nuenenen/screens/overview/tools_page.dart';
 import 'package:nuenenen/screens/settings/settings_page.dart';
@@ -37,7 +38,7 @@ class _TabBarControllerState extends State<TabBarController>{
 		);
 	}
 
-	void iOS_Permission() {
+	Future<void> iOS_Permission() async {
 		_firebaseMessaging.requestNotificationPermissions(
 				IosNotificationSettings(sound: true, badge: true, alert: true)
 		);
@@ -46,6 +47,8 @@ class _TabBarControllerState extends State<TabBarController>{
 		{
 			print("Settings registered: $settings");
 		});
+
+		await PermissionHandler().requestPermissions([PermissionGroup.camera]) ;
 	}
 
 	void onTabTapped(int index) {
