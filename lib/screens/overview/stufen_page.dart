@@ -1,7 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:nuenenen/theme/colors.dart';
 import 'package:nuenenen/user_info.dart';
 
