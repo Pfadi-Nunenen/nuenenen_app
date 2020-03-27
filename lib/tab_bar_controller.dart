@@ -67,12 +67,7 @@ class _TabBarControllerState extends State<TabBarController>{
 				_currentWidget = new StufenPage();
 				_title = "Stufen";
 			});
-		}else if (index == 2) {
-			setState(() {
-				_currentWidget = new ToolsPage();
-				_title = "Tools";
-			});
-		}else if (index == 3) {
+		} else if (index == 2) {
 			setState(() {
 				_currentWidget = new SettingsPage();
 				_title = "Einstellungen";
@@ -97,12 +92,7 @@ class _TabBarControllerState extends State<TabBarController>{
 					_currentWidget = new StufenPage();
 					_title = "Stufen";
 				});
-			}else if (lastPage == 2) {
-				setState(() {
-					_currentWidget = new ToolsPage();
-					_title = "Tools";
-				});
-			}else if (lastPage == 3) {
+			} else if (lastPage == 2) {
 				setState(() {
 					_currentWidget = new SettingsPage();
 					_title = "Einstellungen";
@@ -132,11 +122,6 @@ class _TabBarControllerState extends State<TabBarController>{
 							icon: new Icon(Icons.info, size: 30.0, color: Colors.grey,),
 							activeIcon: new Icon(Icons.info, size: 30.0, color: mainColor),
 							title: new Text("Stufen", style: TextStyle(color: Colors.grey))
-					),
-					new BottomNavigationBarItem(
-							icon: new Icon(Icons.build, size: 30.0, color: Colors.grey,),
-							activeIcon: new Icon(Icons.build, size: 30.0, color: mainColor),
-							title: new Text("Tools", style: TextStyle(color: Colors.grey))
 					),
 					new BottomNavigationBarItem(
 							icon: new Icon(Icons.settings, size: 30.0, color: Colors.grey,),

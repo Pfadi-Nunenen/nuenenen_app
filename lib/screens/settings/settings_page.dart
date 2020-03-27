@@ -21,6 +21,7 @@ class _SettingsPageState extends State<SettingsPage>{
 	bool allowWolfNotification = false;
 	bool allowAetnaNotification = false;
 	bool allowSaturnNotification = false;
+	bool allowPioNotification = false;
 	bool allowDevNotification = false;
 
 	savePref(String key, bool value) async {
@@ -36,6 +37,7 @@ class _SettingsPageState extends State<SettingsPage>{
 			allowWolfNotification = (sharedPrefs.getBool('wolfNot') ?? false);
 			allowAetnaNotification = (sharedPrefs.getBool('aetnaNot') ?? false);
 			allowSaturnNotification = (sharedPrefs.getBool('saturnNot') ?? false);
+			allowPioNotification = (sharedPrefs.getBool('pioNot') ?? false);
 			allowDevNotification = (sharedPrefs.getBool('devNot') ?? false);
 		});
 	}
@@ -57,7 +59,6 @@ class _SettingsPageState extends State<SettingsPage>{
 		super.initState();
 		restorePref();
 	}
-
 
 	@override
 	Widget build(BuildContext context) {
@@ -192,6 +193,18 @@ class _SettingsPageState extends State<SettingsPage>{
 												});
 												savePref('saturnNot', value);
 												setNotificationChannel('saturn', value, 'den Trupp Saturn');
+											},
+										),
+										new SwitchListTile.adaptive(
+											title: new Text("Benachrichtigungen Pios", style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
+											value: allowPioNotification,
+											activeColor: mainColor,
+											onChanged: (bool value) {
+												setState(() {
+													allowPioNotification = value;
+												});
+												savePref('pioNot', value);
+												setNotificationChannel('pios', value, 'die Pios');
 											},
 										),
 										new Divider(height: 5.0, color: mainColor, thickness: 1.0,),

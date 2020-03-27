@@ -10,8 +10,6 @@ class ToolsPage extends StatefulWidget{
 }
 
 class _ToolsPage extends State<ToolsPage> {
-  bool _notifs = true;
-
   @override
   Widget build(BuildContext context) {
     return NestedScrollView(

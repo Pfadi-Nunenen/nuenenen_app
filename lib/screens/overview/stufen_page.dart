@@ -10,8 +10,6 @@ class StufenPage extends StatefulWidget{
 }
 
 class _StufenPage extends State<StufenPage> {
-	bool _notifs = true;
-
 	@override
 	Widget build(BuildContext context) {
 		return NestedScrollView(
