@@ -1,3 +1,4 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -58,4 +59,8 @@ void main(){
     debugShowCheckedModeBanner: false,
     theme: mainTheme,
   ));
+
+  // Subscribe all devices to a general notification chanel
+  FirebaseMessaging _firebaseMessaging =  FirebaseMessaging();
+  _firebaseMessaging.subscribeToTopic('any');
 }
