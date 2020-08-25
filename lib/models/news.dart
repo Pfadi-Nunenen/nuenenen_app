@@ -1,6 +1,6 @@
 class News{
-	String title;
-	String content;
+  String title;
+  String content;
 
-	News(this.title, this.content);
+  News(this.title, this.content);
 }
