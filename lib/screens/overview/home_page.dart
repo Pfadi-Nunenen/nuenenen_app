@@ -3,45 +3,45 @@ import 'package:flutter/material.dart';
 import 'package:nuenenen/theme/colors.dart';
 
 class HomePage extends StatefulWidget {
-	@override
-	_HomePageState createState() => _HomePageState();
+  @override
+  _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-	@override
-	Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     // TODO: implement build
     return NestedScrollView(
-	    headerSliverBuilder: (BuildContext context, bool isScrolled) {
-		    return [
-			    new CupertinoSliverNavigationBar(
-				    largeTitle: new Text(
-					    "Pfadi Nünenen",
-					    style: TextStyle(
-							    color: Colors.white
-					    ),
-				    ),
-				    backgroundColor: mainColor,
-			    ),
-		    ];
-	    },
-	    body: Container(
-		    color: currBackgroundColor,
-		    child: new Center(
-			    child: new Padding(
-				    padding: EdgeInsets.all(20.0),
-			      child: new Text(
-				      "Wilkommen in der neuen App der Pfadi Nünenen. \n \n"
-						      "Momentan können im Menüpunkt 'Stufen' die Kastenzettel der Stufen abgerufen werden. \n \n"
-						     "Daneben kann in den Einstellungen festgelegt werden, von welchen Stufen Push-Benachrichtigungen empfangen werden sollen.",
-				      style: TextStyle(
-					      color: currTextColor,
-					      fontSize: 20.0,
-				      ),
-			      ),
-		      )
-		    ),
-	    ),
+      headerSliverBuilder: (BuildContext context, bool isScrolled) {
+        return [
+          new CupertinoSliverNavigationBar(
+            largeTitle: new Text(
+              "Pfadi Nünenen",
+              style: TextStyle(
+                  color: Colors.white
+              ),
+            ),
+            backgroundColor: mainColor,
+          ),
+        ];
+      },
+      body: Container(
+        color: currBackgroundColor,
+        child: new Center(
+            child: new Padding(
+              padding: EdgeInsets.all(20.0),
+              child: new Text(
+                "Wilkommen in der neuen App der Pfadi Nünenen. \n \n"
+                    "Momentan können im Menüpunkt 'Stufen' die Kastenzettel der Stufen abgerufen werden. \n \n"
+                    "Daneben kann in den Einstellungen festgelegt werden, von welchen Stufen Push-Benachrichtigungen empfangen werden sollen.",
+                style: TextStyle(
+                  color: currTextColor,
+                  fontSize: 20.0,
+                ),
+              ),
+            )
+        ),
+      ),
     );
   }
 }
