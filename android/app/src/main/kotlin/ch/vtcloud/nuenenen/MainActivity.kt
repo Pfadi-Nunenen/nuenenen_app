@@ -1,4 +1,4 @@
-package com.example.nuenenen
+package ch.vtcloud.nuenenen
 
 import io.flutter.embedding.android.FlutterActivity
 
