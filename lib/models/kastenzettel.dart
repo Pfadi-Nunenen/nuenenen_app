@@ -1,6 +1,6 @@
 class Kastenzettel{
-  String title;
-  String content;
+	String title;
+	String content;
 
-  Kastenzettel(this.title, this.content);
+	Kastenzettel(this.title, this.content);
 }
