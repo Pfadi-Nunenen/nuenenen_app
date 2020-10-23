@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter_html/style.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter/cupertino.dart';
@@ -90,7 +91,10 @@ class _AetnaPage extends State<AetnaPage> {
                       ),
                       Html(
                         data: kastenzettelList[0].content,
-                        renderNewlines: true,
+                        style: {
+                          "html": Style(whiteSpace: WhiteSpace.PRE),
+                          "html": Style.fromTextStyle(TextStyle(color: currTextColor)),
+                        },
                         onLinkTap: (url) async {
                           if (await canLaunch(url)) {
                             await launch(url, forceSafariVC: false);
@@ -98,7 +102,6 @@ class _AetnaPage extends State<AetnaPage> {
                             throw 'Could not launch $url';
                           }
                         },
-                        defaultTextStyle: TextStyle(color: currTextColor),
                       ),
                     ],
                   ),
