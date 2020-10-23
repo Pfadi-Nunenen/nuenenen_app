@@ -44,7 +44,7 @@ class _AetnaPage extends State<AetnaPage> {
           });
         }
       });
-      
+
       setState(() {
         isLoading = false;
       });
