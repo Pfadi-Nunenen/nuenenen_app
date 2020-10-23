@@ -91,9 +91,7 @@ class _SaturnPage extends State<SaturnPage> {
                       Html(
                         data: kastenzettelList[0].content,
                         style: {
-                          "html": Style(whiteSpace: WhiteSpace.PRE),
-                          "html": Style.fromTextStyle(
-                              TextStyle(color: currTextColor)),
+                          "html": Style(whiteSpace: WhiteSpace.PRE, color: currTextColor),
                         },
                         onLinkTap: (url) async {
                           if (await canLaunch(url)) {
