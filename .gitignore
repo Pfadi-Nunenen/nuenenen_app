@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/dart,swift,macos,android,flutter,objective-c,androidstudio,jetbrains+all
-# Edit at https://www.toptal.com/developers/gitignore?templates=dart,swift,macos,android,flutter,objective-c,androidstudio,jetbrains+all
+# Created by https://www.toptal.com/developers/gitignore/api/dart,swift,macos,flutter,android,objective-c,jetbrains+all,androidstudio
+# Edit at https://www.toptal.com/developers/gitignore?templates=dart,swift,macos,flutter,android,objective-c,jetbrains+all,androidstudio
 
 ### Android ###
 # Built application files
@@ -153,6 +153,7 @@ lib/generated_plugin_registrant.dart
 **/ios/**/profile
 **/ios/**/xcuserdata
 **/ios/.generated/
+**/ios/Flutter/.last_build_id
 **/ios/Flutter/App.framework
 **/ios/Flutter/Flutter.framework
 **/ios/Flutter/Flutter.podspec
@@ -197,19 +198,6 @@ lib/generated_plugin_registrant.dart
 # Gradle
 .idea/**/gradle.xml
 .idea/**/libraries
-
-# Gradle and Maven with auto-import
-# When using Gradle or Maven with auto-import, you should exclude module files,
-# since they will be recreated, and may cause churn.  Uncomment if using
-# auto-import.
-# .idea/artifacts
-# .idea/compiler.xml
-# .idea/jarRepositories.xml
-# .idea/modules.xml
-# .idea/*.iml
-# .idea/modules
-# *.iml
-# *.ipr
 
 # CMake
 cmake-build-*/
@@ -318,18 +306,6 @@ DerivedData/
 *.dSYM.zip
 *.dSYM
 
-# CocoaPods
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-# Pods/
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
-
-# Carthage
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
 Carthage/Build/
 
 # fastlane
@@ -351,11 +327,6 @@ iOSInjectionProject/
 ### Swift ###
 # Xcode
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
-
-
-
-
-
 
 ## Playgrounds
 timeline.xctimeline
@@ -434,6 +405,13 @@ Dependencies/
 *~
 *.swp
 
+# Keystore files
+*.jks
+*.keystore
+
+# Google Services (e.g. APIs or Firebase)
+# google-services.json
+
 # Android Patch
 
 # External native build folder generated in Android Studio 2.2 and later
@@ -460,6 +438,7 @@ obj/
 .idea/sqlDataSources.xml
 .idea/dynamic.xml
 .idea/uiDesigner.xml
+.idea/jarRepositories.xml
 
 # OS-specific files
 .DS_Store?
@@ -497,4 +476,4 @@ hs_err_pid*
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-# End of https://www.toptal.com/developers/gitignore/api/dart,swift,macos,android,flutter,objective-c,androidstudio,jetbrains+all
+# End of https://www.toptal.com/developers/gitignore/api/dart,swift,macos,flutter,android,objective-c,jetbrains+all,androidstudio
