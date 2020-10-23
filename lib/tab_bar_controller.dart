@@ -6,6 +6,7 @@ import 'package:nuenenen/screens/overview/stufen_page.dart';
 import 'package:nuenenen/screens/settings/settings_page.dart';
 import 'package:nuenenen/theme/colors.dart';
 import 'package:nuenenen/screens/overview/home_page.dart';
+import 'package:nuenenen/user_info.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class TabBarController extends StatefulWidget {
