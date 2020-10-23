@@ -112,18 +112,6 @@ class _SettingsPageState extends State<SettingsPage> {
                       },
                     ),
                     Divider(height: 0.0, color: mainColor),
-                    ListTile(
-                      title: Text("Hilfe",
-                          style: TextStyle(
-                              fontFamily: "Product Sans",
-                              color: currTextColor)),
-                      trailing: Icon(Icons.navigate_next, color: mainColor),
-                      onTap: () {
-                        router.navigateTo(context, '/help',
-                            transition: TransitionType.native);
-                      },
-                    ),
-                    Divider(height: 0.0, color: mainColor),
                   ],
                 ),
               ),
