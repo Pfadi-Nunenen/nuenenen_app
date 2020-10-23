@@ -1,8 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class QRReader extends StatefulWidget {
   @override
-  _QRReader createState() => new _QRReader();
+  _QRReader createState() => _QRReader();
 }
 
 class _QRReader extends State<QRReader> {
@@ -16,11 +17,11 @@ class _QRReader extends State<QRReader> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: new AppBar(
-          title: new Text('QR Code Scanner'),
+        appBar: AppBar(
+          title: Text('QR Code Scanner'),
         ),
-        body: new Center(
-          child: new Column(
+        body: Center(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
@@ -30,15 +31,15 @@ class _QRReader extends State<QRReader> {
                     color: Colors.blue,
                     textColor: Colors.white,
                     splashColor: Colors.blueGrey,
-                    child: const Text('START CAMERA SCAN')
-                ),
-              )
-              ,
+                    child: const Text('START CAMERA SCAN')),
+              ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                child: Text(barcode, textAlign: TextAlign.center,),
-              )
-              ,
+                child: Text(
+                  barcode,
+                  textAlign: TextAlign.center,
+                ),
+              ),
             ],
           ),
         ));
