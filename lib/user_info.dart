@@ -1,6 +1,6 @@
 import 'package:fluro/fluro.dart';
 
-final router = Router();
+final router = FluroRouter();
 
 double appVersion = 3.1;
 int appBuild = 12;
