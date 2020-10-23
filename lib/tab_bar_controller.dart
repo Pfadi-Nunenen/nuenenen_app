@@ -39,17 +39,17 @@ class _TabBarControllerState extends State<TabBarController> {
 
   Future iOS_Permission() async {
     _firebaseMessaging.requestNotificationPermissions(
-      IosNotificationSettings(sound: true, badge: true, alert: true)
-    );
+        IosNotificationSettings(sound: true, badge: true, alert: true));
 
-    _firebaseMessaging.onIosSettingsRegistered.listen((IosNotificationSettings settings){
+    _firebaseMessaging.onIosSettingsRegistered
+        .listen((IosNotificationSettings settings) {
       print("Settings registered: $settings");
     });
 
     await Permission.camera.request();
   }
 
-  void onTabTapped(int index){
+  void onTabTapped(int index) {
     lastPage = index;
     setState(() {
       tabBarColor = currBackgroundColor;
@@ -57,17 +57,17 @@ class _TabBarControllerState extends State<TabBarController> {
     _currentTab = index;
     if (index == 0) {
       setState(() {
-        _currentWidget = new HomePage();
+        _currentWidget = HomePage();
         _title = "Home";
       });
-    }else if (index == 1) {
+    } else if (index == 1) {
       setState(() {
-        _currentWidget = new StufenPage();
+        _currentWidget = StufenPage();
         _title = "Stufen";
       });
     } else if (index == 2) {
       setState(() {
-        _currentWidget = new SettingsPage();
+        _currentWidget = SettingsPage();
         _title = "Einstellungen";
       });
     }
@@ -82,17 +82,17 @@ class _TabBarControllerState extends State<TabBarController> {
       _currentTab = lastPage;
       if (lastPage == 0) {
         setState(() {
-          _currentWidget = new HomePage();
+          _currentWidget = HomePage();
           _title = "Home";
         });
-      }else if (lastPage == 1) {
+      } else if (lastPage == 1) {
         setState(() {
-          _currentWidget = new StufenPage();
+          _currentWidget = StufenPage();
           _title = "Stufen";
         });
       } else if (lastPage == 2) {
         setState(() {
-          _currentWidget = new SettingsPage();
+          _currentWidget = SettingsPage();
           _title = "Einstellungen";
         });
       }
@@ -104,28 +104,41 @@ class _TabBarControllerState extends State<TabBarController> {
     return Scaffold(
       body: _currentWidget,
       backgroundColor: currBackgroundColor,
-      bottomNavigationBar: new BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTapped,
         currentIndex: _currentTab,
         showSelectedLabels: true,
         showUnselectedLabels: true,
         backgroundColor: tabBarColor,
         items: [
-          new BottomNavigationBarItem(
-              icon: new Icon(Icons.home, size: 30.0, color: Colors.grey,),
-              activeIcon: new Icon(Icons.home, size: 30.0, color: mainColor),
-              title: new Text("Home", style: TextStyle(color: Colors.grey),)
-          ),
-          new BottomNavigationBarItem(
-              icon: new Icon(Icons.info, size: 30.0, color: Colors.grey,),
-              activeIcon: new Icon(Icons.info, size: 30.0, color: mainColor),
-              title: new Text("Stufen", style: TextStyle(color: Colors.grey))
-          ),
-          new BottomNavigationBarItem(
-              icon: new Icon(Icons.settings, size: 30.0, color: Colors.grey,),
-              activeIcon: new Icon(Icons.settings, size: 30.0, color: mainColor),
-              title: new Text("Einstellungen", style: TextStyle(color: Colors.grey))
-          ),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+                size: 30.0,
+                color: Colors.grey,
+              ),
+              activeIcon: Icon(Icons.home, size: 30.0, color: mainColor),
+              title: Text(
+                "Home",
+                style: TextStyle(color: Colors.grey),
+              )),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.info,
+                size: 30.0,
+                color: Colors.grey,
+              ),
+              activeIcon: Icon(Icons.info, size: 30.0, color: mainColor),
+              title: Text("Stufen", style: TextStyle(color: Colors.grey))),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.settings,
+                size: 30.0,
+                color: Colors.grey,
+              ),
+              activeIcon: Icon(Icons.settings, size: 30.0, color: mainColor),
+              title:
+                  Text("Einstellungen", style: TextStyle(color: Colors.grey))),
         ],
       ),
     );
