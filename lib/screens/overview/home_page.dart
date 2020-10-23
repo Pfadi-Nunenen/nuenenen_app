@@ -14,12 +14,10 @@ class _HomePageState extends State<HomePage> {
     return NestedScrollView(
       headerSliverBuilder: (BuildContext context, bool isScrolled) {
         return [
-          new CupertinoSliverNavigationBar(
-            largeTitle: new Text(
+          CupertinoSliverNavigationBar(
+            largeTitle: Text(
               "Pfadi Nünenen",
-              style: TextStyle(
-                  color: Colors.white
-              ),
+              style: TextStyle(color: Colors.white),
             ),
             backgroundColor: mainColor,
           ),
@@ -27,20 +25,19 @@ class _HomePageState extends State<HomePage> {
       },
       body: Container(
         color: currBackgroundColor,
-        child: new Center(
-            child: new Padding(
-              padding: EdgeInsets.all(20.0),
-              child: new Text(
-                "Wilkommen in der neuen App der Pfadi Nünenen. \n \n"
-                    "Momentan können im Menüpunkt 'Stufen' die Kastenzettel der Stufen abgerufen werden. \n \n"
-                    "Daneben kann in den Einstellungen festgelegt werden, von welchen Stufen Push-Benachrichtigungen empfangen werden sollen.",
-                style: TextStyle(
-                  color: currTextColor,
-                  fontSize: 20.0,
-                ),
-              ),
-            )
-        ),
+        child: Center(
+            child: Padding(
+          padding: EdgeInsets.all(20.0),
+          child: Text(
+            "Wilkommen in der neuen App der Pfadi Nünenen. \n \n"
+            "Momentan können im Menüpunkt 'Stufen' die Kastenzettel der Stufen abgerufen werden. \n \n"
+            "Daneben kann in den Einstellungen festgelegt werden, von welchen Stufen Push-Benachrichtigungen empfangen werden sollen.",
+            style: TextStyle(
+              color: currTextColor,
+              fontSize: 20.0,
+            ),
+          ),
+        )),
       ),
     );
   }
