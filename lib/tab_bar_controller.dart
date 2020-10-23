@@ -2,25 +2,23 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:permission_handler/permission_handler.dart';
-import 'package:nuenenen/theme/colors.dart';
-import 'package:nuenenen/user_info.dart';
-import 'package:nuenenen/screens/overview/home_page.dart';
 import 'package:nuenenen/screens/overview/stufen_page.dart';
-import 'package:nuenenen/screens/overview/tools_page.dart';
 import 'package:nuenenen/screens/settings/settings_page.dart';
+import 'package:nuenenen/theme/colors.dart';
+import 'package:nuenenen/screens/overview/home_page.dart';
+import 'package:permission_handler/permission_handler.dart';
 
-class TabBarController extends StatefulWidget{
+class TabBarController extends StatefulWidget {
   @override
   _TabBarControllerState createState() => _TabBarControllerState();
 }
 
-class _TabBarControllerState extends State<TabBarController>{
-  FirebaseMessaging _firebaseMessaging =  FirebaseMessaging();
+class _TabBarControllerState extends State<TabBarController> {
+  FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
 
   int _currentTab = 0;
   String _title = "Home";
-  Widget _currentWidget = new HomePage();
+  Widget _currentWidget = HomePage();
   Color tabBarColor = currBackgroundColor;
 
   void firebaseCloudMessaging_Listeners() {
@@ -38,20 +36,19 @@ class _TabBarControllerState extends State<TabBarController>{
     );
   }
 
-  Future<void> iOS_Permission() async {
+  Future iOS_Permission() async {
     _firebaseMessaging.requestNotificationPermissions(
-        IosNotificationSettings(sound: true, badge: true, alert: true)
+      IosNotificationSettings(sound: true, badge: true, alert: true)
     );
-    _firebaseMessaging.onIosSettingsRegistered
-        .listen((IosNotificationSettings settings)
-    {
+
+    _firebaseMessaging.onIosSettingsRegistered.listen((IosNotificationSettings settings){
       print("Settings registered: $settings");
     });
 
-    await PermissionHandler().requestPermissions([PermissionGroup.camera]) ;
+    await Permission.camera.request();
   }
 
-  void onTabTapped(int index) {
+  void onTabTapped(int index){
     lastPage = index;
     setState(() {
       tabBarColor = currBackgroundColor;
