@@ -124,7 +124,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     Container(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
-                        "Konfuguration",
+                        "Konfiguration",
                         style: TextStyle(
                             color: mainColor,
                             fontWeight: FontWeight.bold,
