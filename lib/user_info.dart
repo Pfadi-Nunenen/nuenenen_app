@@ -8,8 +8,8 @@ String appStatus = "";
 String appFull = "Version $appVersion";
 
 int lastPage = 0;
-bool offlineMode = false;
 bool darkMode = false;
+bool darkAppBar = false;
 
 String baseURI = "https://pfadi-nuenenen.ch";
 
