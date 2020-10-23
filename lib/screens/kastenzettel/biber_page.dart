@@ -92,7 +92,8 @@ class _BiberPage extends State<BiberPage> {
                         data: kastenzettelList[0].content,
                         style: {
                           "html": Style(whiteSpace: WhiteSpace.PRE),
-                          "html": Style.fromTextStyle(TextStyle(color: currTextColor)),
+                          "html": Style.fromTextStyle(
+                              TextStyle(color: currTextColor)),
                         },
                         onLinkTap: (url) async {
                           if (await canLaunch(url)) {
