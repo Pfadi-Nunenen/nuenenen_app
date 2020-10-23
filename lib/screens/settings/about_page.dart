@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
-import 'package:nuenenen/user_info.dart';
-import 'package:nuenenen/theme/colors.dart';
-import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'dart:io';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:nuenenen/theme/colors.dart';
+import 'package:nuenenen/user_info.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutPage extends StatefulWidget {
   @override
@@ -19,7 +19,7 @@ class _AboutPageState extends State<AboutPage> {
     super.initState();
     if (Platform.isIOS) {
       devicePlatform = "iOS";
-    }else if(Platform.isAndroid){
+    } else if (Platform.isAndroid) {
       devicePlatform = "Android";
     }
     deviceName = Platform.localHostname;
@@ -50,73 +50,95 @@ class _AboutPageState extends State<AboutPage> {
           backgroundColor: mainColor,
           actionsForegroundColor: Colors.white,
           previousPageTitle: "Zurück",
-          middle: new Text(
+          middle: Text(
             "Über die APP",
-            style: TextStyle(
-                color: Colors.white
-            ),
+            style: TextStyle(color: Colors.white),
           ),
         ),
         backgroundColor: currCardColor,
-        body: new SafeArea(
+        body: SafeArea(
           child: SingleChildScrollView(
             padding: EdgeInsets.all(16.0),
             child: Column(
               children: <Widget>[
-                new Card(
+                Card(
                   color: currBackgroundColor,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      new Container(
+                      Container(
                         padding: EdgeInsets.all(16.0),
-                        child: new Text("Gerät", style: TextStyle(
-                            color: mainColor,
-                            fontFamily: "Product Sans",
-                            fontWeight: FontWeight.bold),),
+                        child: Text(
+                          "Gerät",
+                          style: TextStyle(
+                              color: mainColor,
+                              fontFamily: "Product Sans",
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
-                      new ListTile(
-                        title: new Text("App Version",
-                            style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
-                        trailing: new Text("$appVersion$appStatus",
+                      ListTile(
+                        title: Text("App Version",
                             style: TextStyle(
-                                fontFamily: "Product Sans", fontSize: 16.0, color: currTextColor)),
+                                fontFamily: "Product Sans",
+                                color: currTextColor)),
+                        trailing: Text("$appVersion$appStatus",
+                            style: TextStyle(
+                                fontFamily: "Product Sans",
+                                fontSize: 16.0,
+                                color: currTextColor)),
                       ),
-                      new Divider(height: 0.0, color: mainColor),
-                      new ListTile(
-                        title: new Text("Gerätename",
-                            style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
-                        trailing: new Text("$deviceName", style: TextStyle(
-                            fontFamily: "Product Sans", fontSize: 16.0, color: currTextColor)),
+                      Divider(height: 0.0, color: mainColor),
+                      ListTile(
+                        title: Text("Gerätename",
+                            style: TextStyle(
+                                fontFamily: "Product Sans",
+                                color: currTextColor)),
+                        trailing: Text("$deviceName",
+                            style: TextStyle(
+                                fontFamily: "Product Sans",
+                                fontSize: 16.0,
+                                color: currTextColor)),
                       ),
-                      new Divider(height: 0.0, color: mainColor),
-                      new ListTile(
-                        title: new Text("Platform",
-                            style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
-                        trailing: new Text("$devicePlatform", style: TextStyle(
-                            fontFamily: "Product Sans", fontSize: 16.0, color: currTextColor)),
+                      Divider(height: 0.0, color: mainColor),
+                      ListTile(
+                        title: Text("Platform",
+                            style: TextStyle(
+                                fontFamily: "Product Sans",
+                                color: currTextColor)),
+                        trailing: Text("$devicePlatform",
+                            style: TextStyle(
+                                fontFamily: "Product Sans",
+                                fontSize: 16.0,
+                                color: currTextColor)),
                       ),
                     ],
                   ),
                 ),
-                new Padding(padding: EdgeInsets.all(8.0)),
-                new Card(
+                Padding(padding: EdgeInsets.all(8.0)),
+                Card(
                   color: currBackgroundColor,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      new Container(
+                      Container(
                         padding: EdgeInsets.all(16.0),
-                        child: new Text("Eintwicklung", style: TextStyle(
-                            fontFamily: "Product Sans",
-                            color: mainColor,
-                            fontWeight: FontWeight.bold),),
+                        child: Text(
+                          "Eintwicklung",
+                          style: TextStyle(
+                              fontFamily: "Product Sans",
+                              color: mainColor,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
-                      new ListTile(
-                        title: new Text("Caspar Brenneisen v/o Vento",
-                            style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
-                        subtitle: new Text("App Development",
-                            style: TextStyle(fontFamily: "Product Sans", color: Colors.grey)),
+                      ListTile(
+                        title: Text("Caspar Brenneisen v/o Vento",
+                            style: TextStyle(
+                                fontFamily: "Product Sans",
+                                color: currTextColor)),
+                        subtitle: Text("App Development",
+                            style: TextStyle(
+                                fontFamily: "Product Sans",
+                                color: Colors.grey)),
                         onTap: () {
                           const url = 'https://github.com/Vento-Nuenenen';
                           launch(url);
@@ -125,24 +147,28 @@ class _AboutPageState extends State<AboutPage> {
                     ],
                   ),
                 ),
-                new Padding(padding: EdgeInsets.all(16.0)),
-                new Card(
+                Padding(padding: EdgeInsets.all(16.0)),
+                Card(
                   color: currBackgroundColor,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      new Container(
+                      Container(
                         padding: EdgeInsets.all(16.0),
-                        child: new Text("Contributing", style: TextStyle(
-                            fontFamily: "Product Sans",
-                            color: mainColor,
-                            fontWeight: FontWeight.bold),),
+                        child: Text(
+                          "Contributing",
+                          style: TextStyle(
+                              fontFamily: "Product Sans",
+                              color: mainColor,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
-                      new ListTile(
-                        title: new Text("Sourcecode",
-                            style: TextStyle(fontFamily: "Product Sans", color: currTextColor)),
-                        trailing: new Icon(
-                            Icons.navigate_next, color: mainColor),
+                      ListTile(
+                        title: Text("Sourcecode",
+                            style: TextStyle(
+                                fontFamily: "Product Sans",
+                                color: currTextColor)),
+                        trailing: Icon(Icons.navigate_next, color: mainColor),
                         onTap: () {
                           launchContributeUrl();
                         },
@@ -153,7 +179,6 @@ class _AboutPageState extends State<AboutPage> {
               ],
             ),
           ),
-        )
-    );
+        ));
   }
 }
