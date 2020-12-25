@@ -14,8 +14,4 @@ const darkCardColor = Color(0xFF2C2C2C);
 const darkDividerColor = Color(0xFF616161);
 const darkTextColor = Colors.white;
 
-// ENABLE DARK THEME
-var currTextColor = darkTextColor;
-var currBackgroundColor = darkBackgroundColor;
-var currCardColor = darkCardColor;
-var currDividerColor = darkDividerColor;
+const titleColor = Colors.pink;

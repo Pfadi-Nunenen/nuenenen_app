@@ -80,13 +80,13 @@ class _SettingsPageState extends State<SettingsPage> {
       },
       body: Container(
         padding: EdgeInsets.only(top: 16.0, right: 16.0, left: 16.0),
-        color: currCardColor,
+        color: Theme.of(context).cardColor,
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
               Padding(padding: EdgeInsets.all(8.0)),
               Card(
-                color: currBackgroundColor,
+                color: Theme.of(context).backgroundColor,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -104,7 +104,7 @@ class _SettingsPageState extends State<SettingsPage> {
                       title: Text("Über die APP",
                           style: TextStyle(
                               fontFamily: "Product Sans",
-                              color: currTextColor)),
+                              color: Theme.of(context).primaryColor)),
                       trailing: Icon(Icons.navigate_next, color: mainColor),
                       onTap: () {
                         router.navigateTo(context, '/about',
@@ -117,7 +117,7 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
               Padding(padding: EdgeInsets.all(8.0)),
               Card(
-                color: currBackgroundColor,
+                color: Theme.of(context).backgroundColor,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -135,24 +135,16 @@ class _SettingsPageState extends State<SettingsPage> {
                       title: Text("Dunkles Design",
                           style: TextStyle(
                               fontFamily: "Product Sans",
-                              color: currTextColor)),
+                              color: Theme.of(context).primaryColor)),
                       value: darkMode,
                       activeColor: mainColor,
                       onChanged: (bool value) {
                         print("Dark Mode - $value");
                         setState(() {
                           if (darkMode) {
-                            currCardColor = darkCardColor;
-                            currBackgroundColor = darkBackgroundColor;
-                            currTextColor = darkTextColor;
-                            currDividerColor = darkDividerColor;
-//                          mainColor = darkAccentColor;
+                            ThemeData.dark();
                           } else {
-                            currCardColor = lightCardColor;
-                            currBackgroundColor = lightBackgroundColor;
-                            currTextColor = lightTextColor;
-                            currDividerColor = lightDividerColor;
-//                          mainColor = lightAccentColor;
+                            ThemeData.light();
                           }
                           darkMode = value;
                           savePref('darkMode', value);
@@ -168,7 +160,7 @@ class _SettingsPageState extends State<SettingsPage> {
                       title: Text("Benachrichtigungen Biber",
                           style: TextStyle(
                               fontFamily: "Product Sans",
-                              color: currTextColor)),
+                              color: Theme.of(context).primaryColor)),
                       value: allowBiberNotification,
                       activeColor: mainColor,
                       onChanged: (bool value) {
@@ -184,7 +176,7 @@ class _SettingsPageState extends State<SettingsPage> {
                       title: Text("Benachrichtigungen Wölf",
                           style: TextStyle(
                               fontFamily: "Product Sans",
-                              color: currTextColor)),
+                              color: Theme.of(context).primaryColor)),
                       value: allowWolfNotification,
                       activeColor: mainColor,
                       onChanged: (bool value) {
@@ -200,7 +192,7 @@ class _SettingsPageState extends State<SettingsPage> {
                       title: Text("Benachrichtigungen Aetna",
                           style: TextStyle(
                               fontFamily: "Product Sans",
-                              color: currTextColor)),
+                              color: Theme.of(context).primaryColor)),
                       value: allowAetnaNotification,
                       activeColor: mainColor,
                       onChanged: (bool value) {
@@ -216,7 +208,7 @@ class _SettingsPageState extends State<SettingsPage> {
                       title: Text("Benachrichtigungen Saturn",
                           style: TextStyle(
                               fontFamily: "Product Sans",
-                              color: currTextColor)),
+                              color: Theme.of(context).primaryColor)),
                       value: allowSaturnNotification,
                       activeColor: mainColor,
                       onChanged: (bool value) {
@@ -232,7 +224,7 @@ class _SettingsPageState extends State<SettingsPage> {
                       title: Text("Benachrichtigungen Pios",
                           style: TextStyle(
                               fontFamily: "Product Sans",
-                              color: currTextColor)),
+                              color: Theme.of(context).primaryColor)),
                       value: allowPioNotification,
                       activeColor: mainColor,
                       onChanged: (bool value) {
@@ -252,7 +244,8 @@ class _SettingsPageState extends State<SettingsPage> {
                       title: Text("**Benachrichtigungen Test**",
                           style: TextStyle(
                               fontFamily: "Product Sans",
-                              color: currTextColor)),
+                              //color: Theme.of(context).primaryColor
+                            )),
                       value: allowDevNotification,
                       activeColor: mainColor,
                       onChanged: (bool value) {
@@ -270,7 +263,7 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
               Padding(padding: EdgeInsets.all(8.0)),
               Card(
-                color: currBackgroundColor,
+                color: Theme.of(context).backgroundColor,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -289,7 +282,8 @@ class _SettingsPageState extends State<SettingsPage> {
                       title: Text("Einen Fehler melden",
                           style: TextStyle(
                               fontFamily: "Product Sans",
-                              color: currTextColor)),
+                              //color: currTextColor
+                          )),
                       trailing: Icon(Icons.navigate_next, color: mainColor),
                       onTap: () {
                         launch(
