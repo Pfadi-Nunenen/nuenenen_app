@@ -67,16 +67,16 @@ class _WolfPage extends State<WolfPage> {
       ),
       body: isLoading
           ? Container(
-              color: currBackgroundColor,
+              color: Theme.of(context).backgroundColor,
               child: Center(
                 child: CircularProgressIndicator(),
               ))
           : RefreshIndicator(
               onRefresh: onRefresh,
               color: darkTextColor,
-              backgroundColor: currBackgroundColor,
+              backgroundColor: Theme.of(context).backgroundColor,
               child: Container(
-                color: currBackgroundColor,
+                color: Theme.of(context).backgroundColor,
                 padding: EdgeInsets.all(16.0),
                 child: Container(
                   child: Column(
@@ -84,14 +84,17 @@ class _WolfPage extends State<WolfPage> {
                       Text(
                         kastenzettelList[0].title.toString(),
                         style: TextStyle(
-                            color: currTextColor,
+                            //color: currTextColor,
                             fontSize: 25.0,
                             fontWeight: FontWeight.bold),
                       ),
                       Html(
                         data: kastenzettelList[0].content,
                         style: {
-                          "html": Style(whiteSpace: WhiteSpace.PRE, color: currTextColor),
+                          "html": Style(
+                              whiteSpace: WhiteSpace.PRE,
+                              //color: currTextColor
+                          ),
                         },
                         onLinkTap: (url) async {
                           if (await canLaunch(url)) {
