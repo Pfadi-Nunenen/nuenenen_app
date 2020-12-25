@@ -58,10 +58,11 @@ void main() {
 
   runApp(MaterialApp(
     title: "Pfadi Nünenen",
-    home: TabBarController(),
     onGenerateRoute: router.generator,
     debugShowCheckedModeBanner: false,
-    theme: mainTheme,
+    theme: Constants.lightTheme,
+    darkTheme: Constants.darkTheme,
+    home: TabBarController(),
   ));
 
   // Subscribe all devices to a general notification chanel
