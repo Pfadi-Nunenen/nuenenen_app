@@ -14,6 +14,11 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
+  _SettingsPageState({Key key, this.onSelectedTheme})
+      : super(key: key);
+
+  final ValueChanged<Brightness> onSelectedTheme;
+
   FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
 
   bool darkMode = false;
