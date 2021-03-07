@@ -10,8 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.0
-  fluro: ^1.7.6
+  cupertino_icons: ^1.0.2
+  fluro: ^1.7.8
   http: ^0.12.2
   firebase_messaging: ^7.0.3
   permission_handler: ^5.0.1
