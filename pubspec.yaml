@@ -4,22 +4,22 @@ description: X-Platform App für die Pfadiabteilung Nünenen
 version: 3.1.1+12
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.0
-  fluro: ^2.0.0
+  cupertino_icons: ^1.0.2
+  fluro: ^2.0.3
   http: ^0.13.0
-  firebase_messaging: ^9.0.0
+  firebase_messaging: ^7.0.3
   permission_handler: ^5.0.1
   flutter_html: ^1.0.2
   url_launcher: ^5.7.8
   shared_preferences: ^0.5.12
   fluttertoast: ^7.1.1
-  qr_code_scanner: ^0.3.0
+  qr_code_scanner: ^0.0.13
 
 dev_dependencies:
   flutter_test:
