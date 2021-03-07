@@ -1,11 +1,17 @@
 {
   "extends": [
-    "config:base",
+    "config:base"
   ],
   "packageRules": [
     {
-      "updateTypes": ["patch", "pin"],
+      "updateTypes": ["minor", "patch", "pin"],
       "automerge": true
     }
+  ],
+  "timezone": "Europe/Zurich",
+  "schedule": [
+    "after 10pm every weekday",
+    "before 5am every weekday",
+    "every weekend"
   ]
 }
