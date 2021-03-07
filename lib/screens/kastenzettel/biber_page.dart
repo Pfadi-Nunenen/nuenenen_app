@@ -32,7 +32,7 @@ class _BiberPage extends State<BiberPage> {
 
     print("Lade Daten für den Kastenzettel herunter");
     kastenzettelList.clear();
-    var URL = "${baseURI}/node/${biberID}/json";
+    var URL = Uri.https(baseURI, "node/$biberID/json");
 
     try {
       await http.get(URL).then((response) {

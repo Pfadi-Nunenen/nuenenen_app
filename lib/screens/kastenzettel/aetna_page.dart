@@ -32,7 +32,7 @@ class _AetnaPage extends State<AetnaPage> {
 
     print("Lade Daten für den Kastenzettel herunter");
     kastenzettelList.clear();
-    var URL = "${baseURI}/node/${aetnaID}/json";
+    var URL = Uri.https(baseURI, "node/$aetnaID/json");
 
     try {
       await http.get(URL).then((response) {

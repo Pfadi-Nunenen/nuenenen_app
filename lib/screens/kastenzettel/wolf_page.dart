@@ -32,7 +32,7 @@ class _WolfPage extends State<WolfPage> {
 
     print("Lade Daten für den Kastenzettel herunter");
     kastenzettelList.clear();
-    var URL = "${baseURI}/node/${wolfID}/json";
+    var URL = Uri.https(baseURI, "node/$wolfID/json");
 
     try {
       await http.get(URL).then((response) {

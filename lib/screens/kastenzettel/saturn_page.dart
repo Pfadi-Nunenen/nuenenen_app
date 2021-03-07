@@ -32,7 +32,7 @@ class _SaturnPage extends State<SaturnPage> {
 
     print("Lade Daten für den Kastenzettel herunter");
     kastenzettelList.clear();
-    var URL = "${baseURI}/node/${saturnID}/json";
+    var URL = Uri.https(baseURI, "node/$saturnID/json");
 
     try {
       await http.get(URL).then((response) {

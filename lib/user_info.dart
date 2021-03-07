@@ -11,7 +11,7 @@ int lastPage = 0;
 bool darkMode = false;
 bool darkAppBar = false;
 
-String baseURI = "https://pfadi-nuenenen.ch";
+String baseURI = "pfadi-nuenenen.ch";
 
 String biberID = "214";
 String wolfID = "215";
