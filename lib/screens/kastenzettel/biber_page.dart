@@ -67,16 +67,16 @@ class _BiberPage extends State<BiberPage> {
       ),
       body: isLoading
           ? Container(
-              color: Theme.of(context).backgroundColor,
+              color: currBackgroundColor,
               child: Center(
                 child: CircularProgressIndicator(),
               ))
           : RefreshIndicator(
               onRefresh: onRefresh,
               color: darkTextColor,
-              backgroundColor: Theme.of(context).backgroundColor,
+              backgroundColor: currBackgroundColor,
               child: Container(
-                color: Theme.of(context).backgroundColor,
+                color: currBackgroundColor,
                 padding: EdgeInsets.all(16.0),
                 child: Container(
                   child: Column(
@@ -84,17 +84,14 @@ class _BiberPage extends State<BiberPage> {
                       Text(
                         kastenzettelList[0].title.toString(),
                         style: TextStyle(
-                            //color: currTextColor,
+                            color: currTextColor,
                             fontSize: 25.0,
                             fontWeight: FontWeight.bold),
                       ),
                       Html(
                         data: kastenzettelList[0].content,
                         style: {
-                          "html": Style(
-                              whiteSpace: WhiteSpace.PRE,
-                              //color: currTextColor
-                          ),
+                          "html": Style(whiteSpace: WhiteSpace.PRE, color: currTextColor),
                         },
                         onLinkTap: (url) async {
                           if (await canLaunch(url)) {

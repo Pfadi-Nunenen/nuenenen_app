@@ -55,14 +55,14 @@ class _AboutPageState extends State<AboutPage> {
             style: TextStyle(color: Colors.white),
           ),
         ),
-        backgroundColor: Theme.of(context).cardColor,
+        backgroundColor: currCardColor,
         body: SafeArea(
           child: SingleChildScrollView(
             padding: EdgeInsets.all(16.0),
             child: Column(
               children: <Widget>[
                 Card(
-                  color: Theme.of(context).backgroundColor,
+                  color: currBackgroundColor,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -80,49 +80,43 @@ class _AboutPageState extends State<AboutPage> {
                         title: Text("App Version",
                             style: TextStyle(
                                 fontFamily: "Product Sans",
-                                //color: currTextColor
-                            )),
+                                color: currTextColor)),
                         trailing: Text("$appVersion$appStatus",
                             style: TextStyle(
                                 fontFamily: "Product Sans",
                                 fontSize: 16.0,
-                                //color: currTextColor
-                            )),
+                                color: currTextColor)),
                       ),
                       Divider(height: 0.0, color: mainColor),
                       ListTile(
                         title: Text("Gerätename",
                             style: TextStyle(
                                 fontFamily: "Product Sans",
-                                //color: currTextColor
-                            )),
+                                color: currTextColor)),
                         trailing: Text("$deviceName",
                             style: TextStyle(
                                 fontFamily: "Product Sans",
                                 fontSize: 16.0,
-                                //color: currTextColor
-                            )),
+                                color: currTextColor)),
                       ),
                       Divider(height: 0.0, color: mainColor),
                       ListTile(
                         title: Text("Platform",
                             style: TextStyle(
                                 fontFamily: "Product Sans",
-                                //color: currTextColor
-                            )),
+                                color: currTextColor)),
                         trailing: Text("$devicePlatform",
                             style: TextStyle(
                                 fontFamily: "Product Sans",
                                 fontSize: 16.0,
-                              //color: currTextColor
-                            )),
+                                color: currTextColor)),
                       ),
                     ],
                   ),
                 ),
                 Padding(padding: EdgeInsets.all(8.0)),
                 Card(
-                  color: Theme.of(context).backgroundColor,
+                  color: currBackgroundColor,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -140,13 +134,11 @@ class _AboutPageState extends State<AboutPage> {
                         title: Text("Caspar Brenneisen v/o Vento",
                             style: TextStyle(
                                 fontFamily: "Product Sans",
-                                //color: currTextColor
-                            )),
+                                color: currTextColor)),
                         subtitle: Text("App Development",
                             style: TextStyle(
                                 fontFamily: "Product Sans",
-                                color: Colors.grey
-                            )),
+                                color: Colors.grey)),
                         onTap: () {
                           const url = 'https://github.com/Vento-Nuenenen';
                           launch(url);
@@ -157,7 +149,7 @@ class _AboutPageState extends State<AboutPage> {
                 ),
                 Padding(padding: EdgeInsets.all(16.0)),
                 Card(
-                  color: Theme.of(context).backgroundColor,
+                  color: currBackgroundColor,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -175,8 +167,7 @@ class _AboutPageState extends State<AboutPage> {
                         title: Text("Sourcecode",
                             style: TextStyle(
                                 fontFamily: "Product Sans",
-                                //color: currTextColor
-                            )),
+                                color: currTextColor)),
                         trailing: Icon(Icons.navigate_next, color: mainColor),
                         onTap: () {
                           launchContributeUrl();

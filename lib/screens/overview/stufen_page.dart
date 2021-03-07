@@ -26,13 +26,13 @@ class _StufenPage extends State<StufenPage> {
       },
       body: Container(
         padding: EdgeInsets.only(top: 16.0, right: 16.0, left: 16.0),
-        color: Theme.of(context).cardColor,
+        color: currCardColor,
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
               Padding(padding: EdgeInsets.all(8.0)),
               Card(
-                color: Theme.of(context).backgroundColor,
+                color: currBackgroundColor,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -50,9 +50,7 @@ class _StufenPage extends State<StufenPage> {
                       title: Text("Biberstein",
                           style: TextStyle(
                               fontFamily: "Product Sans",
-                              //color: currTextColor
-                          )
-                      ),
+                              color: currTextColor)),
                       trailing: Icon(Icons.navigate_next, color: mainColor),
                       onTap: () {
                         router.navigateTo(context, '/biber',
@@ -65,7 +63,7 @@ class _StufenPage extends State<StufenPage> {
               ),
               Padding(padding: EdgeInsets.all(8.0)),
               Card(
-                color: Theme.of(context).backgroundColor,
+                color: currBackgroundColor,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -83,8 +81,7 @@ class _StufenPage extends State<StufenPage> {
                       title: Text("Phönix",
                           style: TextStyle(
                               fontFamily: "Product Sans",
-                              //color: currTextColor
-                          )),
+                              color: currTextColor)),
                       trailing: Icon(Icons.navigate_next, color: mainColor),
                       onTap: () {
                         router.navigateTo(context, '/wolf',
@@ -97,7 +94,7 @@ class _StufenPage extends State<StufenPage> {
               ),
               Padding(padding: EdgeInsets.all(8.0)),
               Card(
-                color: Theme.of(context).backgroundColor,
+                color: currBackgroundColor,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -115,8 +112,7 @@ class _StufenPage extends State<StufenPage> {
                       title: Text("Aetna",
                           style: TextStyle(
                               fontFamily: "Product Sans",
-                              //color: currTextColor
-                          )),
+                              color: currTextColor)),
                       trailing: Icon(Icons.navigate_next, color: mainColor),
                       onTap: () {
                         router.navigateTo(context, '/aetna',
@@ -128,8 +124,7 @@ class _StufenPage extends State<StufenPage> {
                       title: Text("Saturn",
                           style: TextStyle(
                               fontFamily: "Product Sans",
-                              //color: currTextColor
-                          )),
+                              color: currTextColor)),
                       trailing: Icon(Icons.navigate_next, color: mainColor),
                       onTap: () {
                         router.navigateTo(context, '/saturn',

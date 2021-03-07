@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
         ];
       },
       body: Container(
-        color: Theme.of(context).backgroundColor,
+        color: currBackgroundColor,
         child: Center(
             child: Padding(
           padding: EdgeInsets.all(20.0),
@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
             "Momentan können im Menüpunkt 'Stufen' die Kastenzettel der Stufen abgerufen werden. \n \n"
             "Daneben kann in den Einstellungen festgelegt werden, von welchen Stufen Push-Benachrichtigungen empfangen werden sollen.",
             style: TextStyle(
-              //color: Theme.of(context).textTheme.body1,
+              color: currTextColor,
               fontSize: 20.0,
             ),
           ),

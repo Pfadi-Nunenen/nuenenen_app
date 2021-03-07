@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:nuenenen/screens/overview/stufen_page.dart';
-import 'package:nuenenen/screens/overview/tools_page.dart';
 import 'package:nuenenen/screens/settings/settings_page.dart';
 import 'package:nuenenen/theme/colors.dart';
 import 'package:nuenenen/screens/overview/home_page.dart';
@@ -21,7 +20,7 @@ class _TabBarControllerState extends State<TabBarController> {
   int _currentTab = 0;
   String _title = "Home";
   Widget _currentWidget = HomePage();
-  Color tabBarColor = Colors.black;
+  Color tabBarColor = currBackgroundColor;
 
   void firebaseCloudMessaging_Listeners() {
     if (Platform.isIOS) iOS_Permission();
@@ -53,7 +52,7 @@ class _TabBarControllerState extends State<TabBarController> {
   void onTabTapped(int index) {
     lastPage = index;
     setState(() {
-      tabBarColor = Theme.of(context).backgroundColor;
+      tabBarColor = currBackgroundColor;
     });
     _currentTab = index;
     if (index == 0) {
@@ -66,12 +65,7 @@ class _TabBarControllerState extends State<TabBarController> {
         _currentWidget = StufenPage();
         _title = "Stufen";
       });
-    } else if (lastPage == 2) {
-      setState(() {
-        _currentWidget = ToolsPage();
-        _title = "Tools";
-      });
-    }else if (lastPage == 3) {
+    } else if (index == 2) {
       setState(() {
         _currentWidget = SettingsPage();
         _title = "Einstellungen";
@@ -98,11 +92,6 @@ class _TabBarControllerState extends State<TabBarController> {
         });
       } else if (lastPage == 2) {
         setState(() {
-          _currentWidget = ToolsPage();
-          _title = "Tools";
-        });
-      }else if (lastPage == 3) {
-        setState(() {
           _currentWidget = SettingsPage();
           _title = "Einstellungen";
         });
@@ -114,7 +103,7 @@ class _TabBarControllerState extends State<TabBarController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _currentWidget,
-      backgroundColor: Theme.of(context).backgroundColor,
+      backgroundColor: currBackgroundColor,
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTapped,
         currentIndex: _currentTab,
@@ -143,22 +132,13 @@ class _TabBarControllerState extends State<TabBarController> {
               title: Text("Stufen", style: TextStyle(color: Colors.grey))),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.handyman,
-                size: 30.0,
-                color: Colors.grey,
-              ),
-              activeIcon: Icon(Icons.handyman, size: 30.0, color: mainColor),
-              title:
-                  Text("Tools", style: TextStyle(color: Colors.grey))),
-          BottomNavigationBarItem(
-              icon: Icon(
                 Icons.settings,
                 size: 30.0,
                 color: Colors.grey,
               ),
               activeIcon: Icon(Icons.settings, size: 30.0, color: mainColor),
               title:
-              Text("Einstellungen", style: TextStyle(color: Colors.grey))),
+                  Text("Einstellungen", style: TextStyle(color: Colors.grey))),
         ],
       ),
     );

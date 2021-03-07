@@ -12,7 +12,6 @@ import 'package:nuenenen/screens/tools/qr_page.dart';
 import 'package:nuenenen/tab_bar_controller.dart';
 import 'package:nuenenen/theme/theme.dart';
 import 'package:nuenenen/user_info.dart';
-import 'package:nuenenen/theme/dynamic_theme.dart';
 
 void main() {
   // Home Routes
@@ -57,31 +56,15 @@ void main() {
     return QRReader();
   }));
 
-  runApp(MyApp());
+  runApp(MaterialApp(
+    title: "Pfadi Nünenen",
+    home: TabBarController(),
+    onGenerateRoute: router.generator,
+    debugShowCheckedModeBanner: false,
+    theme: mainTheme,
+  ));
 
   // Subscribe all devices to a general notification chanel
   FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
   _firebaseMessaging.subscribeToTopic('any');
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return DynamicTheme(
-      defaultBrightness: Brightness.light,
-      data: (Brightness brightness) => ThemeData(
-        primarySwatch: Colors.indigo,
-        brightness: brightness,
-      ),
-      loadBrightnessOnStart: true,
-      themedWidgetBuilder: (BuildContext context, ThemeData theme) {
-        return MaterialApp(
-          title: 'Pfadi Nünenen',
-          theme: theme,
-          home: TabBarController(),
-          onGenerateRoute: router.generator,
-        );
-      },
-    );
-  }
 }
