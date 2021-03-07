@@ -31,6 +31,7 @@ class _QRReader extends State<QRReader> {
                     color: Colors.blue,
                     textColor: Colors.white,
                     splashColor: Colors.blueGrey,
+                    onPressed: () {},
                     child: const Text('START CAMERA SCAN')),
               ),
               Padding(

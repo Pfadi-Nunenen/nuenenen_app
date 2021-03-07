@@ -1,11 +1,12 @@
 import 'dart:convert';
-import 'package:flutter_html/style.dart';
-import 'package:http/http.dart' as http;
-import 'package:flutter_html/flutter_html.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nuenenen/theme/colors.dart';
+import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html/style.dart';
+import 'package:http/http.dart' as http;
 import 'package:nuenenen/models/kastenzettel.dart';
+import 'package:nuenenen/theme/colors.dart';
 import 'package:nuenenen/user_info.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -15,7 +16,7 @@ class AetnaPage extends StatefulWidget {
 }
 
 class _AetnaPage extends State<AetnaPage> {
-  List<Kastenzettel> kastenzettelList = List();
+  List<Kastenzettel> kastenzettelList = [];
   var isLoading = false;
 
   @override
@@ -39,9 +40,9 @@ class _AetnaPage extends State<AetnaPage> {
         for (int i = 0; i < json.length; i++) {
           setState(() {
             kastenzettelList.add(Kastenzettel(
-              json['title'].toString(),
-              json['body']['und'][0]['value'].toString()
-            ));
+                json['title'].toString(),
+                json['body']['und'][0]['value'].toString(),
+                json['field_corona_info']['und'][0]['value'].toString()));
           });
         }
       });
@@ -59,7 +60,6 @@ class _AetnaPage extends State<AetnaPage> {
     return Scaffold(
       appBar: CupertinoNavigationBar(
         backgroundColor: mainColor,
-        actionsForegroundColor: Colors.white,
         previousPageTitle: "Stufen",
         middle: Text(
           "Aetna",
@@ -92,7 +92,21 @@ class _AetnaPage extends State<AetnaPage> {
                       Html(
                         data: kastenzettelList[0].content,
                         style: {
-                          "html": Style(whiteSpace: WhiteSpace.PRE, color: currTextColor),
+                          "html": Style(
+                              whiteSpace: WhiteSpace.PRE, color: currTextColor),
+                        },
+                        onLinkTap: (url) async {
+                          if (await canLaunch(url)) {
+                            await launch(url, forceSafariVC: false);
+                          } else {
+                            throw 'Could not launch $url';
+                          }
+                        },
+                      ),
+                      Html(
+                        data: kastenzettelList[0].coronaInfo,
+                        style: {
+                          "html": Style(color: currTextColor),
                         },
                         onLinkTap: (url) async {
                           if (await canLaunch(url)) {

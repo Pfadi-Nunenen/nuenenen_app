@@ -1,4 +1,5 @@
 import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nuenenen/theme/colors.dart';
@@ -48,7 +49,6 @@ class _AboutPageState extends State<AboutPage> {
     return Scaffold(
         appBar: CupertinoNavigationBar(
           backgroundColor: mainColor,
-          actionsForegroundColor: Colors.white,
           previousPageTitle: "Zurück",
           middle: Text(
             "Über die APP",
