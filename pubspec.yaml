@@ -1,7 +1,7 @@
 name: nuenenen
 description: X-Platform App für die Pfadiabteilung Nünenen
 
-version: 3.1.1+12
+version: 3.1.2+13
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
