@@ -19,7 +19,7 @@ dependencies:
   url_launcher: ^6.0.2
   shared_preferences: ^2.0.3
   fluttertoast: ^8.0.2
-  qr_code_scanner: ^0.3.5
+  qr_code_scanner: ^0.4.0
 
 dev_dependencies:
   flutter_test:
