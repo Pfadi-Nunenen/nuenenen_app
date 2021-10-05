@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<color name="notificationColor">#FF0084</color>
+    <color name="notificationColor">#FF0084</color>
 </resources>
