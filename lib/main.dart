@@ -1,70 +1,82 @@
-import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:fluro/fluro.dart';
+import 'package:nuenenen_app/providers/album_provider.dart';
+import 'package:nuenenen_app/providers/artist_provider.dart';
+import 'package:nuenenen_app/providers/audio_provider.dart';
+import 'package:nuenenen_app/providers/auth_provider.dart';
+import 'package:nuenenen_app/providers/cache_provider.dart';
+import 'package:nuenenen_app/providers/data_provider.dart';
+import 'package:nuenenen_app/providers/interaction_provider.dart';
+import 'package:nuenenen_app/providers/media_info_provider.dart';
+import 'package:nuenenen_app/providers/playlist_provider.dart';
+import 'package:nuenenen_app/providers/search_provider.dart';
+import 'package:nuenenen_app/providers/song_provider.dart';
+import 'package:nuenenen_app/ui/app.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:nuenenen/screens/kastenzettel/biber_page.dart';
-import 'package:nuenenen/screens/kastenzettel/wolf_page.dart';
-import 'package:nuenenen/screens/kastenzettel/aetna_page.dart';
-import 'package:nuenenen/screens/kastenzettel/saturn_page.dart';
-import 'package:nuenenen/screens/overview/stufen_page.dart';
-import 'package:nuenenen/screens/settings/about_page.dart';
-import 'package:nuenenen/screens/tools/qr_page.dart';
-import 'package:nuenenen/tab_bar_controller.dart';
-import 'package:nuenenen/theme/theme.dart';
-import 'package:nuenenen/user_info.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:provider/provider.dart';
+import 'package:provider/single_child_widget.dart';
 
-void main() {
-  // Home Routes
-  router.define('/home', handler:
-      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return TabBarController();
-  }));
+List<SingleChildWidget> _providers = [
+  Provider(create: (_) => AuthProvider()),
+  ChangeNotifierProvider(create: (_) => ArtistProvider()),
+  Provider(create: (_) => MediaInfoProvider()),
+  ChangeNotifierProvider(create: (_) => CacheProvider()),
+  ChangeNotifierProvider(
+    create: (context) => AlbumProvider(
+      artistProvider: context.read<ArtistProvider>(),
+    ),
+  ),
+  Provider(
+    create: (context) => SongProvider(
+      artistProvider: context.read<ArtistProvider>(),
+      albumProvider: context.read<AlbumProvider>(),
+      cacheProvider: context.read<CacheProvider>(),
+    ),
+  ),
+  ChangeNotifierProvider(
+    create: (context) => InteractionProvider(
+      songProvider: context.read<SongProvider>(),
+    ),
+  ),
+  ChangeNotifierProvider(
+    create: (context) => PlaylistProvider(
+      songProvider: context.read<SongProvider>(),
+    ),
+  ),
+  ChangeNotifierProvider(
+    create: (context) => AudioProvider(
+      songProvider: context.read<SongProvider>(),
+      interactionProvider: context.read<InteractionProvider>(),
+    ),
+  ),
+  ChangeNotifierProvider(
+    create: (context) => SearchProvider(
+      songProvider: context.read<SongProvider>(),
+      artistProvider: context.read<ArtistProvider>(),
+      albumProvider: context.read<AlbumProvider>(),
+    ),
+  ),
+  ChangeNotifierProvider(
+    create: (context) => DataProvider(
+      songProvider: context.read<SongProvider>(),
+      artistProvider: context.read<ArtistProvider>(),
+      albumProvider: context.read<AlbumProvider>(),
+      playlistProvider: context.read<PlaylistProvider>(),
+    ),
+  ),
+];
 
-  // Settings Routes
-  router.define('/about', handler:
-      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return AboutPage();
-  }));
+Future<void> main() async {
+  AssetsAudioPlayer.setupNotificationsOpenAction((notification) {
+    return true;
+  });
 
-  router.define('/stufen', handler:
-      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return StufenPage();
-  }));
+  await GetStorage.init();
 
-  router.define('/biber', handler:
-      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return BiberPage();
-  }));
-
-  router.define('/wolf', handler:
-      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return WolfPage();
-  }));
-
-  router.define('/aetna', handler:
-      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return AetnaPage();
-  }));
-
-  router.define('/saturn', handler:
-      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return SaturnPage();
-  }));
-
-  router.define('/qr-reader', handler:
-      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return QRReader();
-  }));
-
-  runApp(MaterialApp(
-    title: "Pfadi Nünenen",
-    home: TabBarController(),
-    onGenerateRoute: router.generator,
-    debugShowCheckedModeBanner: false,
-    theme: mainTheme,
-  ));
-
-  // Subscribe all devices to a general notification chanel
-  FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
-  _firebaseMessaging.subscribeToTopic('any');
+  runApp(
+    MultiProvider(
+      providers: _providers,
+      child: App(),
+    ),
+  );
 }
