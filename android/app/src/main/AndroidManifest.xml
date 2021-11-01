@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ch.pfadi_nuenenen.app">
+    package="ch.vtcloud.nuenenen">
    <application
         android:label="Pfadi Nünenen"
         android:icon="@mipmap/ic_launcher">
