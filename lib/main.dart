@@ -1,3 +1,9 @@
+import 'package:flutter/material.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:provider/provider.dart';
+import 'package:provider/single_child_widget.dart';
+
 import 'package:nuenenen_app/providers/album_provider.dart';
 import 'package:nuenenen_app/providers/artist_provider.dart';
 import 'package:nuenenen_app/providers/audio_provider.dart';
@@ -9,12 +15,8 @@ import 'package:nuenenen_app/providers/media_info_provider.dart';
 import 'package:nuenenen_app/providers/playlist_provider.dart';
 import 'package:nuenenen_app/providers/search_provider.dart';
 import 'package:nuenenen_app/providers/song_provider.dart';
+
 import 'package:nuenenen_app/ui/app.dart';
-import 'package:assets_audio_player/assets_audio_player.dart';
-import 'package:flutter/material.dart';
-import 'package:get_storage/get_storage.dart';
-import 'package:provider/provider.dart';
-import 'package:provider/single_child_widget.dart';
 
 List<SingleChildWidget> _providers = [
   Provider(create: (_) => AuthProvider()),
