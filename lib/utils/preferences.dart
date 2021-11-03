@@ -12,10 +12,6 @@ void _delete(String key) => storage.remove(key);
 
 set hostUrl(String? url) => _set('hostUrl', url);
 
-String? get hostUrl => _get<String>('hostUrl');
-
-String? get apiBaseUrl => hostUrl == null ? null : '$hostUrl/api';
-
 set apiToken(String? token) =>
     token == null ? _delete('apiToken') : _set('apiToken', token);
 
@@ -41,4 +37,13 @@ set volume(double volume) => _set('volume', volume);
 
 double get volume => _get<double>('volume') ?? 0.7;
 
+String get hostUrl => 'https://pfadi-nuenenen.ch';
+
 String get defaultImageUrl => '$hostUrl/images/unknown-album.png';
+
+String get apiBaseUrl => '$hostUrl/node';
+
+String get apiUrlBiber => '$apiBaseUrl/214/json';
+String get apiUrlWolf => '$apiBaseUrl/215/json';
+String get apiUrlAetna => '$apiBaseUrl/203/json';
+String get apiUrlSaturn => '$apiBaseUrl/213/json';
