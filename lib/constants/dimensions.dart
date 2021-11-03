@@ -7,7 +7,7 @@ class AppDimensions {
   static const double verticalPadding = 18.0;
 
   static BorderRadius inputBorderRadius = BorderRadius.circular(10.0);
-  static EdgeInsets inputPadding = const EdgeInsets.symmetric(
+  static EdgeInsets inputPadding = EdgeInsets.symmetric(
     horizontal: 18,
     vertical: 12.0,
   );
