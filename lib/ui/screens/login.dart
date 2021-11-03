@@ -1,11 +1,15 @@
-import 'package:nuenenen_app/constants/dimensions.dart';
-import 'package:nuenenen_app/providers/auth_provider.dart';
-import 'package:nuenenen_app/ui/screens/data_loading.dart';
-import 'package:nuenenen_app/ui/widgets/spinner.dart';
-import 'package:nuenenen_app/utils/preferences.dart' as preferences;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import 'package:nuenenen_app/constants/dimensions.dart';
+
+import 'package:nuenenen_app/providers/auth_provider.dart';
+
+import 'package:nuenenen_app/ui/screens/data_loading.dart';
+import 'package:nuenenen_app/ui/widgets/spinner.dart';
+
+import 'package:nuenenen_app/utils/preferences.dart' as preferences;
 
 class LoginScreen extends StatefulWidget {
   static const routeName = '/login';
