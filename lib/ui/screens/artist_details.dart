@@ -1,16 +1,18 @@
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart' hide AppBar;
+import 'package:provider/provider.dart';
 
 import 'package:nuenenen_app/models/artist.dart';
 import 'package:nuenenen_app/models/song.dart';
+
 import 'package:nuenenen_app/providers/song_provider.dart';
+
 import 'package:nuenenen_app/ui/widgets/app_bar.dart';
 import 'package:nuenenen_app/ui/widgets/bottom_space.dart';
 import 'package:nuenenen_app/ui/widgets/song_list_buttons.dart';
 import 'package:nuenenen_app/ui/widgets/song_row.dart';
 import 'package:nuenenen_app/ui/widgets/sortable_song_list.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart' hide AppBar;
-import 'package:provider/provider.dart';
 
 OrderBy _currentSortOrder = OrderBy.title;
 
@@ -97,7 +99,7 @@ class _ArtistDetailsScreenState extends State<ArtistDetailsScreen> {
               SliverToBoxAdapter(child: SongListButtons(songs: songs)),
               SliverList(
                 delegate: SliverChildBuilderDelegate(
-                  (_, int index) => SongRow(
+                      (_, int index) => SongRow(
                     song: songs[index],
                     listContext: SongListContext.artist,
                   ),
