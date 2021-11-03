@@ -37,11 +37,11 @@ class _VolumeSliderState extends State<VolumeSlider> {
             padding: const EdgeInsets.symmetric(horizontal: 12),
             child: SliderTheme(
               data: Theme.of(context).sliderTheme.copyWith(
-                    trackHeight: 2,
-                    thumbShape: const RoundSliderThumbShape(
-                      enabledThumbRadius: 6,
-                    ),
-                  ),
+                trackHeight: 2,
+                thumbShape: const RoundSliderThumbShape(
+                  enabledThumbRadius: 6,
+                ),
+              ),
               child: Slider(
                 min: 0.0,
                 max: 1.0,
