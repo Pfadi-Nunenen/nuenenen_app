@@ -146,16 +146,16 @@ class LyricsPane extends StatelessWidget {
   Widget build(BuildContext context) {
     return lyrics == null || lyrics == ''
         ? const Padding(
-            padding: const EdgeInsets.only(top: 16),
-            child: const Text(
-              'No lyrics available.',
-              style: const TextStyle(color: Colors.white54),
-            ),
-          )
+      padding: const EdgeInsets.only(top: 16),
+      child: const Text(
+        'No lyrics available.',
+        style: const TextStyle(color: Colors.white54),
+      ),
+    )
         : InfoHtml(
-            content: lyrics!,
-            style: Style(fontSize: FontSize.larger),
-          );
+      content: lyrics!,
+      style: Style(fontSize: FontSize.larger),
+    );
   }
 }
 
