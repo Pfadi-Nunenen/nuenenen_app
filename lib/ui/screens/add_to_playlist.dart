@@ -42,7 +42,7 @@ class AddToPlaylistScreen extends StatelessWidget {
                 navigationBar!,
                 SliverList(
                   delegate: SliverChildBuilderDelegate(
-                    (BuildContext context, int index) {
+                        (BuildContext context, int index) {
                       Playlist playlist = provider.standardPlaylists[index];
 
                       return PlaylistRow(
