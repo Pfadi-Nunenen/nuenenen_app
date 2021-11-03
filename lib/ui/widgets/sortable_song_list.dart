@@ -1,6 +1,7 @@
-import 'package:nuenenen_app/models/song.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'package:nuenenen_app/models/song.dart';
 
 enum OrderBy {
   trackNumber,
@@ -54,17 +55,17 @@ class SortButton extends StatelessWidget {
             actions: options.entries
                 .map(
                   (entry) => CupertinoActionSheetAction(
-                    onPressed: () {
-                      _currentOrder = entry.key;
-                      onActionSheetActionPressed?.call(entry.key);
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      (entry.key == _currentOrder ? '✓ ' : ' ') + entry.value,
-                      style: const TextStyle(color: Colors.white70),
-                    ),
-                  ),
-                )
+                onPressed: () {
+                  _currentOrder = entry.key;
+                  onActionSheetActionPressed?.call(entry.key);
+                  Navigator.pop(context);
+                },
+                child: Text(
+                  (entry.key == _currentOrder ? '✓ ' : ' ') + entry.value,
+                  style: const TextStyle(color: Colors.white70),
+                ),
+              ),
+            )
                 .toList(),
           ),
         );
