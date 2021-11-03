@@ -8,10 +8,10 @@ import 'package:http/http.dart' as Http;
 enum HttpMethod { get, post, patch, put, delete }
 
 Future<dynamic> request(
-  HttpMethod method,
-  String path, {
-  Object data = const {},
-}) async {
+    HttpMethod method,
+    String path, {
+      Object data = const {},
+    }) async {
   late Http.Response response;
 
   Uri uri = Uri.parse('${preferences.apiBaseUrl}/$path');
@@ -50,7 +50,7 @@ Future<dynamic> request(
       break;
     case HttpMethod.delete:
       response =
-          await Http.delete(uri, headers: headers, body: json.encode(data));
+      await Http.delete(uri, headers: headers, body: json.encode(data));
       break;
     default:
       throw ArgumentError.value(method);
