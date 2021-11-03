@@ -1,12 +1,13 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart' hide AppBar;
+import 'package:provider/provider.dart';
+
 import 'package:nuenenen_app/constants/dimensions.dart';
 import 'package:nuenenen_app/providers/interaction_provider.dart';
 import 'package:nuenenen_app/ui/widgets/app_bar.dart';
 import 'package:nuenenen_app/ui/widgets/bottom_space.dart';
 import 'package:nuenenen_app/ui/widgets/song_list_buttons.dart';
 import 'package:nuenenen_app/ui/widgets/song_row.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart' hide AppBar;
-import 'package:provider/provider.dart';
 
 class FavoritesScreen extends StatelessWidget {
   static const routeName = '/favorites';
@@ -77,7 +78,7 @@ class FavoritesScreen extends StatelessWidget {
               ),
               SliverList(
                 delegate: SliverChildBuilderDelegate(
-                  (_, int index) {
+                      (_, int index) {
                     return Dismissible(
                       direction: DismissDirection.endToStart,
                       onDismissed: (DismissDirection direction) =>
