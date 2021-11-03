@@ -1,3 +1,7 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart' hide AppBar;
+import 'package:provider/provider.dart';
+
 import 'package:nuenenen_app/constants/dimensions.dart';
 import 'package:nuenenen_app/models/song.dart';
 import 'package:nuenenen_app/providers/cache_provider.dart';
@@ -6,9 +10,6 @@ import 'package:nuenenen_app/ui/widgets/bottom_space.dart';
 import 'package:nuenenen_app/ui/widgets/song_list_buttons.dart';
 import 'package:nuenenen_app/ui/widgets/song_row.dart';
 import 'package:nuenenen_app/ui/widgets/sortable_song_list.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart' hide AppBar;
-import 'package:provider/provider.dart';
 
 class DownloadedScreen extends StatefulWidget {
   static const routeName = '/downloaded';
@@ -96,7 +97,7 @@ class _DownloadedScreenState extends State<DownloadedScreen> {
               SliverToBoxAdapter(child: SongListButtons(songs: songs)),
               SliverList(
                 delegate: SliverChildBuilderDelegate(
-                  (_, int index) {
+                      (_, int index) {
                     return Dismissible(
                       direction: DismissDirection.endToStart,
                       onDismissed: (DismissDirection direction) =>
