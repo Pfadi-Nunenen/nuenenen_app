@@ -1,12 +1,16 @@
-import 'package:nuenenen_app/models/album.dart';
-import 'package:nuenenen_app/providers/album_provider.dart';
-import 'package:nuenenen_app/router.dart';
-import 'package:nuenenen_app/ui/widgets/album_thumbnail.dart';
-import 'package:nuenenen_app/ui/widgets/bottom_space.dart';
-import 'package:nuenenen_app/ui/widgets/typography.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import 'package:nuenenen_app/models/album.dart';
+
+import 'package:nuenenen_app/providers/album_provider.dart';
+
+import 'package:nuenenen_app/router.dart';
+
+import 'package:nuenenen_app/ui/widgets/album_thumbnail.dart';
+import 'package:nuenenen_app/ui/widgets/bottom_space.dart';
+import 'package:nuenenen_app/ui/widgets/typography.dart';
 
 class AlbumsScreen extends StatefulWidget {
   static const routeName = '/albums';
@@ -48,7 +52,7 @@ class _AlbumsScreenState extends State<AlbumsScreen> {
             ),
             SliverList(
               delegate: SliverChildBuilderDelegate(
-                (BuildContext context, int index) {
+                    (BuildContext context, int index) {
                   Album album = _albums[index];
                   return Container(
                     decoration: BoxDecoration(
@@ -62,7 +66,7 @@ class _AlbumsScreenState extends State<AlbumsScreen> {
                       child: ListTile(
                         leading: AlbumThumbnail(album: album, asHero: true),
                         title:
-                            Text(album.name, overflow: TextOverflow.ellipsis),
+                        Text(album.name, overflow: TextOverflow.ellipsis),
                         subtitle: Text(
                           album.artist.name,
                           overflow: TextOverflow.ellipsis,
