@@ -1,12 +1,13 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 import 'package:nuenenen_app/models/artist.dart';
 import 'package:nuenenen_app/providers/artist_provider.dart';
 import 'package:nuenenen_app/router.dart';
 import 'package:nuenenen_app/ui/widgets/artist_thumbnail.dart';
 import 'package:nuenenen_app/ui/widgets/bottom_space.dart';
 import 'package:nuenenen_app/ui/widgets/typography.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class ArtistsScreen extends StatefulWidget {
   static const routeName = '/artists';
@@ -47,7 +48,7 @@ class _ArtistsScreenState extends State<ArtistsScreen> {
             ),
             SliverList(
               delegate: SliverChildBuilderDelegate(
-                (BuildContext context, int index) {
+                    (BuildContext context, int index) {
                   Artist artist = _artists[index];
                   return InkWell(
                     onTap: () => widget.router.gotoArtistDetailsScreen(
