@@ -1,8 +1,9 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
 import 'package:nuenenen_app/models/album.dart';
 import 'package:nuenenen_app/router.dart';
 import 'package:nuenenen_app/ui/widgets/album_thumbnail.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 class AlbumCard extends StatefulWidget {
   final Album album;
