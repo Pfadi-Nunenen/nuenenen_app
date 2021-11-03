@@ -4,12 +4,12 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 class Spinner extends StatelessWidget {
   final double size;
 
-  const Spinner({Key? key, this.size = 32.0}) : super(key: key);
+  const Spinner({Key? key, this.size = 60.0}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SpinKitFadingCube(
-      color: Colors.white,
+      color: Colors.pink,
       size: size,
     );
   }
@@ -18,18 +18,15 @@ class Spinner extends StatelessWidget {
 class ContainerWithSpinner extends StatelessWidget {
   final double spinnerSize;
 
-  const ContainerWithSpinner({Key? key, this.spinnerSize = 32.0})
-      : super(key: key);
+  const ContainerWithSpinner({Key? key, this.spinnerSize = 60.0}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Center(child: Spinner(size: spinnerSize)),
-        ],
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Center(child: Spinner(size: spinnerSize)),
+      ],
     );
   }
 }
