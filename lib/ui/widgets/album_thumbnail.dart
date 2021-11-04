@@ -33,9 +33,9 @@ class AlbumThumbnail extends StatelessWidget {
       borderRadius: BorderRadius.circular(borderRadius),
       child: asHero
           ? Hero(
-              tag: 'album-hero-${album.id}',
-              child: image,
-            )
+        tag: 'album-hero-${album.id}',
+        child: image,
+      )
           : image,
     );
   }
