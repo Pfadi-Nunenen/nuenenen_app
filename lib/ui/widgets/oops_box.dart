@@ -47,7 +47,7 @@ class OopsBox extends StatelessWidget {
                       rootNavigator: true,
                     ).pushNamedAndRemoveUntil(
                       LoginScreen.routeName,
-                      (_) => false,
+                          (_) => false,
                     );
                   },
                   child: const Text(
