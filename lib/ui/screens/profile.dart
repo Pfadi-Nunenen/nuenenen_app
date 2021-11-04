@@ -166,7 +166,7 @@ class LogOutButton extends StatelessWidget {
                         rootNavigator: true,
                       ).pushNamedAndRemoveUntil(
                         LoginScreen.routeName,
-                        (_) => false,
+                            (_) => false,
                       );
                     },
                   ),
