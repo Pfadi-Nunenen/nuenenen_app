@@ -51,7 +51,7 @@ class _PlaylistsScreenState extends State<PlaylistsScreen> {
                 navigationBar!,
                 SliverList(
                   delegate: SliverChildBuilderDelegate(
-                    (BuildContext context, int index) {
+                        (BuildContext context, int index) {
                       Playlist playlist = provider.playlists[index];
 
                       return Dismissible(
@@ -96,9 +96,9 @@ class _PlaylistsScreenState extends State<PlaylistsScreen> {
   }
 
   Future<bool> confirmDelete(
-    BuildContext context, {
-    required Playlist playlist,
-  }) async {
+      BuildContext context, {
+        required Playlist playlist,
+      }) async {
     return await showCupertinoDialog(
       context: context,
       builder: (BuildContext context) {
