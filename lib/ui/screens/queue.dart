@@ -56,8 +56,8 @@ class QueueScreen extends StatelessWidget {
                       direction: DismissDirection.endToStart,
                       onDismissed: (DismissDirection direction) =>
                           provider.removeFromQueue(
-                        song: provider.queuedSongs[index],
-                      ),
+                            song: provider.queuedSongs[index],
+                          ),
                       background: Container(
                         alignment: AlignmentDirectional.centerEnd,
                         color: Colors.red,
