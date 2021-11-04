@@ -33,7 +33,7 @@ class SimpleSongList extends StatelessWidget {
             child: Heading5(text: headingText!),
           ),
         ...songs.map(
-          (song) => SongRow(
+              (song) => SongRow(
             song: song,
             bordered: bordered,
             padding: const EdgeInsets.symmetric(horizontal: 0),
