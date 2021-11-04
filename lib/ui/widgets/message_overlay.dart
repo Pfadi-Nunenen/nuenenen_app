@@ -62,13 +62,13 @@ class MessageOverlay extends StatelessWidget {
 }
 
 void showOverlay(
-  BuildContext context, {
-  String? caption,
-  String? message,
-  IconData icon = CupertinoIcons.check_mark_circled_solid,
-  Color iconColor = Colors.white30,
-  Duration? timeOut = const Duration(seconds: 2),
-}) {
+    BuildContext context, {
+      String? caption,
+      String? message,
+      IconData icon = CupertinoIcons.check_mark_circled_solid,
+      Color iconColor = Colors.white30,
+      Duration? timeOut = const Duration(seconds: 2),
+    }) {
   late OverlayEntry _entry;
 
   _entry = OverlayEntry(builder: (_) {
