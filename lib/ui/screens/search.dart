@@ -46,24 +46,24 @@ class _SearchScreenState extends State<SearchScreen> {
   }
 
   _search(String keywords) => EasyDebounce.debounce(
-        'search',
-        const Duration(microseconds: 500), // typing on a phone isn't that fast
+    'search',
+    const Duration(microseconds: 500), // typing on a phone isn't that fast
         () async {
-          if (keywords.length == 0) return _resetSearch();
-          if (keywords.length < 2) return;
+      if (keywords.length == 0) return _resetSearch();
+      if (keywords.length < 2) return;
 
-          SearchResult result = await searchProvider.searchExcerpts(
-            keywords: keywords,
-          );
-
-          setState(() {
-            _initial = false;
-            _songs = result.songs;
-            _albums = result.albums;
-            _artists = result.artists;
-          });
-        },
+      SearchResult result = await searchProvider.searchExcerpts(
+        keywords: keywords,
       );
+
+      setState(() {
+        _initial = false;
+        _songs = result.songs;
+        _albums = result.albums;
+        _artists = result.artists;
+      });
+    },
+  );
 
   Widget get noResults {
     return Padding(
@@ -156,7 +156,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       else
                         HorizontalCardScroller(
                           cards:
-                              _albums.map((album) => AlbumCard(album: album)),
+                          _albums.map((album) => AlbumCard(album: album)),
                         ),
                       const SizedBox(height: 32),
                       Padding(
@@ -171,7 +171,7 @@ class _SearchScreenState extends State<SearchScreen> {
                           cards: _artists
                               .map((artist) => ArtistCard(artist: artist)),
                         ),
-                      const BottomSpace(),
+                      const BottomSpace(asSliver: false),
                     ],
                   ),
                 ),
