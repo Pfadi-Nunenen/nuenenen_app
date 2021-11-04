@@ -21,7 +21,7 @@ class HorizontalCardScroller extends StatelessWidget {
         if (headingText != null)
           Padding(
             padding:
-                const EdgeInsets.only(left: AppDimensions.horizontalPadding),
+            const EdgeInsets.only(left: AppDimensions.horizontalPadding),
             child: Heading5(text: headingText!),
           ),
         SingleChildScrollView(
@@ -30,7 +30,7 @@ class HorizontalCardScroller extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               ...cards.expand(
-                (card) => <Widget>[
+                    (card) => <Widget>[
                   const SizedBox(width: AppDimensions.horizontalPadding),
                   card,
                 ],
