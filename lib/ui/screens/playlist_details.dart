@@ -81,32 +81,32 @@ class _PlaylistDetailsScreen extends State<PlaylistDetailsScreen> {
               else
                 SliverList(
                   delegate: SliverChildBuilderDelegate(
-                    (_, int index) {
+                        (_, int index) {
                       final bool dismissible = populatedPlaylist.isStandard;
                       final Song song = populatedPlaylist.songs[index];
                       return dismissible
                           ? Dismissible(
-                              direction: DismissDirection.endToStart,
-                              onDismissed: (DismissDirection direction) {
-                                playlistProvider.removeSongFromPlaylist(
-                                  song: song,
-                                  playlist: populatedPlaylist,
-                                );
-                              },
-                              background: Container(
-                                alignment: AlignmentDirectional.centerEnd,
-                                color: Colors.red,
-                                child: const Padding(
-                                  padding: EdgeInsets.only(right: 28),
-                                  child: Icon(CupertinoIcons.delete_simple),
-                                ),
-                              ),
-                              key: ValueKey(song),
-                              child: SongRow(
-                                key: ValueKey(song),
-                                song: song,
-                              ),
-                            )
+                        direction: DismissDirection.endToStart,
+                        onDismissed: (DismissDirection direction) {
+                          playlistProvider.removeSongFromPlaylist(
+                            song: song,
+                            playlist: populatedPlaylist,
+                          );
+                        },
+                        background: Container(
+                          alignment: AlignmentDirectional.centerEnd,
+                          color: Colors.red,
+                          child: const Padding(
+                            padding: EdgeInsets.only(right: 28),
+                            child: Icon(CupertinoIcons.delete_simple),
+                          ),
+                        ),
+                        key: ValueKey(song),
+                        child: SongRow(
+                          key: ValueKey(song),
+                          song: song,
+                        ),
+                      )
                           : SongRow(song: song);
                     },
                     childCount: playlist.songs.length,
