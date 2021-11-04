@@ -43,7 +43,7 @@ class SongListButtons extends StatelessWidget {
             icon: CupertinoIcons.shuffle,
             label: 'Shuffle All',
             onPressed: () async =>
-                await audio.replaceQueue(songs, shuffle: true),
+            await audio.replaceQueue(songs, shuffle: true),
           ),
         ],
       ),
