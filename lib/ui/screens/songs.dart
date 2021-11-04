@@ -54,7 +54,7 @@ class _SongsScreenState extends State<SongsScreen> {
               SliverToBoxAdapter(child: SongListButtons(songs: songs)),
               SliverList(
                 delegate: SliverChildBuilderDelegate(
-                  (_, int index) => SongRow(
+                      (_, int index) => SongRow(
                     song: songs[index],
                     listContext: SongListContext.allSongs,
                   ),
