@@ -52,14 +52,14 @@ class _PlaylistRowState extends State<PlaylistRow> with StreamSubscriber {
   @override
   Widget build(BuildContext context) {
     String subtitle =
-        _playlist.isSmart ? 'Smart playlist' : 'Standard playlist';
+    _playlist.isSmart ? 'Smart playlist' : 'Standard playlist';
 
     if (_playlist.populated) {
       subtitle += _playlist.isEmpty
           ? ' • Empty'
           : ' • ${_playlist.songs.length} song'.pluralize(
-              _playlist.songs.length,
-            );
+        _playlist.songs.length,
+      );
     }
 
     return InkWell(
@@ -95,19 +95,19 @@ class PlaylistThumbnail extends StatelessWidget {
 
     return playlist.populated
         ? ClipRRect(
-            borderRadius: BorderRadius.circular(6),
-            child: CachedNetworkImage(
-              fit: BoxFit.cover,
-              width: 40,
-              height: 40,
-              placeholder: (_, __) => defaultImage,
-              errorWidget: (_, __, ___) => defaultImage,
-              imageUrl: thumbnailUrl ?? preferences.defaultImageUrl,
-            ),
-          )
+      borderRadius: BorderRadius.circular(6),
+      child: CachedNetworkImage(
+        fit: BoxFit.cover,
+        width: 40,
+        height: 40,
+        placeholder: (_, __) => defaultImage,
+        errorWidget: (_, __, ___) => defaultImage,
+        imageUrl: thumbnailUrl ?? preferences.defaultImageUrl,
+      ),
+    )
         : const Icon(
-            CupertinoIcons.music_note_list,
-            color: Colors.white54,
-          );
+      CupertinoIcons.music_note_list,
+      color: Colors.white54,
+    );
   }
 }
