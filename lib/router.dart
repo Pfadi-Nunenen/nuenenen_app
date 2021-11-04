@@ -18,10 +18,12 @@ import 'package:nuenenen_app/ui/screens/home.dart';
 import 'package:nuenenen_app/ui/screens/initial.dart';
 import 'package:nuenenen_app/ui/screens/library.dart';
 import 'package:nuenenen_app/ui/screens/login.dart';
-import 'package:nuenenen_app/ui/screens/main.dart';
 import 'package:nuenenen_app/ui/screens/now_playing.dart';
 import 'package:nuenenen_app/ui/screens/playlist_details.dart';
 import 'package:nuenenen_app/ui/screens/playlists.dart';
+import 'package:nuenenen_app/ui/screens/profile.dart';
+import 'package:nuenenen_app/ui/screens/queue.dart';
+import 'package:nuenenen_app/ui/screens/root.dart';
 import 'package:nuenenen_app/ui/screens/search.dart';
 import 'package:nuenenen_app/ui/screens/song_action_sheet.dart';
 import 'package:nuenenen_app/ui/screens/songs.dart';
@@ -32,7 +34,7 @@ class AppRouter {
   static Map<String, Widget Function(BuildContext)> routes = {
     InitialScreen.routeName: (_) => const InitialScreen(),
     LoginScreen.routeName: (_) => const LoginScreen(),
-    MainScreen.routeName: (_) => const MainScreen(),
+    RootScreen.routeName: (_) => const RootScreen(),
     HomeScreen.routeName: (_) => const HomeScreen(),
     SearchScreen.routeName: (_) => const SearchScreen(),
     LibraryScreen.routeName: (_) => const LibraryScreen(),
@@ -44,35 +46,38 @@ class AppRouter {
     AlbumDetailsScreen.routeName: (_) => const AlbumDetailsScreen(),
     ArtistDetailsScreen.routeName: (_) => const ArtistDetailsScreen(),
     PlaylistDetailsScreen.routeName: (_) => const PlaylistDetailsScreen(),
+    QueueScreen.routeName: (_) => const QueueScreen(),
     AddToPlaylistScreen.routeName: (_) => const AddToPlaylistScreen(),
+    ProfileScreen.routeName: (_) => const ProfileScreen(),
     DataLoadingScreen.routeName: (_) => const DataLoadingScreen(),
     DownloadedScreen.routeName: (_) => const DownloadedScreen(),
   };
 
   Future<void> gotoAlbumDetailsScreen(
-    BuildContext context, {
-    required Album album,
-  }) async {
-    await Navigator.of(context, rootNavigator: true).pushNamed(
-      AlbumDetailsScreen.routeName,
-      arguments: album,
-    );
+      BuildContext context, {
+        required Album album,
+      }) async {
+    await Navigator.of(context).push(CupertinoPageRoute(
+      builder: (_) => const AlbumDetailsScreen(),
+      settings: RouteSettings(arguments: album),
+    ));
   }
 
   Future<void> gotoArtistDetailsScreen(
-    BuildContext context, {
-    required Artist artist,
-  }) async {
-    await Navigator.of(context, rootNavigator: true).pushNamed(
-      ArtistDetailsScreen.routeName,
-      arguments: artist,
-    );
+      BuildContext context, {
+        required Artist artist,
+      }) async {
+    await Navigator.of(context).push(CupertinoPageRoute(
+      builder: (_) => const ArtistDetailsScreen(),
+      settings: RouteSettings(arguments: artist),
+    ));
   }
 
   Future<void> openNowPlayingScreen(BuildContext context) async {
     await showModalBottomSheet(
       context: context,
       isScrollControlled: true,
+      useRootNavigator: true,
       backgroundColor: Colors.transparent,
       builder: (BuildContext context) {
         return Container(
@@ -87,6 +92,7 @@ class AppRouter {
     await showModalBottomSheet(
       context: context,
       isScrollControlled: true,
+      useRootNavigator: true,
       backgroundColor: Colors.transparent,
       builder: (BuildContext context) {
         return Container(
@@ -98,9 +104,9 @@ class AppRouter {
   }
 
   Future<void> showActionSheet(
-    BuildContext context, {
-    required Song song,
-  }) async {
+      BuildContext context, {
+        required Song song,
+      }) async {
     showModalBottomSheet<void>(
       useRootNavigator: true, // covering everything else
       context: context,
