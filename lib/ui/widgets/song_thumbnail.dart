@@ -22,22 +22,22 @@ class SongThumbnail extends StatelessWidget {
   Widget build(BuildContext context) {
     return this.playing
         ? PlayingSongThumbnail(
-            width: width,
-            height: height,
-            song: song,
-            borderRadius: borderRadius,
-          )
+      width: width,
+      height: height,
+      song: song,
+      borderRadius: borderRadius,
+    )
         : ClipRRect(
-            borderRadius: BorderRadius.circular(borderRadius),
-            child: CachedNetworkImage(
-              fit: BoxFit.cover,
-              width: width,
-              height: height,
-              placeholder: (_, __) => defaultImage,
-              errorWidget: (_, __, ___) => defaultImage,
-              imageUrl: song.imageUrl ?? preferences.defaultImageUrl,
-            ),
-          );
+      borderRadius: BorderRadius.circular(borderRadius),
+      child: CachedNetworkImage(
+        fit: BoxFit.cover,
+        width: width,
+        height: height,
+        placeholder: (_, __) => defaultImage,
+        errorWidget: (_, __, ___) => defaultImage,
+        imageUrl: song.imageUrl ?? preferences.defaultImageUrl,
+      ),
+    );
   }
 
   double get width {
