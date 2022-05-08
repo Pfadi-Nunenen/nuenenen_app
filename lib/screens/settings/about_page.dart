@@ -12,33 +12,29 @@ class AboutPage extends StatefulWidget {
 }
 
 class _AboutPageState extends State<AboutPage> {
-  String devicePlatform = "";
-  String deviceName = "";
+  String devicePlatform = "Unbekannt";
+  String deviceName = "Unbekannt";
 
   @override
   void initState() {
     super.initState();
-    if (Platform.isIOS) {
-      devicePlatform = "iOS";
-    } else if (Platform.isAndroid) {
-      devicePlatform = "Android";
+
+    try {
+      if(Platform.isIOS) {
+        devicePlatform = "iOS";
+      } else if(Platform.isAndroid) {
+        devicePlatform = "Android";
+      }
+      deviceName = Platform.localHostname;
+    } catch (e) {
+      print(e);
     }
-    deviceName = Platform.localHostname;
   }
 
   launchContributeUrl() async {
-    const url = 'https://github.com/Vento-Nuenenen/nuenenen/';
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw '$url kann nicht geöffnet werden.';
-    }
-  }
-
-  launchGuidelinesUrl() async {
-    const url = 'https://github.com/Vento-Nuenenen/nuenenen/wiki/Contributing';
-    if (await canLaunch(url)) {
-      await launch(url);
+    var url = Uri(scheme: "https", host: "github.com", path: "/Pfadi-Nunenen/nuenenen_app");
+    if(await canLaunchUrl(url)) {
+      await launchUrl(url);
     } else {
       throw '$url kann nicht geöffnet werden.';
     }
@@ -140,8 +136,8 @@ class _AboutPageState extends State<AboutPage> {
                                 fontFamily: "Product Sans",
                                 color: Colors.grey)),
                         onTap: () {
-                          const url = 'https://github.com/Vento-Nuenenen';
-                          launch(url);
+                          var url = Uri(scheme: "https", host: "github.com", path: "/Pfadi-Nunenen");
+                          launchUrl(url);
                         },
                       ),
                     ],
