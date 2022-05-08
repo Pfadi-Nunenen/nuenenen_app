@@ -20,7 +20,7 @@ dependencies:
   flutter_html: ^2.2.1
   url_launcher: ^6.0.18
   shared_preferences: ^2.0.13
-  fluttertoast: ^8.0.8
+  fluttertoast: ^8.0.9
 
 dev_dependencies:
   flutter_test:
