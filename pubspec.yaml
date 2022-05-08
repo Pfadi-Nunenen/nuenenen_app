@@ -16,7 +16,7 @@ dependencies:
   fluro: ^2.0.3
   http: ^0.13.4
   firebase_messaging: ^11.2.15
-  permission_handler: ^8.3.0
+  permission_handler: ^9.0.0
   flutter_html: ^2.2.1
   url_launcher: ^6.0.18
   shared_preferences: ^2.0.13
