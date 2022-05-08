@@ -3,5 +3,9 @@ class Kastenzettel {
   late String content;
   String coronaInfo;
 
-  Kastenzettel(this.title, this.content, this.coronaInfo);
+  Kastenzettel(
+      this.title,
+      this.content,
+      this.coronaInfo
+  );
 }
