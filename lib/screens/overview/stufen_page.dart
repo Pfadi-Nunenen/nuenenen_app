@@ -6,10 +6,10 @@ import 'package:nuenenen/user_info.dart';
 
 class StufenPage extends StatefulWidget {
   @override
-  _StufenPage createState() => _StufenPage();
+  _StufenPageState createState() => _StufenPageState();
 }
 
-class _StufenPage extends State<StufenPage> {
+class _StufenPageState extends State<StufenPage> {
   @override
   Widget build(BuildContext context) {
     return NestedScrollView(
