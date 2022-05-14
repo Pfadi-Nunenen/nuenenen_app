@@ -26,7 +26,7 @@ class _AboutPageState extends State<AboutPage> {
         devicePlatform = "Android";
       }
       deviceName = Platform.localHostname;
-    } catch (e) {
+    } catch(e) {
       print(e);
     }
   }
