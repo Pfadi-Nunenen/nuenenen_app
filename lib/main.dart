@@ -8,53 +8,56 @@ import 'package:nuenenen/screens/kastenzettel/aetna_page.dart';
 import 'package:nuenenen/screens/kastenzettel/saturn_page.dart';
 import 'package:nuenenen/screens/overview/stufen_page.dart';
 import 'package:nuenenen/screens/settings/about_page.dart';
-import 'package:nuenenen/screens/tools/qr_page.dart';
 import 'package:nuenenen/tab_bar_controller.dart';
 import 'package:nuenenen/theme/theme.dart';
 import 'package:nuenenen/user_info.dart';
 
 void main() {
+  late FirebaseMessaging messaging = FirebaseMessaging.instance;
+
   // Home Routes
   router.define('/home', handler:
-      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return TabBarController();
-  }));
+    Handler(handlerFunc: (BuildContext? context, Map<String, dynamic> params) {
+      return TabBarController();
+    })
+  );
 
   // Settings Routes
   router.define('/about', handler:
-      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return AboutPage();
-  }));
+    Handler(handlerFunc: (BuildContext? context, Map<String, dynamic> params) {
+      return AboutPage();
+    })
+  );
 
   router.define('/stufen', handler:
-      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return StufenPage();
-  }));
+    Handler(handlerFunc: (BuildContext? context, Map<String, dynamic> params) {
+      return StufenPage();
+    })
+  );
 
   router.define('/biber', handler:
-      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return BiberPage();
-  }));
+    Handler(handlerFunc: (BuildContext? context, Map<String, dynamic> params) {
+      return BiberPage();
+    })
+  );
 
   router.define('/wolf', handler:
-      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return WolfPage();
-  }));
+    Handler(handlerFunc: (BuildContext? context, Map<String, dynamic> params) {
+      return WolfPage();
+    })
+  );
 
   router.define('/aetna', handler:
-      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return AetnaPage();
-  }));
+    Handler(handlerFunc: (BuildContext? context, Map<String, dynamic> params) {
+      return AetnaPage();
+    })
+  );
 
   router.define('/saturn', handler:
-      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return SaturnPage();
-  }));
-
-  router.define('/qr-reader', handler:
-      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return QRReader();
-  }));
+    Handler(handlerFunc: (BuildContext? context, Map<String, dynamic> params) {
+      return SaturnPage();
+    })
+  );
 
   runApp(MaterialApp(
     title: "Pfadi Nünenen",
@@ -64,7 +67,6 @@ void main() {
     theme: mainTheme,
   ));
 
-  // Subscribe all devices to a general notification chanel
-  FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
-  _firebaseMessaging.subscribeToTopic('any');
+  FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
+  _firebaseMessaging.subscribeToTopic("any");
 }
