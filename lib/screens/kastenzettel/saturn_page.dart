@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:flutter_html/style.dart';
 import 'package:http/http.dart' as http;
 import 'package:nuenenen/models/kastenzettel.dart';
 import 'package:nuenenen/theme/colors.dart';
@@ -12,10 +11,10 @@ import 'package:url_launcher/url_launcher.dart';
 
 class SaturnPage extends StatefulWidget {
   @override
-  _SaturnPage createState() => _SaturnPage();
+  _SaturnPageState createState() => _SaturnPageState();
 }
 
-class _SaturnPage extends State<SaturnPage> {
+class _SaturnPageState extends State<SaturnPage> {
   List<Kastenzettel> kastenzettelList = [];
   var isLoading = false;
 
@@ -42,7 +41,8 @@ class _SaturnPage extends State<SaturnPage> {
             kastenzettelList.add(Kastenzettel(
                 json['title'].toString(),
                 json['body']['und'][0]['value'].toString(),
-                json['field_corona_info']['und'][0]['value'].toString()));
+                json['field_corona_info']['und'][0]['value'].toString()
+            ));
           });
         }
       });
@@ -67,59 +67,59 @@ class _SaturnPage extends State<SaturnPage> {
       ),
       body: isLoading
           ? Container(
-              color: currBackgroundColor,
-              child: Center(
-                child: CircularProgressIndicator(),
-              ))
+          color: currBackgroundColor,
+          child: Center(
+            child: CircularProgressIndicator(),
+          ))
           : RefreshIndicator(
-              onRefresh: onRefresh,
-              color: darkTextColor,
-              backgroundColor: currBackgroundColor,
-              child: Container(
-                color: currBackgroundColor,
-                padding: EdgeInsets.all(16.0),
-                child: Container(
-                  child: Column(
-                    children: <Widget>[
-                      Text(
-                        kastenzettelList[0].title.toString(),
-                        style: TextStyle(
-                            color: currTextColor,
-                            fontSize: 25.0,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Html(
-                        data: kastenzettelList[0].content,
-                        style: {
-                          "html": Style(
-                              whiteSpace: WhiteSpace.PRE, color: currTextColor),
-                        },
-                        onLinkTap: (url) async {
-                          if (await canLaunch(url)) {
-                            await launch(url, forceSafariVC: false);
-                          } else {
-                            throw 'Could not launch $url';
-                          }
-                        },
-                      ),
-                      Html(
-                        data: kastenzettelList[0].coronaInfo,
-                        style: {
-                          "html": Style(color: currTextColor),
-                        },
-                        onLinkTap: (url) async {
-                          if (await canLaunch(url)) {
-                            await launch(url, forceSafariVC: false);
-                          } else {
-                            throw 'Could not launch $url';
-                          }
-                        },
-                      ),
-                    ],
-                  ),
+        onRefresh: onRefresh,
+        color: darkTextColor,
+        backgroundColor: currBackgroundColor,
+        child: Container(
+          color: currBackgroundColor,
+          padding: EdgeInsets.all(16.0),
+          child: Container(
+            child: Column(
+              children: <Widget>[
+                Text(
+                  kastenzettelList[0].title.toString(),
+                  style: TextStyle(
+                      color: currTextColor,
+                      fontSize: 25.0,
+                      fontWeight: FontWeight.bold),
                 ),
-              ),
+                Html(
+                  data: kastenzettelList[0].content,
+                  style: {
+                    "html": Style(
+                        whiteSpace: WhiteSpace.PRE, color: currTextColor),
+                  },
+                  onLinkTap: (url, _, __, ___) async {
+                    if (await canLaunch(url!)) {
+                      await launch(url, forceSafariVC: false);
+                    } else {
+                      throw 'Could not launch $url';
+                    }
+                  },
+                ),
+                Html(
+                  data: kastenzettelList[0].coronaInfo,
+                  style: {
+                    "html": Style(color: currTextColor),
+                  },
+                  onLinkTap: (url, _, __, ___) async {
+                    if (await canLaunch(url!)) {
+                      await launch(url, forceSafariVC: false);
+                    } else {
+                      throw 'Could not launch $url';
+                    }
+                  },
+                ),
+              ],
             ),
+          ),
+        ),
+      ),
     );
   }
 }
