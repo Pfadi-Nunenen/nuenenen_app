@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:flutter_html/style.dart';
 import 'package:http/http.dart' as http;
 import 'package:nuenenen/models/kastenzettel.dart';
 import 'package:nuenenen/theme/colors.dart';
@@ -12,10 +11,10 @@ import 'package:url_launcher/url_launcher.dart';
 
 class BiberPage extends StatefulWidget {
   @override
-  _BiberPage createState() => _BiberPage();
+  _BiberPageState createState() => _BiberPageState();
 }
 
-class _BiberPage extends State<BiberPage> {
+class _BiberPageState extends State<BiberPage> {
   List<Kastenzettel> kastenzettelList = [];
   var isLoading = false;
 
@@ -40,16 +39,17 @@ class _BiberPage extends State<BiberPage> {
         for (int i = 0; i < json.length; i++) {
           setState(() {
             kastenzettelList.add(Kastenzettel(
-                json['title'].toString(),
-                json['body']['und'][0]['value'].toString(),
-                json['field_corona_info']['und'][0]['value'].toString()));
+              json['title'].toString(),
+              json['body']['und'][0]['value'].toString(),
+              json['field_corona_info']['und'][0]['value'].toString()
+            ));
           });
         }
       });
       setState(() {
         isLoading = false;
       });
-    } catch (error) {
+    } catch(error) {
       print("Failed to get Kastenzettel - $error");
     }
   }
@@ -67,59 +67,59 @@ class _BiberPage extends State<BiberPage> {
       ),
       body: isLoading
           ? Container(
-              color: currBackgroundColor,
-              child: Center(
-                child: CircularProgressIndicator(),
-              ))
+          color: currBackgroundColor,
+          child: Center(
+            child: CircularProgressIndicator(),
+          ))
           : RefreshIndicator(
-              onRefresh: onRefresh,
-              color: darkTextColor,
-              backgroundColor: currBackgroundColor,
-              child: Container(
-                color: currBackgroundColor,
-                padding: EdgeInsets.all(16.0),
-                child: Container(
-                  child: Column(
-                    children: <Widget>[
-                      Text(
-                        kastenzettelList[0].title.toString(),
-                        style: TextStyle(
-                            color: currTextColor,
-                            fontSize: 25.0,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Html(
-                        data: kastenzettelList[0].content,
-                        style: {
-                          "html": Style(
-                              whiteSpace: WhiteSpace.PRE, color: currTextColor),
-                        },
-                        onLinkTap: (url) async {
-                          if (await canLaunch(url)) {
-                            await launch(url, forceSafariVC: false);
-                          } else {
-                            throw 'Could not launch $url';
-                          }
-                        },
-                      ),
-                      Html(
-                        data: kastenzettelList[0].coronaInfo,
-                        style: {
-                          "html": Style(color: currTextColor),
-                        },
-                        onLinkTap: (url) async {
-                          if (await canLaunch(url)) {
-                            await launch(url, forceSafariVC: false);
-                          } else {
-                            throw 'Could not launch $url';
-                          }
-                        },
-                      ),
-                    ],
-                  ),
+        onRefresh: onRefresh,
+        color: darkTextColor,
+        backgroundColor: currBackgroundColor,
+        child: Container(
+          color: currBackgroundColor,
+          padding: EdgeInsets.all(16.0),
+          child: Container(
+            child: Column(
+              children: <Widget>[
+                Text(
+                  kastenzettelList[0].title.toString(),
+                  style: TextStyle(
+                      color: currTextColor,
+                      fontSize: 25.0,
+                      fontWeight: FontWeight.bold),
                 ),
-              ),
+                Html(
+                  data: kastenzettelList[0].content,
+                  style: {
+                    "html": Style(
+                        whiteSpace: WhiteSpace.PRE, color: currTextColor),
+                  },
+                  onLinkTap: (url, _, __, ___) async {
+                    if(await canLaunch(url!)) {
+                      await launch(url);
+                    } else {
+                      throw 'Could not launch $url';
+                    }
+                  },
+                ),
+                Html(
+                  data: kastenzettelList[0].coronaInfo,
+                  style: {
+                    "html": Style(color: currTextColor),
+                  },
+                  onLinkTap: (url, _, __, ___) async {
+                    if(await canLaunch(url!)) {
+                      await launch(url);
+                    } else {
+                      throw 'Could not launch $url';
+                    }
+                  },
+                ),
+              ],
             ),
+          ),
+        ),
+      ),
     );
   }
 }
