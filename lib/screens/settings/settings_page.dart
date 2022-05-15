@@ -3,6 +3,7 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:nuenenen/theme/colors.dart';
 import 'package:nuenenen/user_info.dart';
@@ -14,7 +15,7 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
-  FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
+  FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
 
   bool darkMode = false;
   bool allowBiberNotification = false;
@@ -43,16 +44,16 @@ class _SettingsPageState extends State<SettingsPage> {
   }
 
   setNotificationChannel(String channelKey, bool state, String what) {
-    if (state == true) {
+    if(state == true) {
       _firebaseMessaging.subscribeToTopic(channelKey);
       Fluttertoast.showToast(
-          msg:
-              "Benachrichtigungen welche ${what} betreffen werden nun angezeigt!");
-    } else if (state == false) {
+          msg: "Benachrichtigungen welche ${what} betreffen werden nun angezeigt!"
+      );
+    } else if(state == false) {
       _firebaseMessaging.unsubscribeFromTopic(channelKey);
       Fluttertoast.showToast(
-          msg:
-              "Benachrichtigungen welche ${what} betreffen werden nicht mehr angezeigt!");
+          msg: "Benachrichtigungen welche ${what} betreffen werden nicht mehr angezeigt!"
+      );
     } else {
       print("WTF have you done? This is impossible...");
     }
