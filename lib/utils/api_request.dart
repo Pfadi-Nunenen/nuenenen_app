@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:nuenenen_app/exceptions/http_response_exception.dart';
-import 'package:nuenenen_app/utils/preferences.dart' as preferences;
+import 'package:nuenenen/exceptions/http_response_exception.dart';
+import 'package:nuenenen/utils/preferences.dart' as preferences;
 import 'package:http/http.dart' as Http;
 
 enum HttpMethod { get, post, patch, put, delete }
