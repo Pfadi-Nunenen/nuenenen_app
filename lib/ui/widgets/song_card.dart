@@ -1,7 +1,7 @@
-import 'package:nuenenen_app/models/song.dart';
-import 'package:nuenenen_app/providers/audio_provider.dart';
-import 'package:nuenenen_app/router.dart';
-import 'package:nuenenen_app/ui/widgets/song_thumbnail.dart';
+import 'package:nuenenen/models/song.dart';
+import 'package:nuenenen/providers/audio_provider.dart';
+import 'package:nuenenen/router.dart';
+import 'package:nuenenen/ui/widgets/song_thumbnail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
