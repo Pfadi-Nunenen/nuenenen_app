@@ -4,10 +4,10 @@
 
 import 'dart:async' as _i3;
 
-import 'package:nuenenen_app/models/album.dart' as _i5;
-import 'package:nuenenen_app/models/artist.dart' as _i6;
-import 'package:nuenenen_app/models/song.dart' as _i7;
-import 'package:nuenenen_app/router.dart' as _i2;
+import 'package:nuenenen/models/album.dart' as _i5;
+import 'package:nuenenen/models/artist.dart' as _i6;
+import 'package:nuenenen/models/song.dart' as _i7;
+import 'package:nuenenen/router.dart' as _i2;
 import 'package:flutter/cupertino.dart' as _i4;
 import 'package:mockito/mockito.dart' as _i1;
 
