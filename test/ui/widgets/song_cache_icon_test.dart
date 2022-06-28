@@ -1,6 +1,6 @@
-import 'package:nuenenen_app/models/song.dart';
-import 'package:nuenenen_app/providers/cache_provider.dart';
-import 'package:nuenenen_app/ui/widgets/song_cache_icon.dart';
+import 'package:nuenenen/models/song.dart';
+import 'package:nuenenen/providers/cache_provider.dart';
+import 'package:nuenenen/ui/widgets/song_cache_icon.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:flutter_test/flutter_test.dart';
