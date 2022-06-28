@@ -1,5 +1,5 @@
-import 'package:nuenenen_app/providers/audio_provider.dart';
-import 'package:nuenenen_app/utils/preferences.dart' as preferences;
+import 'package:nuenenen/providers/audio_provider.dart';
+import 'package:nuenenen/utils/preferences.dart' as preferences;
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
