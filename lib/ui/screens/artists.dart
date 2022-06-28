@@ -2,12 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:nuenenen_app/models/artist.dart';
-import 'package:nuenenen_app/providers/artist_provider.dart';
-import 'package:nuenenen_app/router.dart';
-import 'package:nuenenen_app/ui/widgets/artist_thumbnail.dart';
-import 'package:nuenenen_app/ui/widgets/bottom_space.dart';
-import 'package:nuenenen_app/ui/widgets/typography.dart';
+import 'package:nuenenen/models/artist.dart';
+import 'package:nuenenen/providers/artist_provider.dart';
+import 'package:nuenenen/router.dart';
+import 'package:nuenenen/ui/widgets/artist_thumbnail.dart';
+import 'package:nuenenen/ui/widgets/bottom_space.dart';
+import 'package:nuenenen/ui/widgets/typography.dart';
 
 class ArtistsScreen extends StatefulWidget {
   static const routeName = '/artists';
