@@ -1,5 +1,5 @@
-import 'package:nuenenen_app/models/song.dart';
-import 'package:nuenenen_app/utils/api_request.dart';
+import 'package:nuenenen/models/song.dart';
+import 'package:nuenenen/utils/api_request.dart';
 
 class Track {
   String title;
