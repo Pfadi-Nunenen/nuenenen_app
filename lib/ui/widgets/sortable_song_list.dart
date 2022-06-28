@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:nuenenen_app/models/song.dart';
+import 'package:nuenenen/models/song.dart';
 
 enum OrderBy {
   trackNumber,
