@@ -1,4 +1,4 @@
-import 'package:nuenenen_app/utils/crypto.dart';
+import 'package:nuenenen/utils/crypto.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 class User {
