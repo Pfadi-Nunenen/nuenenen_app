@@ -1,7 +1,10 @@
-import 'package:nuenenen_app/ui/screens/main.dart';
-import 'package:nuenenen_app/ui/widgets/spinner.dart';
+import 'package:nuenenen/providers/auth_provider.dart';
+import 'package:nuenenen/ui/screens/data_loading.dart';
+import 'package:nuenenen/ui/screens/login.dart';
+import 'package:nuenenen/ui/widgets/spinner.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class InitialScreen extends StatefulWidget {
   static const routeName = '/';
@@ -16,14 +19,21 @@ class _InitialScreenState extends State<InitialScreen> {
   @override
   void initState() {
     super.initState();
-    _redirectToHome();
+    _resolveAuthenticatedUser();
   }
 
-  Future<void> _redirectToHome() async {
-    Navigator.of(context).pushReplacement(PageRouteBuilder(
-        pageBuilder: (_, __, ___) => const MainScreen(),
+  Future<void> _resolveAuthenticatedUser() async {
+    context.read<AuthProvider>().tryGetAuthUser().then((user) {
+      Navigator.of(context).pushReplacement(PageRouteBuilder(
+        pageBuilder: (_, __, ___) =>
+        user == null ? const LoginScreen() : const DataLoadingScreen(),
         transitionDuration: Duration.zero,
-    ));
+      ));
+    }, onError: (_) async {
+      await Navigator.of(context, rootNavigator: true).pushReplacementNamed(
+        LoginScreen.routeName,
+      );
+    });
   }
 
   @override
