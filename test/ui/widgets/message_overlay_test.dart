@@ -1,4 +1,4 @@
-import 'package:nuenenen_app/ui/widgets/message_overlay.dart';
+import 'package:nuenenen/ui/widgets/message_overlay.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
