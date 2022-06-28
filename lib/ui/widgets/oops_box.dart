@@ -1,5 +1,5 @@
-import 'package:nuenenen_app/providers/auth_provider.dart';
-import 'package:nuenenen_app/ui/screens/login.dart';
+import 'package:nuenenen/providers/auth_provider.dart';
+import 'package:nuenenen/ui/screens/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
