@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:nuenenen_app/constants/colors.dart';
-import 'package:nuenenen_app/constants/dimensions.dart';
-import 'package:nuenenen_app/utils/full_width_slider_track_shape.dart';
+import 'package:nuenenen/constants/colors.dart';
+import 'package:nuenenen/constants/dimensions.dart';
+import 'package:nuenenen/utils/full_width_slider_track_shape.dart';
 
 ThemeData themeData(BuildContext context) => ThemeData(
   brightness: Brightness.dark,
