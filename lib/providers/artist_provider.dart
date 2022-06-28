@@ -1,5 +1,5 @@
-import 'package:nuenenen_app/models/artist.dart';
-import 'package:nuenenen_app/values/parse_result.dart';
+import 'package:nuenenen/models/artist.dart';
+import 'package:nuenenen/values/parse_result.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 
