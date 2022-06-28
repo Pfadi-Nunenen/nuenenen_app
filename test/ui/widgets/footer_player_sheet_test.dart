@@ -1,10 +1,10 @@
-import 'package:nuenenen_app/extensions/assets_audio_player.dart';
-import 'package:nuenenen_app/models/artist.dart';
-import 'package:nuenenen_app/models/song.dart';
-import 'package:nuenenen_app/providers/audio_provider.dart';
-import 'package:nuenenen_app/providers/song_provider.dart';
-import 'package:nuenenen_app/router.dart';
-import 'package:nuenenen_app/ui/widgets/footer_player_sheet.dart';
+import 'package:nuenenen/extensions/assets_audio_player.dart';
+import 'package:nuenenen/models/artist.dart';
+import 'package:nuenenen/models/song.dart';
+import 'package:nuenenen/providers/audio_provider.dart';
+import 'package:nuenenen/providers/song_provider.dart';
+import 'package:nuenenen/router.dart';
+import 'package:nuenenen/ui/widgets/footer_player_sheet.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
