@@ -2,15 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:nuenenen_app/models/album.dart';
+import 'package:nuenenen/models/album.dart';
 
-import 'package:nuenenen_app/providers/album_provider.dart';
+import 'package:nuenenen/providers/album_provider.dart';
 
-import 'package:nuenenen_app/router.dart';
+import 'package:nuenenen/router.dart';
 
-import 'package:nuenenen_app/ui/widgets/album_thumbnail.dart';
-import 'package:nuenenen_app/ui/widgets/bottom_space.dart';
-import 'package:nuenenen_app/ui/widgets/typography.dart';
+import 'package:nuenenen/ui/widgets/album_thumbnail.dart';
+import 'package:nuenenen/ui/widgets/bottom_space.dart';
+import 'package:nuenenen/ui/widgets/typography.dart';
 
 class AlbumsScreen extends StatefulWidget {
   static const routeName = '/albums';
