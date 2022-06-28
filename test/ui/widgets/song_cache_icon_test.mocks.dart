@@ -5,8 +5,8 @@
 import 'dart:async' as _i6;
 import 'dart:ui' as _i8;
 
-import 'package:nuenenen_app/models/song.dart' as _i5;
-import 'package:nuenenen_app/providers/cache_provider.dart' as _i4;
+import 'package:nuenenen/models/song.dart' as _i5;
+import 'package:nuenenen/providers/cache_provider.dart' as _i4;
 import 'package:file/file.dart' as _i3;
 import 'package:flutter_cache_manager/flutter_cache_manager.dart' as _i7;
 import 'package:mockito/mockito.dart' as _i1;
