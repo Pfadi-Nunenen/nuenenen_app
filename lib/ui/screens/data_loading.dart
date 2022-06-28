@@ -1,7 +1,7 @@
-import 'package:nuenenen_app/providers/data_provider.dart';
-import 'package:nuenenen_app/ui/screens/main.dart';
-import 'package:nuenenen_app/ui/widgets/oops_box.dart';
-import 'package:nuenenen_app/ui/widgets/spinner.dart';
+import 'package:nuenenen/providers/data_provider.dart';
+import 'package:nuenenen/ui/screens/root.dart';
+import 'package:nuenenen/ui/widgets/oops_box.dart';
+import 'package:nuenenen/ui/widgets/spinner.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -16,6 +16,8 @@ class DataLoadingScreen extends StatefulWidget {
 }
 
 class _DataLoadingScreen extends State<DataLoadingScreen> {
+  bool _hasError = false;
+
   @override
   void initState() {
     super.initState();
@@ -23,27 +25,33 @@ class _DataLoadingScreen extends State<DataLoadingScreen> {
   }
 
   Future<void> _loadData() async {
-    await Navigator.of(context).pushReplacement(
-      PageRouteBuilder(
-        pageBuilder: (_, __, ___) => const MainScreen(),
-        transitionDuration: const Duration(seconds: 2),
-        transitionsBuilder: (context, animation, secondaryAnimation, child) {
-          return const ZoomPageTransitionsBuilder().buildTransitions(
+    context.read<DataProvider>().init(context).then((_) async {
+      await Navigator.of(context).pushReplacement(
+        PageRouteBuilder(
+          pageBuilder: (_, __, ___) => const RootScreen(),
+          transitionDuration: const Duration(seconds: 2),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            return ZoomPageTransitionsBuilder().buildTransitions(
               null,
               context,
               animation,
               secondaryAnimation,
-              child
-          );
-        }
-      )
-    );
+              child,
+            );
+          },
+        ),
+      );
+    }, onError: (_) => setState(() => _hasError = true));
   }
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: ContainerWithSpinner(),
+    return Scaffold(
+      body: _hasError
+          ? OopsBox(
+        onRetryButtonPressed: () => setState(() => _hasError = false),
+      )
+          : const ContainerWithSpinner(),
     );
   }
 }
