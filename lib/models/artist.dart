@@ -1,4 +1,4 @@
-import 'package:nuenenen_app/constants/images.dart';
+import 'package:nuenenen/constants/images.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
