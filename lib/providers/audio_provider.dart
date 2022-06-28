@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:nuenenen_app/extensions/assets_audio_player.dart';
-import 'package:nuenenen_app/extensions/audio.dart';
-import 'package:nuenenen_app/mixins/stream_subscriber.dart';
-import 'package:nuenenen_app/models/song.dart';
-import 'package:nuenenen_app/providers/interaction_provider.dart';
-import 'package:nuenenen_app/providers/song_provider.dart';
-import 'package:nuenenen_app/utils/preferences.dart' as preferences;
+import 'package:nuenenen/extensions/assets_audio_player.dart';
+import 'package:nuenenen/extensions/audio.dart';
+import 'package:nuenenen/mixins/stream_subscriber.dart';
+import 'package:nuenenen/models/song.dart';
+import 'package:nuenenen/providers/interaction_provider.dart';
+import 'package:nuenenen/providers/song_provider.dart';
+import 'package:nuenenen/utils/preferences.dart' as preferences;
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:rxdart/rxdart.dart';
