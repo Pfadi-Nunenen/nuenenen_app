@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:nuenenen_app/providers/audio_provider.dart';
-import 'package:nuenenen_app/ui/screens/home.dart';
-import 'package:nuenenen_app/ui/screens/library.dart';
-import 'package:nuenenen_app/ui/screens/search.dart';
-import 'package:nuenenen_app/ui/widgets/footer_player_sheet.dart';
+import 'package:nuenenen/providers/audio_provider.dart';
+import 'package:nuenenen/ui/screens/home.dart';
+import 'package:nuenenen/ui/screens/library.dart';
+import 'package:nuenenen/ui/screens/search.dart';
+import 'package:nuenenen/ui/widgets/footer_player_sheet.dart';
 import 'package:flutter/cupertino.dart'
     show
     CupertinoIcons,
