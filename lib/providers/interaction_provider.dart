@@ -1,7 +1,7 @@
-import 'package:nuenenen_app/models/interaction.dart';
-import 'package:nuenenen_app/models/song.dart';
-import 'package:nuenenen_app/providers/song_provider.dart';
-import 'package:nuenenen_app/utils/api_request.dart';
+import 'package:nuenenen/models/interaction.dart';
+import 'package:nuenenen/models/song.dart';
+import 'package:nuenenen/providers/song_provider.dart';
+import 'package:nuenenen/utils/api_request.dart';
 import 'package:flutter/foundation.dart';
 
 class InteractionProvider with ChangeNotifier {
