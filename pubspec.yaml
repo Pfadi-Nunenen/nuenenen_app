@@ -1,4 +1,4 @@
-name: nuenenen_app
+name: nuenenen
 description: X-Platform App für die Pfadiabteilung Nünenen
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
