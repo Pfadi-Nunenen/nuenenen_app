@@ -5,18 +5,18 @@ import 'package:get_storage/get_storage.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 
-import 'package:nuenenen_app/providers/album_provider.dart';
-import 'package:nuenenen_app/providers/artist_provider.dart';
-import 'package:nuenenen_app/providers/audio_provider.dart';
-import 'package:nuenenen_app/providers/auth_provider.dart';
-import 'package:nuenenen_app/providers/cache_provider.dart';
-import 'package:nuenenen_app/providers/data_provider.dart';
-import 'package:nuenenen_app/providers/interaction_provider.dart';
-import 'package:nuenenen_app/providers/media_info_provider.dart';
-import 'package:nuenenen_app/providers/playlist_provider.dart';
-import 'package:nuenenen_app/providers/search_provider.dart';
-import 'package:nuenenen_app/providers/song_provider.dart';
-import 'package:nuenenen_app/ui/app.dart';
+import 'package:nuenenen/providers/album_provider.dart';
+import 'package:nuenenen/providers/artist_provider.dart';
+import 'package:nuenenen/providers/audio_provider.dart';
+import 'package:nuenenen/providers/auth_provider.dart';
+import 'package:nuenenen/providers/cache_provider.dart';
+import 'package:nuenenen/providers/data_provider.dart';
+import 'package:nuenenen/providers/interaction_provider.dart';
+import 'package:nuenenen/providers/media_info_provider.dart';
+import 'package:nuenenen/providers/playlist_provider.dart';
+import 'package:nuenenen/providers/search_provider.dart';
+import 'package:nuenenen/providers/song_provider.dart';
+import 'package:nuenenen/ui/app.dart';
 
 List<SingleChildWidget> _providers = [
   Provider(create: (_) => AuthProvider()),
