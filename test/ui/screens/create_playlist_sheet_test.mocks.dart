@@ -5,9 +5,9 @@
 import 'dart:async' as _i5;
 import 'dart:ui' as _i7;
 
-import 'package:nuenenen_app/models/playlist.dart' as _i3;
-import 'package:nuenenen_app/models/song.dart' as _i6;
-import 'package:nuenenen_app/providers/playlist_provider.dart' as _i4;
+import 'package:nuenenen/models/playlist.dart' as _i3;
+import 'package:nuenenen/models/song.dart' as _i6;
+import 'package:nuenenen/providers/playlist_provider.dart' as _i4;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:rxdart/rxdart.dart' as _i2;
 
