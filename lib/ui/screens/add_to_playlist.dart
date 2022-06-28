@@ -3,18 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
-import 'package:nuenenen_app/models/playlist.dart';
-import 'package:nuenenen_app/models/song.dart';
+import 'package:nuenenen/models/playlist.dart';
+import 'package:nuenenen/models/song.dart';
 
-import 'package:nuenenen_app/providers/playlist_provider.dart';
+import 'package:nuenenen/providers/playlist_provider.dart';
 
-import 'package:nuenenen_app/router.dart';
+import 'package:nuenenen/router.dart';
 
-import 'package:nuenenen_app/ui/screens/playlists.dart';
-import 'package:nuenenen_app/ui/widgets/bottom_space.dart';
-import 'package:nuenenen_app/ui/widgets/message_overlay.dart';
-import 'package:nuenenen_app/ui/widgets/playlist_row.dart';
-import 'package:nuenenen_app/ui/widgets/typography.dart';
+import 'package:nuenenen/ui/screens/playlists.dart';
+import 'package:nuenenen/ui/widgets/bottom_space.dart';
+import 'package:nuenenen/ui/widgets/message_overlay.dart';
+import 'package:nuenenen/ui/widgets/playlist_row.dart';
+import 'package:nuenenen/ui/widgets/typography.dart';
 
 class AddToPlaylistScreen extends StatelessWidget {
   static const routeName = '/add-to-playlist';
