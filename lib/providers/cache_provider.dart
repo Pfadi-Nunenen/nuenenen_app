@@ -1,4 +1,4 @@
-import 'package:nuenenen_app/models/song.dart';
+import 'package:nuenenen/models/song.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:rxdart/rxdart.dart';
