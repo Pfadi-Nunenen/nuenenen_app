@@ -1,5 +1,5 @@
-import 'package:nuenenen_app/providers/audio_provider.dart';
-import 'package:nuenenen_app/utils/preferences.dart' as preferences;
+import 'package:nuenenen/providers/audio_provider.dart';
+import 'package:nuenenen/utils/preferences.dart' as preferences;
 import 'package:flutter/cupertino.dart' show CupertinoIcons;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
