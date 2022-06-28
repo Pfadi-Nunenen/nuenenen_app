@@ -1,7 +1,7 @@
-import 'package:nuenenen_app/models/playlist.dart';
-import 'package:nuenenen_app/models/song.dart';
-import 'package:nuenenen_app/providers/playlist_provider.dart';
-import 'package:nuenenen_app/ui/widgets/playlist_row.dart';
+import 'package:nuenenen/models/playlist.dart';
+import 'package:nuenenen/models/song.dart';
+import 'package:nuenenen/providers/playlist_provider.dart';
+import 'package:nuenenen/ui/widgets/playlist_row.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
