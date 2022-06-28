@@ -1,11 +1,11 @@
 import 'dart:io';
 
-import 'package:nuenenen_app/models/song.dart';
-import 'package:nuenenen_app/providers/audio_provider.dart';
-import 'package:nuenenen_app/providers/cache_provider.dart';
-import 'package:nuenenen_app/ui/widgets/simple_song_list.dart';
-import 'package:nuenenen_app/ui/widgets/song_row.dart';
-import 'package:nuenenen_app/ui/widgets/typography.dart';
+import 'package:nuenenen/models/song.dart';
+import 'package:nuenenen/providers/audio_provider.dart';
+import 'package:nuenenen/providers/cache_provider.dart';
+import 'package:nuenenen/ui/widgets/simple_song_list.dart';
+import 'package:nuenenen/ui/widgets/song_row.dart';
+import 'package:nuenenen/ui/widgets/typography.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
