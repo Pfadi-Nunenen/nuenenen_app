@@ -1,6 +1,6 @@
-import 'package:nuenenen_app/providers/auth_provider.dart';
-import 'package:nuenenen_app/ui/screens/login.dart';
-import 'package:nuenenen_app/ui/widgets/oops_box.dart';
+import 'package:nuenenen/providers/auth_provider.dart';
+import 'package:nuenenen/ui/screens/login.dart';
+import 'package:nuenenen/ui/widgets/oops_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
