@@ -4,8 +4,8 @@
 
 import 'dart:async' as _i4;
 
-import 'package:nuenenen_app/models/user.dart' as _i2;
-import 'package:nuenenen_app/providers/auth_provider.dart' as _i3;
+import 'package:nuenenen/models/user.dart' as _i2;
+import 'package:nuenenen/providers/auth_provider.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: avoid_redundant_argument_values
