@@ -1,7 +1,7 @@
-import 'package:nuenenen_app/constants/dimensions.dart';
-import 'package:nuenenen_app/models/song.dart';
-import 'package:nuenenen_app/providers/audio_provider.dart';
-import 'package:nuenenen_app/ui/widgets/full_width_primary_icon_button.dart';
+import 'package:nuenenen/constants/dimensions.dart';
+import 'package:nuenenen/models/song.dart';
+import 'package:nuenenen/providers/audio_provider.dart';
+import 'package:nuenenen/ui/widgets/full_width_primary_icon_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
