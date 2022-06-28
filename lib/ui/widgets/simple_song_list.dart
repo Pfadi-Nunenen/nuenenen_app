@@ -1,6 +1,6 @@
-import 'package:nuenenen_app/models/song.dart';
-import 'package:nuenenen_app/ui/widgets/song_row.dart';
-import 'package:nuenenen_app/ui/widgets/typography.dart';
+import 'package:nuenenen/models/song.dart';
+import 'package:nuenenen/ui/widgets/song_row.dart';
+import 'package:nuenenen/ui/widgets/typography.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
