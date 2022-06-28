@@ -2,13 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:nuenenen_app/constants/colors.dart';
-import 'package:nuenenen_app/constants/dimensions.dart';
+import 'package:nuenenen/constants/colors.dart';
+import 'package:nuenenen/constants/dimensions.dart';
 
-import 'package:nuenenen_app/providers/playlist_provider.dart';
+import 'package:nuenenen/providers/playlist_provider.dart';
 
-import 'package:nuenenen_app/ui/widgets/message_overlay.dart';
-import 'package:nuenenen_app/ui/widgets/spinner.dart';
+import 'package:nuenenen/ui/widgets/message_overlay.dart';
+import 'package:nuenenen/ui/widgets/spinner.dart';
 
 class CreatePlaylistSheet extends StatefulWidget {
   static final Key nameFieldKey = UniqueKey();
