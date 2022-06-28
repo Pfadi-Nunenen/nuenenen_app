@@ -1,10 +1,10 @@
-import 'package:nuenenen_app/models/album.dart';
-import 'package:nuenenen_app/models/artist.dart';
-import 'package:nuenenen_app/models/song.dart';
-import 'package:nuenenen_app/providers/album_provider.dart';
-import 'package:nuenenen_app/providers/artist_provider.dart';
-import 'package:nuenenen_app/ui/widgets/app_bar.dart';
-import 'package:nuenenen_app/values/parse_result.dart';
+import 'package:nuenenen/models/album.dart';
+import 'package:nuenenen/models/artist.dart';
+import 'package:nuenenen/models/song.dart';
+import 'package:nuenenen/providers/album_provider.dart';
+import 'package:nuenenen/providers/artist_provider.dart';
+import 'package:nuenenen/ui/widgets/app_bar.dart';
+import 'package:nuenenen/values/parse_result.dart';
 import 'package:flutter/foundation.dart';
 
 import 'cache_provider.dart';
