@@ -1,6 +1,6 @@
-import 'package:nuenenen_app/models/song.dart';
-import 'package:nuenenen_app/providers/audio_provider.dart';
-import 'package:nuenenen_app/ui/widgets/song_list_buttons.dart';
+import 'package:nuenenen/models/song.dart';
+import 'package:nuenenen/providers/audio_provider.dart';
+import 'package:nuenenen/ui/widgets/song_list_buttons.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
