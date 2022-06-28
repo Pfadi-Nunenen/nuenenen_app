@@ -1,5 +1,5 @@
-import 'package:nuenenen_app/constants/dimensions.dart';
-import 'package:nuenenen_app/ui/widgets/typography.dart';
+import 'package:nuenenen/constants/dimensions.dart';
+import 'package:nuenenen/ui/widgets/typography.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
