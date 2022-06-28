@@ -1,8 +1,8 @@
-import 'package:nuenenen_app/models/playlist.dart';
-import 'package:nuenenen_app/models/song.dart';
-import 'package:nuenenen_app/providers/song_provider.dart';
-import 'package:nuenenen_app/utils/api_request.dart';
-import 'package:nuenenen_app/values/parse_result.dart';
+import 'package:nuenenen/models/playlist.dart';
+import 'package:nuenenen/models/song.dart';
+import 'package:nuenenen/providers/song_provider.dart';
+import 'package:nuenenen/utils/api_request.dart';
+import 'package:nuenenen/values/parse_result.dart';
 import 'package:flutter/foundation.dart';
 import 'package:rxdart/rxdart.dart';
 
