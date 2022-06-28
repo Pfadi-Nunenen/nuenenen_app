@@ -1,11 +1,11 @@
 import 'dart:ui';
 
-import 'package:nuenenen_app/constants/dimensions.dart';
-import 'package:nuenenen_app/models/song.dart';
-import 'package:nuenenen_app/providers/media_info_provider.dart';
-import 'package:nuenenen_app/ui/widgets/album_thumbnail.dart';
-import 'package:nuenenen_app/ui/widgets/artist_thumbnail.dart';
-import 'package:nuenenen_app/ui/widgets/spinner.dart';
+import 'package:nuenenen/constants/dimensions.dart';
+import 'package:nuenenen/models/song.dart';
+import 'package:nuenenen/providers/media_info_provider.dart';
+import 'package:nuenenen/ui/widgets/album_thumbnail.dart';
+import 'package:nuenenen/ui/widgets/artist_thumbnail.dart';
+import 'package:nuenenen/ui/widgets/spinner.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
