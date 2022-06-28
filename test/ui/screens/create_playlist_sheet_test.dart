@@ -1,6 +1,6 @@
-import 'package:nuenenen_app/models/playlist.dart';
-import 'package:nuenenen_app/providers/playlist_provider.dart';
-import 'package:nuenenen_app/ui/screens/create_playlist_sheet.dart';
+import 'package:nuenenen/models/playlist.dart';
+import 'package:nuenenen/providers/playlist_provider.dart';
+import 'package:nuenenen/ui/screens/create_playlist_sheet.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
