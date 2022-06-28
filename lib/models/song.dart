@@ -1,8 +1,8 @@
-import 'package:nuenenen_app/exceptions/unsupported_type_exception.dart';
-import 'package:nuenenen_app/models/album.dart';
-import 'package:nuenenen_app/models/artist.dart';
-import 'package:nuenenen_app/utils/crypto.dart';
-import 'package:nuenenen_app/utils/preferences.dart';
+import 'package:nuenenen/exceptions/unsupported_type_exception.dart';
+import 'package:nuenenen/models/album.dart';
+import 'package:nuenenen/models/artist.dart';
+import 'package:nuenenen/utils/crypto.dart';
+import 'package:nuenenen/utils/preferences.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:faker/faker.dart';
