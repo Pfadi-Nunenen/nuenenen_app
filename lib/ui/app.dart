@@ -2,10 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:nuenenen_app/constants/strings.dart';
-import 'package:nuenenen_app/router.dart';
-import 'package:nuenenen_app/ui/screens/initial.dart';
-import 'package:nuenenen_app/ui/theme_data.dart';
+import 'package:nuenenen/constants/strings.dart';
+import 'package:nuenenen/router.dart';
+import 'package:nuenenen/ui/screens/initial.dart';
+import 'package:nuenenen/ui/theme_data.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
