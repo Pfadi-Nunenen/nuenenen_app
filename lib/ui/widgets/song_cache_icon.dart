@@ -1,6 +1,6 @@
-import 'package:nuenenen_app/mixins/stream_subscriber.dart';
-import 'package:nuenenen_app/models/song.dart';
-import 'package:nuenenen_app/providers/cache_provider.dart';
+import 'package:nuenenen/mixins/stream_subscriber.dart';
+import 'package:nuenenen/models/song.dart';
+import 'package:nuenenen/providers/cache_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
