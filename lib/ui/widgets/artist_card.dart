@@ -1,6 +1,6 @@
-import 'package:nuenenen_app/models/artist.dart';
-import 'package:nuenenen_app/router.dart';
-import 'package:nuenenen_app/ui/widgets/artist_thumbnail.dart';
+import 'package:nuenenen/models/artist.dart';
+import 'package:nuenenen/router.dart';
+import 'package:nuenenen/ui/widgets/artist_thumbnail.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
