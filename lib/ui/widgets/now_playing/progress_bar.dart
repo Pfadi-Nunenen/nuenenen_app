@@ -1,7 +1,7 @@
-import 'package:nuenenen_app/extensions/duration.dart';
-import 'package:nuenenen_app/mixins/stream_subscriber.dart';
-import 'package:nuenenen_app/models/song.dart';
-import 'package:nuenenen_app/providers/audio_provider.dart';
+import 'package:nuenenen/extensions/duration.dart';
+import 'package:nuenenen/mixins/stream_subscriber.dart';
+import 'package:nuenenen/models/song.dart';
+import 'package:nuenenen/providers/audio_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
