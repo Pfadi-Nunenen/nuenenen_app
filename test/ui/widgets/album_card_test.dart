@@ -1,8 +1,8 @@
-import 'package:nuenenen_app/models/album.dart';
-import 'package:nuenenen_app/models/artist.dart';
-import 'package:nuenenen_app/router.dart';
-import 'package:nuenenen_app/ui/widgets/album_card.dart';
-import 'package:nuenenen_app/ui/widgets/album_thumbnail.dart';
+import 'package:nuenenen/models/album.dart';
+import 'package:nuenenen/models/artist.dart';
+import 'package:nuenenen/router.dart';
+import 'package:nuenenen/ui/widgets/album_card.dart';
+import 'package:nuenenen/ui/widgets/album_thumbnail.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
