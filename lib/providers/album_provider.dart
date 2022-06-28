@@ -1,5 +1,5 @@
-import 'package:nuenenen_app/models/album.dart';
-import 'package:nuenenen_app/values/parse_result.dart';
+import 'package:nuenenen/models/album.dart';
+import 'package:nuenenen/values/parse_result.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
