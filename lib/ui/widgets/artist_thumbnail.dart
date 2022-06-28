@@ -1,6 +1,6 @@
-import 'package:nuenenen_app/constants/images.dart';
-import 'package:nuenenen_app/models/artist.dart';
-import 'package:nuenenen_app/utils/preferences.dart' as preferences;
+import 'package:nuenenen/constants/images.dart';
+import 'package:nuenenen/models/artist.dart';
+import 'package:nuenenen/utils/preferences.dart' as preferences;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
