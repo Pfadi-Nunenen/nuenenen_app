@@ -1,4 +1,4 @@
-import 'package:nuenenen_app/models/song.dart';
+import 'package:nuenenen/models/song.dart';
 import 'package:faker/faker.dart';
 
 class Playlist {
