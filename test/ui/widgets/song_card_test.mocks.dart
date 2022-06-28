@@ -5,11 +5,11 @@
 import 'dart:async' as _i6;
 import 'dart:ui' as _i7;
 
-import 'package:nuenenen_app/models/album.dart' as _i10;
-import 'package:nuenenen_app/models/artist.dart' as _i11;
-import 'package:nuenenen_app/models/song.dart' as _i5;
-import 'package:nuenenen_app/providers/audio_provider.dart' as _i4;
-import 'package:nuenenen_app/router.dart' as _i8;
+import 'package:nuenenen/models/album.dart' as _i10;
+import 'package:nuenenen/models/artist.dart' as _i11;
+import 'package:nuenenen/models/song.dart' as _i5;
+import 'package:nuenenen/providers/audio_provider.dart' as _i4;
+import 'package:nuenenen/router.dart' as _i8;
 import 'package:assets_audio_player/assets_audio_player.dart' as _i2;
 import 'package:flutter/cupertino.dart' as _i9;
 import 'package:mockito/mockito.dart' as _i1;
