@@ -1,32 +1,32 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:nuenenen_app/models/album.dart';
-import 'package:nuenenen_app/models/artist.dart';
-import 'package:nuenenen_app/models/song.dart';
+import 'package:nuenenen/models/album.dart';
+import 'package:nuenenen/models/artist.dart';
+import 'package:nuenenen/models/song.dart';
 
-import 'package:nuenenen_app/ui/screens/add_to_playlist.dart';
-import 'package:nuenenen_app/ui/screens/album_details.dart';
-import 'package:nuenenen_app/ui/screens/albums.dart';
-import 'package:nuenenen_app/ui/screens/artist_details.dart';
-import 'package:nuenenen_app/ui/screens/artists.dart';
-import 'package:nuenenen_app/ui/screens/create_playlist_sheet.dart';
-import 'package:nuenenen_app/ui/screens/data_loading.dart';
-import 'package:nuenenen_app/ui/screens/downloaded.dart';
-import 'package:nuenenen_app/ui/screens/favorites.dart';
-import 'package:nuenenen_app/ui/screens/home.dart';
-import 'package:nuenenen_app/ui/screens/initial.dart';
-import 'package:nuenenen_app/ui/screens/library.dart';
-import 'package:nuenenen_app/ui/screens/login.dart';
-import 'package:nuenenen_app/ui/screens/now_playing.dart';
-import 'package:nuenenen_app/ui/screens/playlist_details.dart';
-import 'package:nuenenen_app/ui/screens/playlists.dart';
-import 'package:nuenenen_app/ui/screens/profile.dart';
-import 'package:nuenenen_app/ui/screens/queue.dart';
-import 'package:nuenenen_app/ui/screens/root.dart';
-import 'package:nuenenen_app/ui/screens/search.dart';
-import 'package:nuenenen_app/ui/screens/song_action_sheet.dart';
-import 'package:nuenenen_app/ui/screens/songs.dart';
+import 'package:nuenenen/ui/screens/add_to_playlist.dart';
+import 'package:nuenenen/ui/screens/album_details.dart';
+import 'package:nuenenen/ui/screens/albums.dart';
+import 'package:nuenenen/ui/screens/artist_details.dart';
+import 'package:nuenenen/ui/screens/artists.dart';
+import 'package:nuenenen/ui/screens/create_playlist_sheet.dart';
+import 'package:nuenenen/ui/screens/data_loading.dart';
+import 'package:nuenenen/ui/screens/downloaded.dart';
+import 'package:nuenenen/ui/screens/favorites.dart';
+import 'package:nuenenen/ui/screens/home.dart';
+import 'package:nuenenen/ui/screens/initial.dart';
+import 'package:nuenenen/ui/screens/library.dart';
+import 'package:nuenenen/ui/screens/login.dart';
+import 'package:nuenenen/ui/screens/now_playing.dart';
+import 'package:nuenenen/ui/screens/playlist_details.dart';
+import 'package:nuenenen/ui/screens/playlists.dart';
+import 'package:nuenenen/ui/screens/profile.dart';
+import 'package:nuenenen/ui/screens/queue.dart';
+import 'package:nuenenen/ui/screens/root.dart';
+import 'package:nuenenen/ui/screens/search.dart';
+import 'package:nuenenen/ui/screens/song_action_sheet.dart';
+import 'package:nuenenen/ui/screens/songs.dart';
 
 class AppRouter {
   const AppRouter();
