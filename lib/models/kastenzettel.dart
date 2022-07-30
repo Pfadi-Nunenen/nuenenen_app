@@ -1,7 +1,11 @@
 class Kastenzettel {
-  late String title;
-  late String content;
+  String title;
+  String content;
   String coronaInfo;
 
-  Kastenzettel(this.title, this.content, this.coronaInfo);
+  Kastenzettel(
+      this.title,
+      this.content,
+      this.coronaInfo
+  );
 }

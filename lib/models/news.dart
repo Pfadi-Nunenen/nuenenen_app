@@ -1,6 +1,9 @@
 class News {
-  late String title;
-  late String content;
+  String title;
+  String content;
 
-  News(this.title, this.content);
+  News(
+      this.title,
+      this.content
+  );
 }
