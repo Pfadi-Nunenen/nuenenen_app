@@ -8,7 +8,6 @@
 .buildlog/
 .history
 .svn/
-migrate_working_dir/
 
 # IntelliJ related
 *.iml
@@ -46,9 +45,8 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-
-# Created by https://www.toptal.com/developers/gitignore/api/dart,macos,linux,swift,flutter,windows,android,objective-c,androidstudio,jetbrains+all
-# Edit at https://www.toptal.com/developers/gitignore?templates=dart,macos,linux,swift,flutter,windows,android,objective-c,androidstudio,jetbrains+all
+# Created by https://www.toptal.com/developers/gitignore/api/dart,linux,macos,swift,android,flutter,windows,objective-c,jetbrains+all,androidstudio
+# Edit at https://www.toptal.com/developers/gitignore?templates=dart,linux,macos,swift,android,flutter,windows,objective-c,jetbrains+all,androidstudio
 
 ### Android ###
 # Gradle files
@@ -576,4 +574,4 @@ hs_err_pid*
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-# End of https://www.toptal.com/developers/gitignore/api/dart,macos,linux,swift,flutter,windows,android,objective-c,androidstudio,jetbrains+all
+# End of https://www.toptal.com/developers/gitignore/api/dart,linux,macos,swift,android,flutter,windows,objective-c,jetbrains+all,androidstudio
