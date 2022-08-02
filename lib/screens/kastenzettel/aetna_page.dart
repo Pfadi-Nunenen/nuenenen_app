@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html/style.dart';
 import 'package:http/http.dart' as http;
 import 'package:nuenenen/models/kastenzettel.dart';
 import 'package:nuenenen/theme/colors.dart';
@@ -97,9 +98,8 @@ class _AetnaPageState extends State<AetnaPage> {
                         color: currTextColor
                     ),
                   },
-                  onLinkTap: (url, _, __, ___) async {
-                    //Uri url = Uri.parse(url);
-                    if(await canLaunch(url!)) {
+                  onLinkTap: (url) async {
+                    if(await canLaunch(url)) {
                       await launch(url);
                     } else {
                       throw 'Could not launch $url';
@@ -111,8 +111,8 @@ class _AetnaPageState extends State<AetnaPage> {
                   style: {
                     "html": Style(color: currTextColor),
                   },
-                  onLinkTap: (url, _, __, ___) async {
-                    if (await canLaunch(url!)) {
+                  onLinkTap: (url) async {
+                    if (await canLaunch(url)) {
                       await launch(url);
                     } else {
                       throw 'Could not launch $url';
