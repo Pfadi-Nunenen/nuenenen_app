@@ -10,8 +10,8 @@ import 'package:nuenenen/user_info.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SettingsPage extends StatefulWidget {
-  @override
-  _SettingsPageState createState() => _SettingsPageState();
+@override
+_SettingsPageState createState() => _SettingsPageState();
 }
 
 class _SettingsPageState extends State<SettingsPage> {
