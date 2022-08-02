@@ -39,9 +39,9 @@ class _AetnaPageState extends State<AetnaPage> {
         for(int i = 0; i < json.length; i++) {
           setState(() {
             kastenzettelList.add(Kastenzettel(
-              json['title'].toString(),
-              json['body']['und'][0]['value'].toString(),
-              json['field_corona_info']['und'][0]['value'].toString()
+                json['title'].toString(),
+                json['body']['und'][0]['value'].toString(),
+                json['field_corona_info']['und'][0]['value'].toString()
             ));
           });
         }
