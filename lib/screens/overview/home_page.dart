@@ -30,8 +30,8 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.all(20.0),
             child: Text(
               "Wilkommen in der neuen App der Pfadi Nünenen. \n \n"
-              "Momentan können im Menüpunkt 'Stufen' die Kastenzettel der Stufen abgerufen werden. \n \n"
-              "Daneben kann in den Einstellungen festgelegt werden, von welchen Stufen Push-Benachrichtigungen empfangen werden sollen.",
+                  "Momentan können im Menüpunkt 'Stufen' die Kastenzettel der Stufen abgerufen werden. \n \n"
+                  "Daneben kann in den Einstellungen festgelegt werden, von welchen Stufen Push-Benachrichtigungen empfangen werden sollen.",
               style: TextStyle(
                 color: currTextColor,
                 fontSize: 20.0,
