@@ -32,9 +32,9 @@ class _AboutPageState extends State<AboutPage> {
   }
 
   launchContributeUrl() async {
-    var url = Uri(scheme: "https", host: "github.com", path: "/Pfadi-Nunenen/nuenenen_app");
-    if(await canLaunchUrl(url)) {
-      await launchUrl(url);
+    var url = "https://github.com/Pfadi-Nunenen/nuenenen_app";
+    if(await canLaunch(url)) {
+      await launch(url);
     } else {
       throw '$url kann nicht geöffnet werden.';
     }
@@ -136,8 +136,8 @@ class _AboutPageState extends State<AboutPage> {
                                 fontFamily: "Product Sans",
                                 color: Colors.grey)),
                         onTap: () {
-                          var url = Uri(scheme: "https", host: "github.com", path: "/Pfadi-Nunenen");
-                          launchUrl(url);
+                          var url = "https://github.com/Pfadi-Nunenen";
+                          launch(url);
                         },
                       ),
                     ],
