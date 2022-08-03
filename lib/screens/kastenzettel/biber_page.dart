@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'package:flutter_html/style.dart';
 import 'package:http/http.dart' as http;
 import 'package:nuenenen/models/kastenzettel.dart';
 import 'package:nuenenen/theme/colors.dart';
@@ -39,9 +40,9 @@ class _BiberPageState extends State<BiberPage> {
         for (int i = 0; i < json.length; i++) {
           setState(() {
             kastenzettelList.add(Kastenzettel(
-              json['title'].toString(),
-              json['body']['und'][0]['value'].toString(),
-              json['field_corona_info']['und'][0]['value'].toString()
+                json['title'].toString(),
+                json['body']['und'][0]['value'].toString(),
+                json['field_corona_info']['und'][0]['value'].toString()
             ));
           });
         }
@@ -94,8 +95,8 @@ class _BiberPageState extends State<BiberPage> {
                     "html": Style(
                         whiteSpace: WhiteSpace.PRE, color: currTextColor),
                   },
-                  onLinkTap: (url, _, __, ___) async {
-                    if(await canLaunch(url!)) {
+                  onLinkTap: (url) async {
+                    if(await canLaunch(url)) {
                       await launch(url);
                     } else {
                       throw 'Could not launch $url';
@@ -107,8 +108,8 @@ class _BiberPageState extends State<BiberPage> {
                   style: {
                     "html": Style(color: currTextColor),
                   },
-                  onLinkTap: (url, _, __, ___) async {
-                    if(await canLaunch(url!)) {
+                  onLinkTap: (url) async {
+                    if(await canLaunch(url)) {
                       await launch(url);
                     } else {
                       throw 'Could not launch $url';
