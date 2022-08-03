@@ -1,10 +1,6 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
-
-import 'package:flutter/cupertino.dart';
 import 'package:nuenenen/screens/overview/stufen_page.dart';
 import 'package:nuenenen/screens/settings/settings_page.dart';
-
 import 'package:nuenenen/theme/colors.dart';
 import 'package:nuenenen/screens/overview/home_page.dart';
 import 'package:nuenenen/user_info.dart';
@@ -22,10 +18,13 @@ class _TabBarControllerState extends State<TabBarController> {
 
   void onTabTapped(int index) {
     lastPage = index;
+
     setState(() {
       tabBarColor = currBackgroundColor;
     });
+
     _currentTab = index;
+
     if(index == 0) {
       setState(() {
         _currentWidget = HomePage();
@@ -50,17 +49,17 @@ class _TabBarControllerState extends State<TabBarController> {
 
     setState(() {
       _currentTab = lastPage;
-      if (lastPage == 0) {
+      if(lastPage == 0) {
         setState(() {
           _currentWidget = HomePage();
           _title = "Home";
         });
-      } else if (lastPage == 1) {
+      } else if(lastPage == 1) {
         setState(() {
           _currentWidget = StufenPage();
           _title = "Stufen";
         });
-      } else if (lastPage == 2) {
+      } else if(lastPage == 2) {
         _currentWidget = SettingsPage();
         _title = "Einstellungen";
       }
