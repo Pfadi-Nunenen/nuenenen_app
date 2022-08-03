@@ -64,6 +64,7 @@ void main() {
     home: TabBarController(),
     onGenerateRoute: router.generator,
     debugShowCheckedModeBanner: false,
+    theme: mainTheme,
   ));
 
   FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
