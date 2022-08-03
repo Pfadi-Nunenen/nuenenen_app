@@ -32,6 +32,7 @@ class _SettingsPageState extends State<SettingsPage> {
 
   restorePref() async {
     final SharedPreferences sharedPrefs = await SharedPreferences.getInstance();
+
     setState(() {
       darkMode = (sharedPrefs.getBool('darkMode') ?? false);
       allowBiberNotification = (sharedPrefs.getBool('biberNot') ?? false);
