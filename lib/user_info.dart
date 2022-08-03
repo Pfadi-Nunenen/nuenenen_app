@@ -9,7 +9,6 @@ String appFull = "Version $appVersion";
 
 int lastPage = 0;
 bool darkMode = false;
-bool darkAppBar = false;
 
 String baseURI = "pfadi-nuenenen.ch";
 
