@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'colors.dart';
+import 'package:nuenenen/theme/colors.dart';
 
 ThemeData mainTheme = ThemeData(
   primaryColor: mainColor,
