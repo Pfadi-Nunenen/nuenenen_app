@@ -13,7 +13,7 @@ import 'package:nuenenen/theme/theme.dart';
 import 'package:nuenenen/user_info.dart';
 
 void main() {
-  late FirebaseMessaging messaging = FirebaseMessaging.instance;
+  late FirebaseMessaging messaging = FirebaseMessaging();
 
   // Home Routes
   router.define('/home', handler:
@@ -34,7 +34,7 @@ void main() {
       return StufenPage();
     })
   );
-
+  
   router.define('/biber', handler:
     Handler(handlerFunc: (BuildContext? context, Map<String, dynamic> params) {
       return BiberPage();
@@ -64,9 +64,8 @@ void main() {
     home: TabBarController(),
     onGenerateRoute: router.generator,
     debugShowCheckedModeBanner: false,
-    theme: mainTheme,
   ));
 
-  FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
+  FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
   _firebaseMessaging.subscribeToTopic("any");
 }
