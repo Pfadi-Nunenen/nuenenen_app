@@ -58,7 +58,7 @@ class _WolfPage extends State<WolfPage> {
     return Scaffold(
       appBar: CupertinoNavigationBar(
         backgroundColor: mainColor,
-        actionsForegroundColor: Colors.white,
+        //actionsForegroundColor: Colors.white,
         previousPageTitle: "Stufen",
         middle: Text(
           "Phönix",
