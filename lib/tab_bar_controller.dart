@@ -118,10 +118,8 @@ class _TabBarControllerState extends State<TabBarController> {
                 color: Colors.grey,
               ),
               activeIcon: Icon(Icons.home, size: 30.0, color: mainColor),
-              title: Text(
-                "Home",
-                style: TextStyle(color: Colors.grey),
-              )),
+              label: "Home",
+              ),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.info,
@@ -129,7 +127,7 @@ class _TabBarControllerState extends State<TabBarController> {
                 color: Colors.grey,
               ),
               activeIcon: Icon(Icons.info, size: 30.0, color: mainColor),
-              title: Text("Stufen", style: TextStyle(color: Colors.grey))),
+              label: "Stufen"),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.settings,
@@ -137,8 +135,8 @@ class _TabBarControllerState extends State<TabBarController> {
                 color: Colors.grey,
               ),
               activeIcon: Icon(Icons.settings, size: 30.0, color: mainColor),
-              title:
-                  Text("Einstellungen", style: TextStyle(color: Colors.grey))),
+              label: "Einstellungen",
+          ),
         ],
       ),
     );
