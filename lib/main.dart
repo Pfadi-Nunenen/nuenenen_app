@@ -8,7 +8,6 @@ import 'package:nuenenen/screens/kastenzettel/aetna_page.dart';
 import 'package:nuenenen/screens/kastenzettel/saturn_page.dart';
 import 'package:nuenenen/screens/overview/stufen_page.dart';
 import 'package:nuenenen/screens/settings/about_page.dart';
-import 'package:nuenenen/screens/tools/qr_page.dart';
 import 'package:nuenenen/tab_bar_controller.dart';
 import 'package:nuenenen/theme/theme.dart';
 import 'package:nuenenen/user_info.dart';
@@ -49,11 +48,6 @@ void main() {
   router.define('/saturn', handler:
       Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
     return SaturnPage();
-  }));
-
-  router.define('/qr-reader', handler:
-      Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-    return QRReader();
   }));
 
   runApp(MaterialApp(
