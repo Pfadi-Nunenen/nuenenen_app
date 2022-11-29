@@ -59,7 +59,7 @@ class _AetnaPage extends State<AetnaPage> {
     return Scaffold(
       appBar: CupertinoNavigationBar(
         backgroundColor: mainColor,
-        actionsForegroundColor: Colors.white,
+        //actionsForegroundColor: Colors.white,
         previousPageTitle: "Stufen",
         middle: Text(
           "Aetna",
