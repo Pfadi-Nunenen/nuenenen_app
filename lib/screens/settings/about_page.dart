@@ -48,7 +48,7 @@ class _AboutPageState extends State<AboutPage> {
     return Scaffold(
         appBar: CupertinoNavigationBar(
           backgroundColor: mainColor,
-          actionsForegroundColor: Colors.white,
+          //actionsForegroundColor: Colors.white,
           previousPageTitle: "Zurück",
           middle: Text(
             "Über die APP",
