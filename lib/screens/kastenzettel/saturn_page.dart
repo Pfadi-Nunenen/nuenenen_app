@@ -58,7 +58,7 @@ class _SaturnPage extends State<SaturnPage> {
     return Scaffold(
       appBar: CupertinoNavigationBar(
         backgroundColor: mainColor,
-        actionsForegroundColor: Colors.white,
+        //actionsForegroundColor: Colors.white,
         previousPageTitle: "Stufen",
         middle: Text(
           "Saturn",
