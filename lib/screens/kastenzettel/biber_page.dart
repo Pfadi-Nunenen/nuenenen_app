@@ -58,7 +58,7 @@ class _BiberPage extends State<BiberPage> {
     return Scaffold(
       appBar: CupertinoNavigationBar(
         backgroundColor: mainColor,
-        actionsForegroundColor: Colors.white,
+        //actionsForegroundColor: Colors.white,
         previousPageTitle: "Stufen",
         middle: Text(
           "Biberstein",
