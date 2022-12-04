@@ -135,7 +135,7 @@ class _StufenPageState extends State<StufenPage> {
                       ),
                     ),
                     ListTile(
-                      title: Text("Aetna",
+                      title: Text("Pfadis (Saturn & Aetna)",
                         style: TextStyle(
                           fontFamily: "Product Sans",
                           color: currTextColor)),
@@ -148,29 +148,9 @@ class _StufenPageState extends State<StufenPage> {
                             transition: TransitionType.native);
                       },
                     ),
-                    const Divider(
-                      height: 0.0,
-                      color: mainColor
-                    ),
-                    ListTile(
-                      title: Text(
-                        "Saturn",
-                        style: TextStyle(
-                          fontFamily: "Product Sans",
-                          color: currTextColor
-                        )
-                      ),
-                      trailing: const Icon(Icons.navigate_next, color: mainColor),
-                      onTap: () {
-                        router.navigateTo(context, '/saturn',
-                            transition: TransitionType.native);
-                      },
-                    ),
-                    const Divider(height: 0.0, color: mainColor),
                   ],
                 ),
               ),
-              const Padding(padding: EdgeInsets.all(8.0)),
             ],
           ),
         ),
