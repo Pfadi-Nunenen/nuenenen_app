@@ -39,11 +39,13 @@ class _SaturnPageState extends State<SaturnPage> {
         var json = jsonDecode(response.body);
         for (int i = 0; i < json.length; i++) {
           setState(() {
-            kastenzettelList.add(Kastenzettel(
+            kastenzettelList.add(
+              Kastenzettel(
                 json['title'].toString(),
                 json['body']['und'][0]['value'].toString(),
                 json['field_corona_info']['und'][0]['value'].toString()
-            ));
+              )
+            );
           });
         }
       });
@@ -58,7 +60,7 @@ class _SaturnPageState extends State<SaturnPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CupertinoNavigationBar(
+      appBar: const CupertinoNavigationBar(
         backgroundColor: mainColor,
         previousPageTitle: "Stufen",
         middle: Text(
@@ -67,57 +69,60 @@ class _SaturnPageState extends State<SaturnPage> {
         ),
       ),
       body: isLoading
-          ? Container(
+        ? Container(
           color: currBackgroundColor,
-          child: Center(
+          child: const Center(
             child: CircularProgressIndicator(),
-          ))
-          : RefreshIndicator(
-        onRefresh: onRefresh,
-        color: darkTextColor,
-        backgroundColor: currBackgroundColor,
-        child: Container(
-          color: currBackgroundColor,
-          padding: EdgeInsets.all(16.0),
+          )
+        )
+        : RefreshIndicator(
+          onRefresh: onRefresh,
+          color: darkTextColor,
+          backgroundColor: currBackgroundColor,
           child: Container(
-            child: Column(
-              children: <Widget>[
-                Text(
-                  kastenzettelList[0].title.toString(),
-                  style: TextStyle(
-                      color: currTextColor,
-                      fontSize: 25.0,
-                      fontWeight: FontWeight.bold),
-                ),
-                Html(
-                  data: kastenzettelList[0].content,
-                  style: {
-                    "html": Style(
-                        whiteSpace: WhiteSpace.PRE, color: currTextColor),
-                  },
-                  onLinkTap: (url) async {
-                    if (await canLaunch(url)) {
-                      await launch(url, forceSafariVC: false);
+          color: currBackgroundColor,
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: <Widget>[
+              Text(
+                kastenzettelList[0].title.toString(),
+                style: TextStyle(
+                    color: currTextColor,
+                    fontSize: 25.0,
+                    fontWeight: FontWeight.bold),
+              ),
+              Html(
+                data: kastenzettelList[0].content,
+                style: {
+                  "html": Style(
+                      whiteSpace: WhiteSpace.PRE, color: currTextColor),
+                },
+                onLinkTap: (url, _, __, ___) async {
+                  if(url != null){
+                    if (await canLaunchUrl(Uri.parse(url))) {
+                      await launchUrl(Uri.parse(url));
                     } else {
                       throw 'Could not launch $url';
                     }
-                  },
-                ),
-                Html(
-                  data: kastenzettelList[0].coronaInfo,
-                  style: {
-                    "html": Style(color: currTextColor),
-                  },
-                  onLinkTap: (url) async {
-                    if (await canLaunch(url)) {
-                      await launch(url, forceSafariVC: false);
+                  }
+                },
+              ),
+              Html(
+                data: kastenzettelList[0].coronaInfo,
+                style: {
+                  "html": Style(color: currTextColor),
+                },
+                onLinkTap: (url, _, __, ___) async {
+                  if(url != null){
+                    if (await canLaunchUrl(Uri.parse(url))) {
+                      await launchUrl(Uri.parse(url));
                     } else {
                       throw 'Could not launch $url';
                     }
-                  },
-                ),
-              ],
-            ),
+                  }
+                },
+              ),
+            ],
           ),
         ),
       ),
