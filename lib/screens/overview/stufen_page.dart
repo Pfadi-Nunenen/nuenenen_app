@@ -15,7 +15,7 @@ class _StufenPageState extends State<StufenPage> {
     return NestedScrollView(
       headerSliverBuilder: (BuildContext context, bool isScrolled) {
         return [
-          CupertinoSliverNavigationBar(
+          const CupertinoSliverNavigationBar(
             largeTitle: Text(
               "Stufen",
               style: TextStyle(color: Colors.white),
@@ -25,12 +25,18 @@ class _StufenPageState extends State<StufenPage> {
         ];
       },
       body: Container(
-        padding: EdgeInsets.only(top: 16.0, right: 16.0, left: 16.0),
+        padding: const EdgeInsets.only(
+          top: 16.0,
+          right: 16.0,
+          left: 16.0
+        ),
         color: currCardColor,
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Padding(padding: EdgeInsets.all(8.0)),
+              const Padding(
+                  padding: EdgeInsets.all(8.0)
+              ),
               Card(
                 color: currBackgroundColor,
                 child: Column(
@@ -38,104 +44,133 @@ class _StufenPageState extends State<StufenPage> {
                   children: <Widget>[
                     Container(
                       padding: EdgeInsets.all(16.0),
-                      child: Text(
+                      child: const Text(
                         "Biberstufe",
                         style: TextStyle(
-                            color: mainColor,
-                            fontFamily: "Product Sans",
-                            fontWeight: FontWeight.bold),
+                          color: mainColor,
+                          fontFamily: "Product Sans",
+                          fontWeight: FontWeight.bold
+                        ),
                       ),
                     ),
                     ListTile(
-                      title: Text("Biberstein",
+                      title: Text(
+                          "Biberstein",
                           style: TextStyle(
-                              fontFamily: "Product Sans",
-                              color: currTextColor)),
-                      trailing: Icon(Icons.navigate_next, color: mainColor),
+                            fontFamily: "Product Sans",
+                            color: currTextColor
+                          )
+                      ),
+                      trailing: const Icon(
+                          Icons.navigate_next,
+                          color: mainColor
+                      ),
                       onTap: () {
                         router.navigateTo(context, '/biber',
                             transition: TransitionType.native);
                       },
                     ),
-                    Divider(height: 0.0, color: mainColor),
+                    const Divider(
+                        height: 0.0,
+                        color: mainColor
+                    ),
                   ],
                 ),
               ),
-              Padding(padding: EdgeInsets.all(8.0)),
+              const Padding(padding: EdgeInsets.all(8.0)),
               Card(
                 color: currBackgroundColor,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Container(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
+                      padding: const EdgeInsets.all(16.0),
+                      child: const Text(
                         "Wolfstufe",
                         style: TextStyle(
-                            color: mainColor,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: "Product Sans"),
+                          color: mainColor,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "Product Sans"
+                        ),
                       ),
                     ),
                     ListTile(
-                      title: Text("Phönix",
-                          style: TextStyle(
-                              fontFamily: "Product Sans",
-                              color: currTextColor)),
-                      trailing: Icon(Icons.navigate_next, color: mainColor),
+                      title: Text(
+                        "Phönix",
+                        style: TextStyle(
+                            fontFamily: "Product Sans",
+                            color: currTextColor
+                        )
+                      ),
+                      trailing: const Icon(
+                          Icons.navigate_next,
+                          color: mainColor
+                      ),
                       onTap: () {
                         router.navigateTo(context, '/wolf',
                             transition: TransitionType.native);
                       },
                     ),
-                    Divider(height: 0.0, color: mainColor),
+                    const Divider(
+                        height: 0.0,
+                        color: mainColor
+                    ),
                   ],
                 ),
               ),
-              Padding(padding: EdgeInsets.all(8.0)),
+              const Padding(padding: EdgeInsets.all(8.0)),
               Card(
                 color: currBackgroundColor,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Container(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
+                      padding: const EdgeInsets.all(16.0),
+                      child: const Text(
                         "Pfadistufe",
                         style: TextStyle(
-                            color: mainColor,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: "Product Sans"),
+                          color: mainColor,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "Product Sans"),
                       ),
                     ),
                     ListTile(
                       title: Text("Aetna",
-                          style: TextStyle(
-                              fontFamily: "Product Sans",
-                              color: currTextColor)),
-                      trailing: Icon(Icons.navigate_next, color: mainColor),
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: currTextColor)),
+                      trailing: const Icon(
+                          Icons.navigate_next,
+                          color: mainColor
+                      ),
                       onTap: () {
                         router.navigateTo(context, '/aetna',
                             transition: TransitionType.native);
                       },
                     ),
-                    Divider(height: 0.0, color: mainColor),
+                    const Divider(
+                      height: 0.0,
+                      color: mainColor
+                    ),
                     ListTile(
-                      title: Text("Saturn",
-                          style: TextStyle(
-                              fontFamily: "Product Sans",
-                              color: currTextColor)),
-                      trailing: Icon(Icons.navigate_next, color: mainColor),
+                      title: Text(
+                        "Saturn",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: currTextColor
+                        )
+                      ),
+                      trailing: const Icon(Icons.navigate_next, color: mainColor),
                       onTap: () {
                         router.navigateTo(context, '/saturn',
                             transition: TransitionType.native);
                       },
                     ),
-                    Divider(height: 0.0, color: mainColor),
+                    const Divider(height: 0.0, color: mainColor),
                   ],
                 ),
               ),
-              Padding(padding: EdgeInsets.all(8.0)),
+              const Padding(padding: EdgeInsets.all(8.0)),
             ],
           ),
         ),
