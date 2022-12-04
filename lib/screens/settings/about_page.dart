@@ -32,9 +32,9 @@ class _AboutPageState extends State<AboutPage> {
   }
 
   launchContributeUrl() async {
-    var url = "https://github.com/Pfadi-Nunenen/nuenenen_app";
-    if(await canLaunch(url)) {
-      await launch(url);
+    var url = Uri.https("github.com", "/Pfadi-Nunenen/nuenenen_app");
+    if(await canLaunchUrl(url)) {
+      await launchUrl(url);
     } else {
       throw '$url kann nicht geöffnet werden.';
     }
@@ -43,7 +43,7 @@ class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: CupertinoNavigationBar(
+        appBar: const CupertinoNavigationBar(
           backgroundColor: mainColor,
           previousPageTitle: "Zurück",
           middle: Text(
@@ -54,7 +54,7 @@ class _AboutPageState extends State<AboutPage> {
         backgroundColor: currCardColor,
         body: SafeArea(
           child: SingleChildScrollView(
-            padding: EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               children: <Widget>[
                 Card(
@@ -69,7 +69,8 @@ class _AboutPageState extends State<AboutPage> {
                           style: TextStyle(
                               color: mainColor,
                               fontFamily: "Product Sans",
-                              fontWeight: FontWeight.bold),
+                              fontWeight: FontWeight.bold
+                          ),
                         ),
                       ),
                       ListTile(
