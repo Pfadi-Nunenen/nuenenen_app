@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nuenenen/screens/overview/stufen_page.dart';
+import 'package:nuenenen/screens/settings/settings_page.dart';
 import 'package:nuenenen/theme/colors.dart';
 import 'package:nuenenen/screens/overview/home_page.dart';
 import 'package:nuenenen/user_info.dart';
@@ -23,7 +25,45 @@ class _TabBarControllerState extends State<TabBarController> {
 
     _currentTab = index;
 
+    if(index == 0) {
+      setState(() {
+        _currentWidget = HomePage();
+        _title = "Home";
+      });
+    } else if(index == 1) {
+      setState(() {
+        _currentWidget = StufenPage();
+        _title = "Stufen";
+      });
+    } else if(index == 2) {
+      setState(() {
+        _currentWidget = SettingsPage();
+        _title = "Einstellungen";
+      });
+    }
+  }
 
+  @override
+  void initState() {
+    super.initState();
+
+    setState(() {
+      _currentTab = lastPage;
+      if(lastPage == 0) {
+        setState(() {
+          _currentWidget = HomePage();
+          _title = "Home";
+        });
+      } else if(lastPage == 1) {
+        setState(() {
+          _currentWidget = StufenPage();
+          _title = "Stufen";
+        });
+      } else if(lastPage == 2) {
+        _currentWidget = SettingsPage();
+        _title = "Einstellungen";
+      }
+    });
   }
 
   @override
@@ -42,12 +82,12 @@ class _TabBarControllerState extends State<TabBarController> {
             icon: Icon(
               Icons.home,
               size: 30.0,
-              color: Colors.grey,
+              color: Colors.grey
             ),
             activeIcon: Icon(
               Icons.home,
               size: 30.0,
-              color: mainColor,
+              color: Colors.pink,
             ),
             label: "Home",
           ),
@@ -60,7 +100,7 @@ class _TabBarControllerState extends State<TabBarController> {
             activeIcon: Icon(
               Icons.info,
               size: 30.0,
-              color: mainColor
+              color: Colors.pink
             ),
             label: "Stufen"
           ),
@@ -73,7 +113,7 @@ class _TabBarControllerState extends State<TabBarController> {
             activeIcon: Icon(
               Icons.settings,
               size: 30.0,
-              color: mainColor,
+              color: Colors.pink,
             ),
             label: "Einstellungen"
           )
