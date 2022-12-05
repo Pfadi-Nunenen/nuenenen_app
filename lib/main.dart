@@ -12,9 +12,14 @@ import 'package:nuenenen/tab_bar_controller.dart';
 import 'package:nuenenen/theme/theme.dart';
 import 'package:nuenenen/user_info.dart';
 
-void main() {
-  FirebaseMessaging messaging = FirebaseMessaging.instance;
-  messaging.getToken();
+Future<void> _messageHandler(RemoteMessage message) async {
+  print('background message ${message.notification!.body}');
+}
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  FirebaseMessaging.onBackgroundMessage(_messageHandler);
 
   // Home Routes
   router.define('/home', handler:
