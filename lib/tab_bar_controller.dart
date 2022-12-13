@@ -77,14 +77,18 @@ class _TabBarControllerState extends State<TabBarController> {
         showSelectedLabels: true,
         showUnselectedLabels: true,
         backgroundColor: tabBarColor,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
               size: 30.0,
-              color: Colors.grey,
+              color: Colors.grey
             ),
-            activeIcon: Icon(Icons.home, size: 30.0, color: mainColor),
+            activeIcon: Icon(
+              Icons.home,
+              size: 30.0,
+              color: Colors.pink,
+            ),
             label: "Home",
           ),
           BottomNavigationBarItem(
@@ -93,18 +97,26 @@ class _TabBarControllerState extends State<TabBarController> {
                 size: 30.0,
                 color: Colors.grey,
               ),
-              activeIcon: Icon(Icons.info, size: 30.0, color: mainColor),
-              label: "Stufen"
+            activeIcon: Icon(
+              Icons.info,
+              size: 30.0,
+              color: Colors.pink
+            ),
+            label: "Stufen"
           ),
           BottomNavigationBarItem(
-              icon: Icon(
-                Icons.settings,
-                size: 30.0,
-                color: Colors.grey,
-              ),
-              activeIcon: Icon(Icons.settings, size: 30.0, color: mainColor),
-              label: "Einstellungen"
-          ),
+            icon: Icon(
+              Icons.settings,
+              size: 30.0,
+              color: Colors.grey,
+            ),
+            activeIcon: Icon(
+              Icons.settings,
+              size: 30.0,
+              color: Colors.pink,
+            ),
+            label: "Einstellungen"
+          )
         ],
       ),
     );

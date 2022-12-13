@@ -58,7 +58,7 @@ class _BiberPageState extends State<BiberPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CupertinoNavigationBar(
+      appBar: const CupertinoNavigationBar(
         backgroundColor: mainColor,
         previousPageTitle: "Stufen",
         middle: Text(
@@ -69,7 +69,7 @@ class _BiberPageState extends State<BiberPage> {
       body: isLoading
           ? Container(
           color: currBackgroundColor,
-          child: Center(
+          child: const Center(
             child: CircularProgressIndicator(),
           ))
           : RefreshIndicator(
@@ -95,11 +95,13 @@ class _BiberPageState extends State<BiberPage> {
                     "html": Style(
                         whiteSpace: WhiteSpace.PRE, color: currTextColor),
                   },
-                  onLinkTap: (url) async {
-                    if(await canLaunch(url)) {
-                      await launch(url);
-                    } else {
-                      throw 'Could not launch $url';
+                  onLinkTap: (url, _, __, ___) async {
+                    if(url != null){
+                      if (await canLaunchUrl(Uri.parse(url))) {
+                        await launchUrl(Uri.parse(url));
+                      } else {
+                        throw 'Could not launch $url';
+                      }
                     }
                   },
                 ),
@@ -108,11 +110,13 @@ class _BiberPageState extends State<BiberPage> {
                   style: {
                     "html": Style(color: currTextColor),
                   },
-                  onLinkTap: (url) async {
-                    if(await canLaunch(url)) {
-                      await launch(url);
-                    } else {
-                      throw 'Could not launch $url';
+                  onLinkTap: (url, _, __, ___) async {
+                    if(url != null){
+                      if (await canLaunchUrl(Uri.parse(url))) {
+                        await launchUrl(Uri.parse(url));
+                      } else {
+                        throw 'Could not launch $url';
+                      }
                     }
                   },
                 ),

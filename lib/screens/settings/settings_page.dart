@@ -15,7 +15,7 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
-  FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
+  FirebaseMessaging messaging = FirebaseMessaging.instance;
 
   bool darkMode = false;
   bool allowBiberNotification = false;
@@ -46,12 +46,12 @@ class _SettingsPageState extends State<SettingsPage> {
 
   setNotificationChannel(String channelKey, bool state, String what) {
     if(state == true) {
-      _firebaseMessaging.subscribeToTopic(channelKey);
+      messaging.subscribeToTopic(channelKey);
       Fluttertoast.showToast(
           msg: "Benachrichtigungen welche ${what} betreffen werden nun angezeigt!"
       );
     } else if(state == false) {
-      _firebaseMessaging.unsubscribeFromTopic(channelKey);
+      messaging.unsubscribeFromTopic(channelKey);
       Fluttertoast.showToast(
           msg: "Benachrichtigungen welche ${what} betreffen werden nicht mehr angezeigt!"
       );
@@ -71,7 +71,7 @@ class _SettingsPageState extends State<SettingsPage> {
     return NestedScrollView(
       headerSliverBuilder: (BuildContext context, bool isScrolled) {
         return [
-          CupertinoSliverNavigationBar(
+          const CupertinoSliverNavigationBar(
             largeTitle: Text(
               "Einstellungen",
               style: TextStyle(color: Colors.white),
@@ -81,7 +81,11 @@ class _SettingsPageState extends State<SettingsPage> {
         ];
       },
       body: Container(
-        padding: EdgeInsets.only(top: 16.0, right: 16.0, left: 16.0),
+        padding: const EdgeInsets.only(
+          top: 16.0,
+          right: 16.0,
+          left: 16.0,
+        ),
         color: currCardColor,
         child: SingleChildScrollView(
           child: Column(
@@ -93,51 +97,59 @@ class _SettingsPageState extends State<SettingsPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Container(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
+                      padding: const EdgeInsets.all(16.0),
+                      child: const Text(
                         "Allgemeines",
                         style: TextStyle(
                             color: mainColor,
                             fontFamily: "Product Sans",
-                            fontWeight: FontWeight.bold),
+                            fontWeight: FontWeight.bold
+                        ),
                       ),
                     ),
                     ListTile(
-                      title: Text("Über die APP",
+                      title: Text(
+                          "Über die APP",
                           style: TextStyle(
                               fontFamily: "Product Sans",
-                              color: currTextColor)),
+                              color: currTextColor
+                        ),
+                      ),
                       trailing: Icon(Icons.navigate_next, color: mainColor),
                       onTap: () {
                         router.navigateTo(context, '/about',
                             transition: TransitionType.native);
                       },
                     ),
-                    Divider(height: 0.0, color: mainColor),
+                    const Divider(height: 0.0, color: mainColor),
                   ],
                 ),
               ),
-              Padding(padding: EdgeInsets.all(8.0)),
+              const Padding(padding: EdgeInsets.all(8.0)),
               Card(
                 color: currBackgroundColor,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Container(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
+                      padding: const EdgeInsets.all(16.0),
+                      child: const Text(
                         "Konfiguration",
                         style: TextStyle(
-                            color: mainColor,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: "Product Sans"),
+                          color: mainColor,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "Product Sans"
+                        ),
                       ),
                     ),
                     SwitchListTile.adaptive(
-                      title: Text("Dunkles Design",
-                          style: TextStyle(
-                              fontFamily: "Product Sans",
-                              color: currTextColor)),
+                      title: Text(
+                        "Dunkles Design",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: currTextColor
+                        ),
+                      ),
                       value: darkMode,
                       activeColor: mainColor,
                       onChanged: (bool value) {
@@ -161,16 +173,19 @@ class _SettingsPageState extends State<SettingsPage> {
                         });
                       },
                     ),
-                    Divider(
+                    const Divider(
                       height: 5.0,
                       color: mainColor,
                       thickness: 2.0,
                     ),
                     SwitchListTile.adaptive(
-                      title: Text("Benachrichtigungen Biber",
-                          style: TextStyle(
-                              fontFamily: "Product Sans",
-                              color: currTextColor)),
+                      title: Text(
+                        "Benachrichtigungen Biber",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: currTextColor
+                        ),
+                      ),
                       value: allowBiberNotification,
                       activeColor: mainColor,
                       onChanged: (bool value) {
@@ -179,14 +194,18 @@ class _SettingsPageState extends State<SettingsPage> {
                         });
                         savePref('biberNot', value);
                         setNotificationChannel(
-                            'biber', value, 'die Familie Biberstein');
+                            'biber', value, 'die Familie Biberstein'
+                        );
                       },
                     ),
                     SwitchListTile.adaptive(
-                      title: Text("Benachrichtigungen Wölf",
-                          style: TextStyle(
-                              fontFamily: "Product Sans",
-                              color: currTextColor)),
+                      title: Text(
+                        "Benachrichtigungen Wölfe",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: currTextColor
+                        ),
+                      ),
                       value: allowWolfNotification,
                       activeColor: mainColor,
                       onChanged: (bool value) {
@@ -195,14 +214,18 @@ class _SettingsPageState extends State<SettingsPage> {
                         });
                         savePref('wolfNot', value);
                         setNotificationChannel(
-                            'wolf', value, 'die Meute Phönix');
+                            'wolf', value, 'die Meute Phönix'
+                        );
                       },
                     ),
                     SwitchListTile.adaptive(
-                      title: Text("Benachrichtigungen Aetna",
-                          style: TextStyle(
-                              fontFamily: "Product Sans",
-                              color: currTextColor)),
+                      title: Text(
+                        "Benachrichtigungen Aetna",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: currTextColor
+                        ),
+                      ),
                       value: allowAetnaNotification,
                       activeColor: mainColor,
                       onChanged: (bool value) {
@@ -211,14 +234,18 @@ class _SettingsPageState extends State<SettingsPage> {
                         });
                         savePref('aetnaNot', value);
                         setNotificationChannel(
-                            'aetna', value, 'den Stamm Aetna');
+                            'aetna', value, 'den Stamm Aetna'
+                        );
                       },
                     ),
                     SwitchListTile.adaptive(
-                      title: Text("Benachrichtigungen Saturn",
-                          style: TextStyle(
-                              fontFamily: "Product Sans",
-                              color: currTextColor)),
+                      title: Text(
+                        "Benachrichtigungen Saturn",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: currTextColor
+                        ),
+                      ),
                       value: allowSaturnNotification,
                       activeColor: mainColor,
                       onChanged: (bool value) {
@@ -227,14 +254,18 @@ class _SettingsPageState extends State<SettingsPage> {
                         });
                         savePref('saturnNot', value);
                         setNotificationChannel(
-                            'saturn', value, 'den Trupp Saturn');
+                            'saturn', value, 'den Trupp Saturn'
+                        );
                       },
                     ),
                     SwitchListTile.adaptive(
-                      title: Text("Benachrichtigungen Pios",
-                          style: TextStyle(
-                              fontFamily: "Product Sans",
-                              color: currTextColor)),
+                      title: Text(
+                        "Benachrichtigungen Pios",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: currTextColor
+                        )
+                      ),
                       value: allowPioNotification,
                       activeColor: mainColor,
                       onChanged: (bool value) {
@@ -242,7 +273,9 @@ class _SettingsPageState extends State<SettingsPage> {
                           allowPioNotification = value;
                         });
                         savePref('pioNot', value);
-                        setNotificationChannel('pios', value, 'die Pios');
+                        setNotificationChannel(
+                          'pios', value, 'die Pios'
+                        );
                       },
                     ),
                     Divider(
@@ -251,10 +284,13 @@ class _SettingsPageState extends State<SettingsPage> {
                       thickness: 1.0,
                     ),
                     SwitchListTile.adaptive(
-                      title: Text("**Benachrichtigungen Test**",
-                          style: TextStyle(
-                              fontFamily: "Product Sans",
-                              color: currTextColor)),
+                      title: Text(
+                        "**Benachrichtigungen Test**",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: currTextColor
+                        )
+                      ),
                       value: allowDevNotification,
                       activeColor: mainColor,
                       onChanged: (bool value) {
@@ -263,7 +299,8 @@ class _SettingsPageState extends State<SettingsPage> {
                         });
                         savePref('devNot', value);
                         setNotificationChannel(
-                            'devel', value, 'die APP-Programmierer');
+                          'devel', value, 'die APP-Programmierer'
+                        );
                       },
                     ),
                     Divider(height: 0.0, color: mainColor),
@@ -277,8 +314,8 @@ class _SettingsPageState extends State<SettingsPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Container(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
+                      padding: const EdgeInsets.all(16.0),
+                      child: const Text(
                         "Feedback",
                         style: TextStyle(
                           color: mainColor,
@@ -288,14 +325,20 @@ class _SettingsPageState extends State<SettingsPage> {
                       ),
                     ),
                     ListTile(
-                      title: Text("Einen Fehler melden",
-                          style: TextStyle(
-                              fontFamily: "Product Sans",
-                              color: currTextColor)),
-                      trailing: Icon(Icons.navigate_next, color: mainColor),
+                      title: Text(
+                        "Einen Fehler melden",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: currTextColor
+                        ),
+                      ),
+                      trailing: const Icon(
+                        Icons.navigate_next,
+                        color: mainColor,
+                      ),
                       onTap: () {
-                        launch(
-                            "https://github.com/Vento-Nuenenen/nuenenen/issues");
+                        final uri = Uri.https("github.com", "/Vento-Nuenenen/nuenenen/issues");
+                        launchUrl(uri);
                       },
                     ),
                   ],

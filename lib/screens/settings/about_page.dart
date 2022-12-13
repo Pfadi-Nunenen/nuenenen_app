@@ -32,9 +32,9 @@ class _AboutPageState extends State<AboutPage> {
   }
 
   launchContributeUrl() async {
-    var url = "https://github.com/Pfadi-Nunenen/nuenenen_app";
-    if(await canLaunch(url)) {
-      await launch(url);
+    var url = Uri.https("github.com", "/Pfadi-Nunenen/nuenenen_app");
+    if(await canLaunchUrl(url)) {
+      await launchUrl(url);
     } else {
       throw '$url kann nicht geöffnet werden.';
     }
@@ -43,138 +43,171 @@ class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: CupertinoNavigationBar(
-          backgroundColor: mainColor,
-          previousPageTitle: "Zurück",
-          middle: Text(
-            "Über die APP",
-            style: TextStyle(color: Colors.white),
+      appBar: const CupertinoNavigationBar(
+        backgroundColor: mainColor,
+        previousPageTitle: "Zurück",
+        middle: Text(
+          "Über die APP",
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+      backgroundColor: currCardColor,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: <Widget>[
+              Card(
+                color: currBackgroundColor,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Container(
+                      padding: EdgeInsets.all(16.0),
+                      child: const Text(
+                        "Gerät",
+                        style: TextStyle(
+                          color: mainColor,
+                          fontFamily: "Product Sans",
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                    ListTile(
+                      title: Text("App Version",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: currTextColor
+                        )
+                      ),
+                      trailing: Text(
+                        "$appVersion$appStatus",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          fontSize: 16.0,
+                          color: currTextColor
+                        )
+                      ),
+                    ),
+                    const Divider(height: 0.0, color: mainColor),
+                    ListTile(
+                      title: Text(
+                        "Gerätename",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: currTextColor
+                        )
+                      ),
+                      trailing: Text(
+                        "$deviceName",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          fontSize: 16.0,
+                          color: currTextColor
+                        )
+                      ),
+                    ),
+                    const Divider(height: 0.0, color: mainColor),
+                    ListTile(
+                      title: Text(
+                        "Platform",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: currTextColor
+                        )
+                      ),
+                      trailing: Text(
+                        "$devicePlatform",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          fontSize: 16.0,
+                          color: currTextColor
+                        )
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const Padding(padding: EdgeInsets.all(8.0)),
+              Card(
+                color: currBackgroundColor,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Container(
+                      padding: const EdgeInsets.all(16.0),
+                      child: const Text(
+                        "Eintwicklung",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: mainColor,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                    ListTile(
+                      title: Text(
+                        "Caspar Brenneisen v/o Vento",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: currTextColor
+                        )
+                      ),
+                      subtitle: const Text(
+                        "App Development",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: Colors.grey
+                        )
+                      ),
+                      onTap: () {
+                        var url = Uri.https("github.com", "Pfadi-Nunenen");
+                        launchUrl(url);
+                      },
+                    ),
+                  ],
+                ),
+              ),
+              const Padding(padding: EdgeInsets.all(16.0)),
+              Card(
+                color: currBackgroundColor,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Container(
+                      padding: const EdgeInsets.all(16.0),
+                      child: const Text(
+                        "Contributing",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: mainColor,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                    ListTile(
+                      title: Text(
+                        "Sourcecode",
+                        style: TextStyle(
+                          fontFamily: "Product Sans",
+                          color: currTextColor
+                        )
+                      ),
+                      trailing: const Icon(
+                          Icons.navigate_next,
+                          color: mainColor
+                      ),
+                      onTap: () {
+                        launchContributeUrl();
+                      },
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
-        backgroundColor: currCardColor,
-        body: SafeArea(
-          child: SingleChildScrollView(
-            padding: EdgeInsets.all(16.0),
-            child: Column(
-              children: <Widget>[
-                Card(
-                  color: currBackgroundColor,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Container(
-                        padding: EdgeInsets.all(16.0),
-                        child: Text(
-                          "Gerät",
-                          style: TextStyle(
-                              color: mainColor,
-                              fontFamily: "Product Sans",
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      ListTile(
-                        title: Text("App Version",
-                            style: TextStyle(
-                                fontFamily: "Product Sans",
-                                color: currTextColor)),
-                        trailing: Text("$appVersion$appStatus",
-                            style: TextStyle(
-                                fontFamily: "Product Sans",
-                                fontSize: 16.0,
-                                color: currTextColor)),
-                      ),
-                      Divider(height: 0.0, color: mainColor),
-                      ListTile(
-                        title: Text("Gerätename",
-                            style: TextStyle(
-                                fontFamily: "Product Sans",
-                                color: currTextColor)),
-                        trailing: Text("$deviceName",
-                            style: TextStyle(
-                                fontFamily: "Product Sans",
-                                fontSize: 16.0,
-                                color: currTextColor)),
-                      ),
-                      Divider(height: 0.0, color: mainColor),
-                      ListTile(
-                        title: Text("Platform",
-                            style: TextStyle(
-                                fontFamily: "Product Sans",
-                                color: currTextColor)),
-                        trailing: Text("$devicePlatform",
-                            style: TextStyle(
-                                fontFamily: "Product Sans",
-                                fontSize: 16.0,
-                                color: currTextColor)),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(padding: EdgeInsets.all(8.0)),
-                Card(
-                  color: currBackgroundColor,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Container(
-                        padding: EdgeInsets.all(16.0),
-                        child: Text(
-                          "Eintwicklung",
-                          style: TextStyle(
-                              fontFamily: "Product Sans",
-                              color: mainColor,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      ListTile(
-                        title: Text("Caspar Brenneisen v/o Vento",
-                            style: TextStyle(
-                                fontFamily: "Product Sans",
-                                color: currTextColor)),
-                        subtitle: Text("App Development",
-                            style: TextStyle(
-                                fontFamily: "Product Sans",
-                                color: Colors.grey)),
-                        onTap: () {
-                          var url = "https://github.com/Pfadi-Nunenen";
-                          launch(url);
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(padding: EdgeInsets.all(16.0)),
-                Card(
-                  color: currBackgroundColor,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Container(
-                        padding: EdgeInsets.all(16.0),
-                        child: Text(
-                          "Contributing",
-                          style: TextStyle(
-                              fontFamily: "Product Sans",
-                              color: mainColor,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      ListTile(
-                        title: Text("Sourcecode",
-                            style: TextStyle(
-                                fontFamily: "Product Sans",
-                                color: currTextColor)),
-                        trailing: Icon(Icons.navigate_next, color: mainColor),
-                        onTap: () {
-                          launchContributeUrl();
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ));
+      )
+    );
   }
 }
