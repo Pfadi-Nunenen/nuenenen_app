@@ -21,7 +21,6 @@ class _SettingsPageState extends State<SettingsPage> {
   bool allowBiberNotification = false;
   bool allowWolfNotification = false;
   bool allowAetnaNotification = false;
-  bool allowSaturnNotification = false;
   bool allowPioNotification = false;
   bool allowDevNotification = false;
 
@@ -38,7 +37,6 @@ class _SettingsPageState extends State<SettingsPage> {
       allowBiberNotification = (sharedPrefs.getBool('biberNot') ?? false);
       allowWolfNotification = (sharedPrefs.getBool('wolfNot') ?? false);
       allowAetnaNotification = (sharedPrefs.getBool('aetnaNot') ?? false);
-      allowSaturnNotification = (sharedPrefs.getBool('saturnNot') ?? false);
       allowPioNotification = (sharedPrefs.getBool('pioNot') ?? false);
       allowDevNotification = (sharedPrefs.getBool('devNot') ?? false);
     });
@@ -90,7 +88,7 @@ class _SettingsPageState extends State<SettingsPage> {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Padding(padding: EdgeInsets.all(8.0)),
+              const Padding(padding: EdgeInsets.all(8.0)),
               Card(
                 color: currBackgroundColor,
                 child: Column(
@@ -115,7 +113,7 @@ class _SettingsPageState extends State<SettingsPage> {
                               color: currTextColor
                         ),
                       ),
-                      trailing: Icon(Icons.navigate_next, color: mainColor),
+                      trailing: const Icon(Icons.navigate_next, color: mainColor),
                       onTap: () {
                         router.navigateTo(context, '/about',
                             transition: TransitionType.native);
@@ -220,7 +218,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     ),
                     SwitchListTile.adaptive(
                       title: Text(
-                        "Benachrichtigungen Aetna",
+                        "Benachrichtigungen Pfadis",
                         style: TextStyle(
                           fontFamily: "Product Sans",
                           color: currTextColor
@@ -234,27 +232,7 @@ class _SettingsPageState extends State<SettingsPage> {
                         });
                         savePref('aetnaNot', value);
                         setNotificationChannel(
-                            'aetna', value, 'den Stamm Aetna'
-                        );
-                      },
-                    ),
-                    SwitchListTile.adaptive(
-                      title: Text(
-                        "Benachrichtigungen Saturn",
-                        style: TextStyle(
-                          fontFamily: "Product Sans",
-                          color: currTextColor
-                        ),
-                      ),
-                      value: allowSaturnNotification,
-                      activeColor: mainColor,
-                      onChanged: (bool value) {
-                        setState(() {
-                          allowSaturnNotification = value;
-                        });
-                        savePref('saturnNot', value);
-                        setNotificationChannel(
-                            'saturn', value, 'den Trupp Saturn'
+                            'aetna', value, 'die Pfadistufe'
                         );
                       },
                     ),
@@ -278,7 +256,7 @@ class _SettingsPageState extends State<SettingsPage> {
                         );
                       },
                     ),
-                    Divider(
+                    const Divider(
                       height: 5.0,
                       color: mainColor,
                       thickness: 1.0,
@@ -303,11 +281,11 @@ class _SettingsPageState extends State<SettingsPage> {
                         );
                       },
                     ),
-                    Divider(height: 0.0, color: mainColor),
+                    const Divider(height: 0.0, color: mainColor),
                   ],
                 ),
               ),
-              Padding(padding: EdgeInsets.all(8.0)),
+              const Padding(padding: EdgeInsets.all(8.0)),
               Card(
                 color: currBackgroundColor,
                 child: Column(
@@ -344,7 +322,6 @@ class _SettingsPageState extends State<SettingsPage> {
                   ],
                 ),
               ),
-              Padding(padding: EdgeInsets.all(8.0)),
             ],
           ),
         ),
