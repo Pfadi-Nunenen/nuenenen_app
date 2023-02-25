@@ -7,7 +7,7 @@ import Foundation
 
 import firebase_core
 import firebase_messaging
-import shared_preferences_macos
+import shared_preferences_foundation
 import url_launcher_macos
 import wakelock_macos
 
