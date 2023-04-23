@@ -13,7 +13,7 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.5
-  fluro: ^2.0.4
+  fluro: ^2.0.5
   http: ^0.13.5
   fluttertoast: ^8.1.2
   shared_preferences: ^2.0.17
