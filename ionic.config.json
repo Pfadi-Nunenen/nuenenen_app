@@ -1,0 +1,7 @@
+{
+  "name": "nuenenen_app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
