@@ -21,7 +21,7 @@
     "@capacitor/status-bar": "5.0.6",
     "@ionic/vue": "^7.6.1",
     "@ionic/vue-router": "^7.0.0",
-    "browserslist": "^4.22.1",
+    "browserslist": "^4.22.2",
     "ionicons": "^7.0.0",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
