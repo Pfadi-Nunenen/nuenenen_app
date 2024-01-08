@@ -1330,13 +1330,13 @@
     debug "^4.0.0"
     tslib "^2.0.1"
 
-"@ionic/core@7.6.2":
-  version "7.6.2"
-  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-7.6.2.tgz#c76dce24b54054b0a2b4b36e24a76bcd4b60e734"
-  integrity sha512-PEeCAjKrtKkc7PqCF7WlXn36PmowBbswnMADmoJ75ozyheRMe+v+GY2a75dGsBxB8nMZP9X9wYBXvZ3BgYUdLw==
+"@ionic/core@7.6.3":
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-7.6.3.tgz#e878197c72c624478e41c53e7871677bb0930dad"
+  integrity sha512-KT8RXcbLRoCvj2wQNZJ0FAM+PlcVZZT0N3BPYPAiyTLA/rmMnlPGxNMMqGEJMynL8oPx/2nh+bLS2Yv/kBPnug==
   dependencies:
     "@stencil/core" "^4.8.2"
-    ionicons "^7.2.1"
+    ionicons "^7.2.2"
     tslib "^2.1.0"
 
 "@ionic/utils-array@2.1.6":
@@ -1429,19 +1429,19 @@
     untildify "^4.0.0"
     wrap-ansi "^7.0.0"
 
-"@ionic/vue-router@^7.6.1":
-  version "7.6.2"
-  resolved "https://registry.yarnpkg.com/@ionic/vue-router/-/vue-router-7.6.2.tgz#a05dd951456cb5e81ff45492be25a7db8e2b9349"
-  integrity sha512-/9vAMfRxteM2lEeBCSTkeuhdcAbAcSK2CCMgvSI36rZquQDUDi+qH8ugrvhjW1JE9p2npCIl108haW0VcHk3Lw==
+"@ionic/vue-router@^7.6.3":
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/@ionic/vue-router/-/vue-router-7.6.3.tgz#1e8d697ca30f916219d358fb476e6d73d522eda7"
+  integrity sha512-4BATQZ5N/ngYh4oXPXckMr/NDyPo5wHx7Bb2nVIlSLHnh63kXc1E/C+2aBYNfhq2+WY2/+SCvQLrXLdlImTuTw==
   dependencies:
-    "@ionic/vue" "7.6.2"
+    "@ionic/vue" "7.6.3"
 
-"@ionic/vue@7.6.2", "@ionic/vue@^7.6.1":
-  version "7.6.2"
-  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-7.6.2.tgz#6c81e242539fbc1903d1c2fb8ba1bb239a131f27"
-  integrity sha512-+qamnvbplyPN0RASemYvxMCPcwJ+lrJVJeDQ8Cw14OIuItVkMsidM2pF4hzZaxXyS+aHqCaVTewvLJ2/cUpzTw==
+"@ionic/vue@7.6.3", "@ionic/vue@^7.6.1":
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-7.6.3.tgz#8e7bc96a693d3e3d6826ad49799bc17d054c4b85"
+  integrity sha512-z++ahF2xfcbj/LuqPZUm22fxm7p5BabWOHekbrraPllIm9+1xpP6JESb7XNYT4G0+hFxThXYxUyhc+ph2cALgQ==
   dependencies:
-    "@ionic/core" "7.6.2"
+    "@ionic/core" "7.6.3"
     ionicons "^7.0.0"
 
 "@isaacs/cliui@^8.0.2":
@@ -3362,7 +3362,7 @@ ini@^3.0.1:
   resolved "https://registry.yarnpkg.com/ini/-/ini-3.0.1.tgz#c76ec81007875bc44d544ff7a11a55d12294102d"
   integrity sha512-it4HyVAUTKBc6m8e1iXWvXSTdndF7HbdN713+kvLrymxTaU4AUBWrJ4vEooP+V7fexnVD3LKcBshjGGPefSMUQ==
 
-ionicons@^7.0.0, ionicons@^7.2.1:
+ionicons@^7.0.0, ionicons@^7.2.2:
   version "7.2.2"
   resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-7.2.2.tgz#b28140bd8e81ec4eea2d1ee78a5e7cfca9f14d3b"
   integrity sha512-I3iYIfc9Q9FRifWyFSwTAvbEABWlWY32i0sAVDDPGYnaIZVugkLCZFbEcrphW6ixVPg8tt1oLwalo/JJwbEqnA==
