@@ -35,7 +35,7 @@
     "cypress": "^13.6.3",
     "eslint": "^8.56.0",
     "eslint-plugin-vue": "^9.20.1",
-    "jsdom": "^23.2.0",
+    "jsdom": "^24.0.0",
     "terser": "^5.27.0",
     "typescript": "^5.3.2",
     "vite": "^4.5.2",
