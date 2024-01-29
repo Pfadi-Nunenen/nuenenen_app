@@ -1348,6 +1348,15 @@
     ionicons "^7.2.2"
     tslib "^2.1.0"
 
+"@ionic/core@7.6.6":
+  version "7.6.6"
+  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-7.6.6.tgz#fcffe778be288cdfbdddaccb0a80905d6ca70d73"
+  integrity sha512-WstnLHiR8ipW2ASdO/eqSwgMHCuVvJE3qsUNPHWkup9f08/bcbKYZpOfaWNLw/ftNqEpFbjiRuocoYYyLP0/gw==
+  dependencies:
+    "@stencil/core" "^4.10.0"
+    ionicons "^7.2.2"
+    tslib "^2.1.0"
+
 "@ionic/utils-array@2.1.6":
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/@ionic/utils-array/-/utils-array-2.1.6.tgz#eee863be945ee1a28b9a10ff16fdea776fa18c22"
@@ -1445,12 +1454,20 @@
   dependencies:
     "@ionic/vue" "7.6.5"
 
-"@ionic/vue@7.6.5", "@ionic/vue@^7.6.1":
+"@ionic/vue@7.6.5":
   version "7.6.5"
   resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-7.6.5.tgz#c68237a376681b96a62252c297c4ed9b98f0fcd4"
   integrity sha512-JZw9IwPvnyZYF8SvT3dZrh1YpGqyHL6Q674XjBTKk+LSWQ9nc0FDmJn3SNt4r+WFH6fY9EaMCPOEN/NEz/ZXHQ==
   dependencies:
     "@ionic/core" "7.6.5"
+    ionicons "^7.0.0"
+
+"@ionic/vue@^7.6.6":
+  version "7.6.6"
+  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-7.6.6.tgz#64d7637fb93caca7cb0df2464eb9b366d735f079"
+  integrity sha512-Ct992mndUmyTKq2vBFX/3gFcyNW/QKScYydAvG0Jtl9fPHrMZ7fYj+Hk1OEuLQDbsBMH3gUXjUV0OV5pYABsEA==
+  dependencies:
+    "@ionic/core" "7.6.6"
     ionicons "^7.0.0"
 
 "@isaacs/cliui@^8.0.2":
