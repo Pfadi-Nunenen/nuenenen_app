@@ -9,7 +9,7 @@
         </ion-tab-button>
 
         <ion-tab-button tab="stufen" href="/tabs/stufen">
-          <ion-icon aria-hidden="true" :icon="information" />
+          <ion-icon aria-hidden="true" :icon="informationCircle" />
           <ion-label>Stufen</ion-label>
         </ion-tab-button>
 
@@ -24,5 +24,5 @@
 
 <script setup lang="ts">
 import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
-import {home, information, settings} from 'ionicons/icons';
+import {home, informationCircle, settings} from 'ionicons/icons';
 </script>
