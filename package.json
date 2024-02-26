@@ -19,7 +19,7 @@
     "@capacitor/ios": "^5.7.0",
     "@capacitor/keyboard": "^5.0.8",
     "@capacitor/status-bar": "^5.0.7",
-    "@ionic/vue": "^7.0.0",
+    "@ionic/vue": "^7.7.3",
     "@ionic/vue-router": "^7.7.2",
     "ionicons": "^7.0.0",
     "vue": "^3.4.19",
