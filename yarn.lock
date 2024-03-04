@@ -947,10 +947,10 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
-"@capacitor/android@^5.7.0":
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-5.7.0.tgz#d67e0432c60e115672007e18a8492b0e7d2aa9ea"
-  integrity sha512-0bnG1dqfT/nTjzMeHF/a5kF8mqGjHrPLADNqn41seWDfb2ch6AMiKUHsmHpEOWmGIrWOM25qNTrTOytoCSpuXg==
+"@capacitor/android@^5.7.1":
+  version "5.7.1"
+  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-5.7.1.tgz#1985f4660f1406113d949431f0cbc45a8347f68c"
+  integrity sha512-qDsFw72y5GMHup148jrG/DJacEpjCz+r7lteAnMh8Jo1/TJCBvX53MVRmeHKrAnriE2BvTtHSZn4VPNcZlK7+Q==
 
 "@capacitor/app@^5.0.7":
   version "5.0.7"
