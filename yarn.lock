@@ -1247,10 +1247,10 @@
     debug "^4.0.0"
     tslib "^2.0.1"
 
-"@ionic/core@7.8.0":
-  version "7.8.0"
-  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-7.8.0.tgz#c5d793046510c60301dc14862dac911faba13880"
-  integrity sha512-rogQw6lWH367E5XQnovbAIB4pT1YmuTz7OvyQm0cp4pO2/64faKyTGteSxc99stG01CoARW+pjJN1K09hfKFPw==
+"@ionic/core@7.8.1":
+  version "7.8.1"
+  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-7.8.1.tgz#ef9710c56232011d99651100911430454dd5de7e"
+  integrity sha512-SsoDy0HaifCcWBlcyRIpTceboz6tSg4gjNr/LRGJyg+r2bWdoG3jeuQDg0Affox8dar7QvODk3AWO/7RFWLOfg==
   dependencies:
     "@stencil/core" "^4.12.2"
     ionicons "^7.2.2"
@@ -1346,19 +1346,19 @@
     untildify "^4.0.0"
     wrap-ansi "^7.0.0"
 
-"@ionic/vue-router@^7.8.0":
-  version "7.8.0"
-  resolved "https://registry.yarnpkg.com/@ionic/vue-router/-/vue-router-7.8.0.tgz#4d2825a7e299ae39be8f73a1428aaa9fed92947e"
-  integrity sha512-eoBznpasYngVCdeU1PiYdzbUGPXP85IZlduJrSa/B+UkZVTx33WTjTNP/GYC2NhMYVrei8eS/fmg7pafIWZHPQ==
+"@ionic/vue-router@^7.8.1":
+  version "7.8.1"
+  resolved "https://registry.yarnpkg.com/@ionic/vue-router/-/vue-router-7.8.1.tgz#26e6c6099843e6d58d94a138aa691e566262c357"
+  integrity sha512-o0TAFStZ6VuD01iq3oMJZiwhzRSlstOhOBheu08RBbZHAnQvY28kKsQypTFRYiQv4E6Ayc95b7ZeayMQt3wu+w==
   dependencies:
-    "@ionic/vue" "7.8.0"
+    "@ionic/vue" "7.8.1"
 
-"@ionic/vue@7.8.0", "@ionic/vue@^7.7.4":
-  version "7.8.0"
-  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-7.8.0.tgz#3f6b94d0a0f5579cf585ab30a1f26df8bd34830f"
-  integrity sha512-IXOUO9SQHXU3Ec/9u6u2JPNcu9VL8jamvM+elzBam7e0GDSQ56cyYDRnptROBdfBYop2EGiNJvzjWxAuZnM6kw==
+"@ionic/vue@7.8.1", "@ionic/vue@^7.7.4":
+  version "7.8.1"
+  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-7.8.1.tgz#35b766e29d4952a1ea4022bfed8b53dbe2d920d6"
+  integrity sha512-jEOss4oslEB38ASaBsYNRMpkLq6IYWmmscHAR01reEBiLt1144SqxQ3y4mhgHBdAP7gZrULMFdVTDUdJdlSq9Q==
   dependencies:
-    "@ionic/core" "7.8.0"
+    "@ionic/core" "7.8.1"
     ionicons "^7.0.0"
 
 "@isaacs/cliui@^8.0.2":
