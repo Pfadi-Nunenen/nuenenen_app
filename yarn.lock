@@ -1248,21 +1248,21 @@
     debug "^4.0.0"
     tslib "^2.0.1"
 
-"@ionic/core@7.8.4":
-  version "7.8.4"
-  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-7.8.4.tgz#ee9e7e1e5103ed6c9f2a03f7592c0a2a4e5e79c5"
-  integrity sha512-GiQM3Gb1kjaxQyDTQfXd54p/a8cK+ccaYKH30pRpzFMborqCZwhcCUQWV1zNAUuFI8YkC5CWTi6bdHyiYuxw4w==
-  dependencies:
-    "@stencil/core" "^4.12.2"
-    ionicons "^7.2.2"
-    tslib "^2.1.0"
-
 "@ionic/core@8.0.0":
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/@ionic/core/-/core-8.0.0.tgz#aa689b6a4be23ccae339466e5b61551255fe4a42"
   integrity sha512-jW1LA5mSUYmG4Go9EBWPiLv0Uxwm9vF8+3gwYNeLxJrRwzsirc1qBW/zvDTqcbyMwopAfwtb690iSv5e3i1CwA==
   dependencies:
     "@stencil/core" "^4.12.2"
+    ionicons "^7.2.2"
+    tslib "^2.1.0"
+
+"@ionic/core@8.0.1":
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-8.0.1.tgz#bedbe7b3714fa75c96299e1c0b6139174061830e"
+  integrity sha512-6FEa0kSXSs82aCYcB7JcLGt5Z0XBU8mRFQGVrJtdh3ybQQntIAWKHc9H2OFaiT3SSAK+XQqlU6kq0jM9nWKveQ==
+  dependencies:
+    "@stencil/core" "^4.17.1"
     ionicons "^7.2.2"
     tslib "^2.1.0"
 
@@ -1401,12 +1401,12 @@
     "@ionic/core" "8.0.0"
     ionicons "^7.0.0"
 
-"@ionic/vue@^7.7.4":
-  version "7.8.4"
-  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-7.8.4.tgz#c993df671a42aa4a991a209790bc0943db8ffbda"
-  integrity sha512-x5qRvGo9OSjnROANbicTR1vDIFLSMo2BWSzUCbpLfp3NLbLfgdRfWLFJMbSlI+2RLhZ6d7iACCjSzoayD255cw==
+"@ionic/vue@^8.0.1":
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.0.1.tgz#ea20010adee5c9de69bdf09f66bea636fe6252e3"
+  integrity sha512-BRP5ig5AfazmuVHJfpnd8FmlNIZZEkF/bn6iqm0nIyvtsd4nweSYCgZEjClrHU2eKK0I/xCIaPnatHt/NLMM5A==
   dependencies:
-    "@ionic/core" "7.8.4"
+    "@ionic/core" "8.0.1"
     ionicons "^7.0.0"
 
 "@isaacs/cliui@^8.0.2":
@@ -1573,6 +1573,11 @@
   version "4.12.2"
   resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.12.2.tgz#3811a30c63b7e18a400d65ca41acb9216ad256dc"
   integrity sha512-WEMpoqwMV4hY/ab2z9NxRhSeZwuKEugjyn6Vd+qA9xqZh6VNUL27QbP8vCa7IeqD4Zql4JBtKu3lVuBHutWE6w==
+
+"@stencil/core@^4.17.1":
+  version "4.17.1"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.17.1.tgz#2dc634a5fe4ccccaaaa4630cd5ffe4a6262e08d9"
+  integrity sha512-nlARe1QtK5abnCG8kPQKJMWiELg39vKabvf3ebm6YEhQA35CgrxC1pVYTsYq3yktJKoY+k+VzGRnATLKyaLbvA==
 
 "@types/estree@1.0.5", "@types/estree@^1.0.0":
   version "1.0.5"
