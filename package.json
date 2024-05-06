@@ -38,7 +38,7 @@
     "terser": "^5.30.4",
     "typescript": "^5.4.5",
     "vite": "^5.2.10",
-    "vitest": "^1.5.0",
+    "vitest": "^1.6.0",
     "vue-tsc": "^2.0.15"
   },
   "description": "An Ionic project"
