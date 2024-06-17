@@ -1352,15 +1352,6 @@
     debug "^4.0.0"
     tslib "^2.0.1"
 
-"@ionic/core@8.2.1":
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-8.2.1.tgz#3064a05e7d78ebb5a206ec6d40db330068ee97b6"
-  integrity sha512-nIoCdjzogRmyCoD7UcKUV3LmzkiqDN+TxHhkCTRVeNPFQwC5zuTbYKb714caJ6ixKSDBlDiEaLRIb2zgr57ekw==
-  dependencies:
-    "@stencil/core" "^4.17.2"
-    ionicons "^7.2.2"
-    tslib "^2.1.0"
-
 "@ionic/core@8.2.2":
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/@ionic/core/-/core-8.2.2.tgz#b76990c5a614e5a94fe4977784b25edf8c5170ad"
@@ -1490,22 +1481,14 @@
     untildify "^4.0.0"
     wrap-ansi "^7.0.0"
 
-"@ionic/vue-router@^8.2.1":
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/@ionic/vue-router/-/vue-router-8.2.1.tgz#57384df0e19f83fc5103f06f427b72fd2a8b1604"
-  integrity sha512-61++7ceTBECFRk/W2T+FyXbHM+c+3ZlWl0yJgHqwO48oqdXppKr9AbREt08xJR1Fjqm7GgLdbTkUNSnJE3PCAg==
+"@ionic/vue-router@^8.2.2":
+  version "8.2.2"
+  resolved "https://registry.yarnpkg.com/@ionic/vue-router/-/vue-router-8.2.2.tgz#d967d769f826b8be5d5c8669232437aa2ae6abb2"
+  integrity sha512-HskymeeW/65pQftCLD4hXW4fbKFil9D1Zu5JRHMRKmt7IOzm4PjNK4yxFjw5jXHlNYoidXeC+Qz9uJDGkOHUOQ==
   dependencies:
-    "@ionic/vue" "8.2.1"
+    "@ionic/vue" "8.2.2"
 
-"@ionic/vue@8.2.1":
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.2.1.tgz#a3a9e8d010b0e22295a125917b204121e99e2bb1"
-  integrity sha512-rMg8LhWUgRYCFU7+tJOzP9Cfxm5k9YqE1pWPyuf8RtvZ8WnaTNx1D5TQK2/RV63kwukyS5zM3eM6M9iWkoHJQw==
-  dependencies:
-    "@ionic/core" "8.2.1"
-    ionicons "^7.0.0"
-
-"@ionic/vue@^8.2.2":
+"@ionic/vue@8.2.2", "@ionic/vue@^8.2.2":
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.2.2.tgz#5b0757e02ebc3771f3ca256e8cf4a22af58195dd"
   integrity sha512-5xIkEX4UHs4Bm15wqG/xBSxUtWdnHv+eFD3dfYGEVhK+M5hp4Vv+YOhHx6xVLKtdQOC3p+ROCXK+7GmCrAv6KQ==
