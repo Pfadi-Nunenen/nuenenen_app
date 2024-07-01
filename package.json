@@ -20,7 +20,7 @@
     "@capacitor/keyboard": "^6.0.1",
     "@capacitor/status-bar": "^6.0.0",
     "@ionic/vue": "^8.2.2",
-    "@ionic/vue-router": "^8.2.2",
+    "@ionic/vue-router": "^8.2.4",
     "ionicons": "^7.4.0",
     "vue": "^3.4.30",
     "vue-router": "^4.3.2"
