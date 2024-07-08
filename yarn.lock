@@ -1352,12 +1352,12 @@
     debug "^4.0.0"
     tslib "^2.0.1"
 
-"@ionic/core@8.2.4":
-  version "8.2.4"
-  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-8.2.4.tgz#43f16c8d468f792127fe6ab2fc663feb20e9c76f"
-  integrity sha512-lCsPzSEVs/XQMF25/phHlwhDNUlz4gqotzY/fEbhq2PT6Z5w81NndRAPsLQ4JM2k4N2gjJNeUFZJi+W78z2qtA==
+"@ionic/core@8.2.5":
+  version "8.2.5"
+  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-8.2.5.tgz#3677371847302ab51371e08b190d79bf9c88b0d5"
+  integrity sha512-NhK5KfP5NL5NITibj8sOUlfI/ARNCF5rBu5HdIEfFe25MJkd0IYBQWjVaESFhSk7aB8pXEP8DIx1AHbT9e3Sog==
   dependencies:
-    "@stencil/core" "^4.19.1"
+    "@stencil/core" "^4.19.2"
     ionicons "^7.2.2"
     tslib "^2.1.0"
 
@@ -1481,19 +1481,19 @@
     untildify "^4.0.0"
     wrap-ansi "^7.0.0"
 
-"@ionic/vue-router@^8.2.4":
-  version "8.2.4"
-  resolved "https://registry.yarnpkg.com/@ionic/vue-router/-/vue-router-8.2.4.tgz#69b8525e06702a3259c9c49b08bbc4a01588a122"
-  integrity sha512-WEfVMrR3WAp7hb61S4cWbu4fUqRk2Qovs2Gx4HoOBWrNvZAWzLhaJjsmGx11eW+y0S0lZ6rp/Z/WOl9YpgeepQ==
+"@ionic/vue-router@^8.2.5":
+  version "8.2.5"
+  resolved "https://registry.yarnpkg.com/@ionic/vue-router/-/vue-router-8.2.5.tgz#fcde11b841bbcd9d9933b0b2cd32a39c586e4fda"
+  integrity sha512-6K4W/gt+LuDlvbZe0Ik0kiq1zRhHAkkvY6O9563RfOFsbrDpWx6YGPl3CFYUZ4hjDITD4/FHeMkNM51G2pYDmA==
   dependencies:
-    "@ionic/vue" "8.2.4"
+    "@ionic/vue" "8.2.5"
 
-"@ionic/vue@8.2.4", "@ionic/vue@^8.2.2":
-  version "8.2.4"
-  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.2.4.tgz#a5120f3f020a40690160712f6d7515c75583d6d1"
-  integrity sha512-0HVaV0temhEsxnaZTx2DibFEGe7QTy7COaL3dquT2/KapPpEcDkKXB/eyYjPbbxDbNmv5jFfmaV7YGJ7Ad2mmg==
+"@ionic/vue@8.2.5", "@ionic/vue@^8.2.2":
+  version "8.2.5"
+  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.2.5.tgz#c24ac69f259a3fb1b6bec2e60a5550f677abd793"
+  integrity sha512-Is6ZwHlLltR0YF54cgd/Fc/eVTW2VDIOExm3paGkczcaka6Jut3UY9m0ukbILeuRG+phjet31QKKbcGSaooWyg==
   dependencies:
-    "@ionic/core" "8.2.4"
+    "@ionic/core" "8.2.5"
     ionicons "^7.0.0"
 
 "@isaacs/cliui@^8.0.2":
@@ -1698,10 +1698,10 @@
   resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.17.1.tgz#2dc634a5fe4ccccaaaa4630cd5ffe4a6262e08d9"
   integrity sha512-nlARe1QtK5abnCG8kPQKJMWiELg39vKabvf3ebm6YEhQA35CgrxC1pVYTsYq3yktJKoY+k+VzGRnATLKyaLbvA==
 
-"@stencil/core@^4.19.1":
-  version "4.19.1"
-  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.19.1.tgz#f497a26f50b0429024783e1eddcbc8ba5d875fdb"
-  integrity sha512-fjSBctHrobeSL2+XcuX7GVk/eaUhZ/lvIu21RJmzHAPcNyueuSAEv7J/Isn4UlYNk70o+yOK72H0FTlNkUibvw==
+"@stencil/core@^4.19.2":
+  version "4.19.2"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.19.2.tgz#02d377aa0133fa211f5e4c1ace4baa329ed1cde2"
+  integrity sha512-ZdnbHmHEl8E5vN0GWDtONe5w6j3CrSqqxZM4hNLBPkV/aouWKug7D5/Mi6RazfYO5U4fmHQYLwMz60rHcx0G4g==
 
 "@types/estree@1.0.5", "@types/estree@^1.0.0":
   version "1.0.5"
