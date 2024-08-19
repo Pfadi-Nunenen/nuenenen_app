@@ -1135,10 +1135,10 @@
   resolved "https://registry.yarnpkg.com/@capacitor/keyboard/-/keyboard-6.0.1.tgz#76add27a20239eefc3353b970fd506036d948d18"
   integrity sha512-fBjqQaMc5uhFj6ycLnLa2hzQsR77pj/iuLLATkWihMUze3dD+IkwqFnEyOLsyk+52uoOYM7WkziSpNTquU1sZA==
 
-"@capacitor/status-bar@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@capacitor/status-bar/-/status-bar-6.0.0.tgz#dd487b1e5fc7c5717de85f2ec8fcdfe1c9a6962c"
-  integrity sha512-Wo0ILugYlmENegKDgTzVCPjbvP8h1ObgHslLdgeVG643ViMS/diausHIq8e104WIKCXtKIELmQeYVp9mX7932g==
+"@capacitor/status-bar@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@capacitor/status-bar/-/status-bar-6.0.1.tgz#27cef2560cdefb8e14d2cecc976056ede7b822ef"
+  integrity sha512-Usd9hZZQVAqy+jJfL7jRcYI7dcsxN09Na1yttwdl+F1bk3Ztoukk7CGPDm5VgKUSs53ihQBOy1+sczCACxhNiw==
 
 "@colors/colors@1.5.0":
   version "1.5.0"
