@@ -1373,10 +1373,10 @@
     debug "^4.0.0"
     tslib "^2.0.1"
 
-"@ionic/core@8.3.1":
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-8.3.1.tgz#524292cc3a7b973ac05fb538652fd1069fca3861"
-  integrity sha512-md4JFwKYLgN/YP+uzoTE5H7ah0W5SQQNZ1cJOQtxhv0ytCCHHaXJrfRVzefdy8iy8NdzL9s6EV5ZTKYH98E+ZQ==
+"@ionic/core@8.3.2":
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-8.3.2.tgz#e6389508e9fd6f03a82de74e48dd0edef47190cc"
+  integrity sha512-ptiDXnn4131eKpY862lv7c9xxjly7vi4O+WWCES78E+hXHvTEAundcA5F8eQyb0MFIFvCnOxreTZjRJJnHqPYw==
   dependencies:
     "@stencil/core" "4.20.0"
     ionicons "^7.2.2"
@@ -1502,19 +1502,19 @@
     untildify "^4.0.0"
     wrap-ansi "^7.0.0"
 
-"@ionic/vue-router@^8.3.1":
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/@ionic/vue-router/-/vue-router-8.3.1.tgz#eb4ffcf94a962e91d1f1683c0ec6de3c13b2c17c"
-  integrity sha512-ir/RQRo/zyZiRm6KCkGfPenykKRW1Ikk5hiRAwJ92jU0BSSwU6tfXWY4hQr2jfXsGCoJ2LiQOlJtvoCrTIRGaQ==
+"@ionic/vue-router@^8.3.2":
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/@ionic/vue-router/-/vue-router-8.3.2.tgz#7f68bdadf97d4b2afc6d5a4764cd4b31e222ef50"
+  integrity sha512-mOTQD+CtvPyREUvxIpQfZAZ/JGGqS8XcwwNSb3CXEQnyufqhJVceEyZV6B5HCWhyeOTNeD8pEHXvoC41kYaF5A==
   dependencies:
-    "@ionic/vue" "8.3.1"
+    "@ionic/vue" "8.3.2"
 
-"@ionic/vue@8.3.1", "@ionic/vue@^8.3.0":
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.3.1.tgz#f94f808a878bfa0b30032cd1738e3b61a149e971"
-  integrity sha512-UWOVuibeHY4xjWl2Sh93FYiXLBZgAVXoh8ObskV93plm36iS611gpHqw47lBeR29uHwZAohfQVT0WLN6GWQ3JQ==
+"@ionic/vue@8.3.2", "@ionic/vue@^8.3.0":
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.3.2.tgz#de1e0a954f7d9c8a8802e394430601f2e76f2e4e"
+  integrity sha512-r9BsWqOlv34d8dPyWgXvh4ZXyKtZBO2dM4aEvJCLcFBC76gtBFARExKKMc3Ji/nLgl8eGoodhfjhwwAaiMSmYg==
   dependencies:
-    "@ionic/core" "8.3.1"
+    "@ionic/core" "8.3.2"
     ionicons "^7.0.0"
 
 "@isaacs/cliui@^8.0.2":
