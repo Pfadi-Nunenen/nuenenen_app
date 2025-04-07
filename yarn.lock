@@ -909,10 +909,10 @@
     "@babel/helper-string-parser" "^7.25.9"
     "@babel/helper-validator-identifier" "^7.25.9"
 
-"@capacitor/android@^6.2.0":
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-6.2.0.tgz#4cbb29e45457839dfd391ff0744b437ef4d4034b"
-  integrity sha512-3YIDPylV0Q2adEQ/H568p496QdYG0jK/XGMdx7OGSqdBZen92ciAsYdyhLtyl91UVsN1lBhDi5H6j3T2KS6aJg==
+"@capacitor/android@^6.2.1":
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-6.2.1.tgz#705347b62605b692093a96c81ce335875ea954e2"
+  integrity sha512-8gd4CIiQO5LAIlPIfd5mCuodBRxMMdZZEdj8qG8m+dQ1sQ2xyemVpzHmRK8qSCHorsBUCg3D62j2cp6bEBAkdw==
 
 "@capacitor/app@^6.0.2":
   version "6.0.2"
