@@ -954,10 +954,10 @@
   resolved "https://registry.yarnpkg.com/@capacitor/haptics/-/haptics-6.0.2.tgz#3971a606ff3f436d71c90b5c524993fb684d53ee"
   integrity sha512-xcFdIH4iIIeW2+1lzmlYMVicqB9ytaiuZ9NE3a9laKFPvMGC7hdj6i6tHFezwPJ/96xkHOwXT2b0F8Mh9xtTWg==
 
-"@capacitor/ios@^6.2.0":
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/@capacitor/ios/-/ios-6.2.0.tgz#7cd4db0471d1cc270962061b64b28f79f3f89103"
-  integrity sha512-gisvZBIrKT1siiumgpLPY63HmJe69Ed/dOmfQQ+U1MIJmOR5gWGWvfO7QSj/FMatVZS4Xt/8jCoUgzDD1U6kSw==
+"@capacitor/ios@^6.2.1":
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/@capacitor/ios/-/ios-6.2.1.tgz#ac18a429072857c0fd88a74d30d6cc60288b7471"
+  integrity sha512-tbMlQdQjxe1wyaBvYVU1yTojKJjgluZQsJkALuJxv/6F8QTw5b6vd7X785O/O7cMpIAZfUWo/vtAHzFkRV+kXw==
 
 "@capacitor/keyboard@^6.0.2":
   version "6.0.2"
