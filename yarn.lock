@@ -3483,10 +3483,10 @@ ionicons@^7.0.0, ionicons@^7.2.2:
   dependencies:
     "@stencil/core" "^4.0.3"
 
-ionicons@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-8.0.0.tgz#1686a2419b46da0936c290b4b02282170a9d4e02"
-  integrity sha512-Rj6HZuEODXWkcZipPXLL6vkkwWFslYx8VumivXU7tatMI/ixTZ2kbACOd8WzLfCXy2fPxhUQf8vossdenBvT7Q==
+ionicons@^8.0.8:
+  version "8.0.8"
+  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-8.0.8.tgz#ae96df29c6a2ccfd0b52962c0014123b6324bd46"
+  integrity sha512-CRHhDQA5vsNxC7raeEPqddgO90iR2F13VZS7hB0Vx7JrxJMM2060E3ddgYbpMQNJjzeBsgpkNwdBeK5qQ7RbLA==
   dependencies:
     "@stencil/core" "^4.30.0"
 
