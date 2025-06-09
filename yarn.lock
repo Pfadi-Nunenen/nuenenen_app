@@ -1337,6 +1337,15 @@
     ionicons "^7.2.2"
     tslib "^2.1.0"
 
+"@ionic/core@8.6.0":
+  version "8.6.0"
+  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-8.6.0.tgz#90612d3d506b3123c9e8b0a3f09169ae6da51ada"
+  integrity sha512-s9/YH6yks4e4tceMJYGKIRyeHeZAh4YVk0uMPO7RQ9nkZTl8wZtB4PegH9bHqNY0tap0ZQQCNLwCfKmofUOnQg==
+  dependencies:
+    "@stencil/core" "4.33.1"
+    ionicons "^7.2.2"
+    tslib "^2.1.0"
+
 "@ionic/utils-array@2.1.6":
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/@ionic/utils-array/-/utils-array-2.1.6.tgz#eee863be945ee1a28b9a10ff16fdea776fa18c22"
@@ -1419,12 +1428,21 @@
   dependencies:
     "@ionic/vue" "8.5.8"
 
-"@ionic/vue@8.5.8", "@ionic/vue@^8.5.8":
+"@ionic/vue@8.5.8":
   version "8.5.8"
   resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.5.8.tgz#f678aa0f398dc6dae6de3122e64167050f681b60"
   integrity sha512-Ys3pXjHYjwlA9UnAFN+CmO+wzapuQH78EYomUor9T7Fb9ia7LRbp9mpnhWd2dfkz8H6DiM0Vy0aF9OMp4dgVvw==
   dependencies:
     "@ionic/core" "8.5.8"
+    "@stencil/vue-output-target" "0.10.7"
+    ionicons "^7.0.0"
+
+"@ionic/vue@^8.6.0":
+  version "8.6.0"
+  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.6.0.tgz#ec5f313a8e2089d406668db47a6cf3fe41542bec"
+  integrity sha512-mKwHF373gSQCUiBG2iRH6ZtLDSvglUsIXJ1Z16WiM3/7jUktUMasY4FbaJ1ImItVAghFo/mi7FN+VAP1cxDLgg==
+  dependencies:
+    "@ionic/core" "8.6.0"
     "@stencil/vue-output-target" "0.10.7"
     ionicons "^7.0.0"
 
@@ -1677,6 +1695,20 @@
   version "4.20.0"
   resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.20.0.tgz#221f2b36ab999891560449b02d6915862c435f49"
   integrity sha512-WPrTHFngvN081RY+dJPneKQLwnOFD60OMCOQGmmSHfCW0f4ujPMzzhwWU1gcSwXPWXz5O+8cBiiCaxAbJU7kAg==
+
+"@stencil/core@4.33.1":
+  version "4.33.1"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.33.1.tgz#5cc48b46cfd455d87833a6d72b7604323a2379a8"
+  integrity sha512-12k9xhAJBkpg598it+NRmaYIdEe6TSnsL/v6/KRXDcUyTK11VYwZQej2eHnMWtqot+znJ+GNTqb5YbiXi+5Low==
+  optionalDependencies:
+    "@rollup/rollup-darwin-arm64" "4.34.9"
+    "@rollup/rollup-darwin-x64" "4.34.9"
+    "@rollup/rollup-linux-arm64-gnu" "4.34.9"
+    "@rollup/rollup-linux-arm64-musl" "4.34.9"
+    "@rollup/rollup-linux-x64-gnu" "4.34.9"
+    "@rollup/rollup-linux-x64-musl" "4.34.9"
+    "@rollup/rollup-win32-arm64-msvc" "4.34.9"
+    "@rollup/rollup-win32-x64-msvc" "4.34.9"
 
 "@stencil/core@^4.0.3", "@stencil/core@^4.30.0":
   version "4.30.0"
