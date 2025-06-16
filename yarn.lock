@@ -1673,24 +1673,10 @@
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.34.9.tgz#1973871850856ae72bc678aeb066ab952330e923"
   integrity sha512-AyleYRPU7+rgkMWbEh71fQlrzRfeP6SyMnRf9XX4fCdDPAJumdSBqYEcWPMzVQ4ScAl7E4oFfK0GUVn77xSwbw==
 
-"@stencil/core@4.33.1":
+"@stencil/core@4.33.1", "@stencil/core@^4.0.3", "@stencil/core@^4.30.0":
   version "4.33.1"
   resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.33.1.tgz#5cc48b46cfd455d87833a6d72b7604323a2379a8"
   integrity sha512-12k9xhAJBkpg598it+NRmaYIdEe6TSnsL/v6/KRXDcUyTK11VYwZQej2eHnMWtqot+znJ+GNTqb5YbiXi+5Low==
-  optionalDependencies:
-    "@rollup/rollup-darwin-arm64" "4.34.9"
-    "@rollup/rollup-darwin-x64" "4.34.9"
-    "@rollup/rollup-linux-arm64-gnu" "4.34.9"
-    "@rollup/rollup-linux-arm64-musl" "4.34.9"
-    "@rollup/rollup-linux-x64-gnu" "4.34.9"
-    "@rollup/rollup-linux-x64-musl" "4.34.9"
-    "@rollup/rollup-win32-arm64-msvc" "4.34.9"
-    "@rollup/rollup-win32-x64-msvc" "4.34.9"
-
-"@stencil/core@^4.0.3", "@stencil/core@^4.30.0":
-  version "4.30.0"
-  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.30.0.tgz#c9f6b87be71a80d46f37717a2806c3a160ae1d7c"
-  integrity sha512-rInn2BaN3ISgtz+yfOeiTvAvY+xjz8g5v9hDtQMIP6uefjO6JHXGhUJw2CujnuEOWjYeVR/BYdZJTi0dWN9/vQ==
   optionalDependencies:
     "@rollup/rollup-darwin-arm64" "4.34.9"
     "@rollup/rollup-darwin-x64" "4.34.9"
@@ -3491,10 +3477,10 @@ ionicons@^7.0.0, ionicons@^7.2.2:
   dependencies:
     "@stencil/core" "^4.0.3"
 
-ionicons@^8.0.8:
-  version "8.0.8"
-  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-8.0.8.tgz#ae96df29c6a2ccfd0b52962c0014123b6324bd46"
-  integrity sha512-CRHhDQA5vsNxC7raeEPqddgO90iR2F13VZS7hB0Vx7JrxJMM2060E3ddgYbpMQNJjzeBsgpkNwdBeK5qQ7RbLA==
+ionicons@^8.0.9:
+  version "8.0.9"
+  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-8.0.9.tgz#a69eae98a009d4c8f54b01c4b6f6b7c245cb9114"
+  integrity sha512-qC8xcTVcrmC9e+4KwigtbfKa9J27rFzsjvi1wQBue178Az6u6mFDpL/Q10w534+RD5PkmiXlqy7my7+h2B/zTw==
   dependencies:
     "@stencil/core" "^4.30.0"
 
