@@ -1328,10 +1328,10 @@
     debug "^4.0.0"
     tslib "^2.0.1"
 
-"@ionic/core@8.6.1":
-  version "8.6.1"
-  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-8.6.1.tgz#43bd9759368ab00e76363d802b60a6d0ed2cfe61"
-  integrity sha512-ewxnIMqFivOJsQJ2V1fbzfBNt1N2ooqx9GGX/YjJYuyckhotDsUotqxKJ0e9il0LryneUwGsNCMvWIa7CXqrmA==
+"@ionic/core@8.6.2":
+  version "8.6.2"
+  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-8.6.2.tgz#e851d22f8fdfacc4c94ba04a18501e4f2654886a"
+  integrity sha512-CGZ9CDp/XHtm9WrK3wt0ZtR2f2B76qEvJIaF/juCqmpza9Al6u2L9R/NTEwInDRCWfbkAIF22nHNH54/VvN78Q==
   dependencies:
     "@stencil/core" "4.33.1"
     ionicons "^7.2.2"
@@ -1412,19 +1412,19 @@
     untildify "^4.0.0"
     wrap-ansi "^7.0.0"
 
-"@ionic/vue-router@^8.6.1":
-  version "8.6.1"
-  resolved "https://registry.yarnpkg.com/@ionic/vue-router/-/vue-router-8.6.1.tgz#c18156809ff93b615c997105af02d3afd8a07e37"
-  integrity sha512-mvHoN1XVP/HzVI4KfTMdHHZC6ZY2C2it6JaKP+nwHs5JqJvIlgHJaSLWGjN7KNLAQC3gGs7T55XfJYA3MxGHBg==
+"@ionic/vue-router@^8.6.2":
+  version "8.6.2"
+  resolved "https://registry.yarnpkg.com/@ionic/vue-router/-/vue-router-8.6.2.tgz#5617f8fd7ee5386060f9da85a71d2cc6a215a851"
+  integrity sha512-Qx+xhNgqLqACH665vMKP4ZjIagqepKCXJ9cyCpwKaS76SeXxTK4OLSSGv6oOT7UIjGAe8xZH8DQ6LRLFpvvEtw==
   dependencies:
-    "@ionic/vue" "8.6.1"
+    "@ionic/vue" "8.6.2"
 
-"@ionic/vue@8.6.1", "@ionic/vue@^8.6.0":
-  version "8.6.1"
-  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.6.1.tgz#7bf7aa946d4480f2de26a68b958d54f2fe984720"
-  integrity sha512-ZqI6z8lSkLrgSoZB8pqMtdYPTCHBQ/H4TB0Hsj1fDqOZCLzjQX//HX+V6IauCaEbcWhvxAzbQoU52JaX7onJ7w==
+"@ionic/vue@8.6.2", "@ionic/vue@^8.6.0":
+  version "8.6.2"
+  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.6.2.tgz#c73e2d8babafbddbf17edc1b258d922ee111a3fc"
+  integrity sha512-bqhKOxKwxp/aK9DR8NkXeaaPyth0TjgIGpzy28JKd/Q3fJ5eICkEn+gctRlC1L/4nBr6DponSEHfncSeEBQfoQ==
   dependencies:
-    "@ionic/core" "8.6.1"
+    "@ionic/core" "8.6.2"
     "@stencil/vue-output-target" "0.10.7"
     ionicons "^7.0.0"
 
@@ -4349,15 +4349,6 @@ postcss@^8.4.43:
   integrity sha512-6oz2beyjc5VMn/KV1pPw8fliQkhBXrVn1Z3TVyqZxU8kZpzEKhBdmCFqI6ZbmGtamQvQGuU1sgPTk8ZrXDD7jQ==
   dependencies:
     nanoid "^3.3.8"
-    picocolors "^1.1.1"
-    source-map-js "^1.2.1"
-
-postcss@^8.5.6:
-  version "8.5.6"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.5.6.tgz#2825006615a619b4f62a9e7426cc120b349a8f3c"
-  integrity sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==
-  dependencies:
-    nanoid "^3.3.11"
     picocolors "^1.1.1"
     source-map-js "^1.2.1"
 
