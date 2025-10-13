@@ -1348,12 +1348,12 @@
     debug "^4.0.0"
     tslib "^2.0.1"
 
-"@ionic/core@8.7.5":
-  version "8.7.5"
-  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-8.7.5.tgz#a3144a393f15aeb434ffaa061aacd3baaf754838"
-  integrity sha512-Uk1qdGPoLHaVhd2FnYSAvRehd3VwwcPIfXaR51qiC7C2L5VhD27VyLSgDetc15G4U+VAIFjgUSR/pKdLFEuMPA==
+"@ionic/core@8.7.6":
+  version "8.7.6"
+  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-8.7.6.tgz#241df9e4406111cb41613d4ab2ea5ee5ef0d813e"
+  integrity sha512-ufV64Pl0BYSoNla+DaTRXTS3hX6MQZZJPhAR3fJQ4N5Fg/vwMcHADQffstKZeoPqk6mbJoLqoTBjcWvaLRdO0g==
   dependencies:
-    "@stencil/core" "4.36.2"
+    "@stencil/core" "4.38.0"
     ionicons "^8.0.13"
     tslib "^2.1.0"
 
@@ -1432,19 +1432,19 @@
     untildify "^4.0.0"
     wrap-ansi "^7.0.0"
 
-"@ionic/vue-router@^8.7.5":
-  version "8.7.5"
-  resolved "https://registry.yarnpkg.com/@ionic/vue-router/-/vue-router-8.7.5.tgz#ad1873639ecde4eb58c900083e7a5855896efa22"
-  integrity sha512-2JBuh9FaNCJ6nd6eMBSWpeSIAox6JBJx5QBmZSwetCkA65lAvAkjyzV/5iumFPi71ilbScvPf32oxiVupwSL2w==
+"@ionic/vue-router@^8.7.6":
+  version "8.7.6"
+  resolved "https://registry.yarnpkg.com/@ionic/vue-router/-/vue-router-8.7.6.tgz#4ab20f49e7a0fbbff94d470336ea8f10d47cc126"
+  integrity sha512-cGuvhhu5BTyCma2K6vuzis8M969TlA71Umb0n5LdIAPXhkykvhfYAWgS5v58q2hqmzP112zBh64eGvpo8Cfakw==
   dependencies:
-    "@ionic/vue" "8.7.5"
+    "@ionic/vue" "8.7.6"
 
-"@ionic/vue@8.7.5", "@ionic/vue@^8.6.5":
-  version "8.7.5"
-  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.7.5.tgz#fd1dc145c2481dd4f5bce8ed379532e6fff6accf"
-  integrity sha512-wx7o+ABDDTWLM47CIjxueoZtKbvMQ9AolqGY4/2JvAJds/JlSs4kOEes/AzQ/1dREEp+4sOapmTtJnyauErY3A==
+"@ionic/vue@8.7.6", "@ionic/vue@^8.6.5":
+  version "8.7.6"
+  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.7.6.tgz#353d67aa1aaece54c0df64766c67be484d02e3e7"
+  integrity sha512-gK5x5Y0ZpZAW12gjvyBO9oUfwDZxMS7y0xcO0P9qzo++h3ZLcFcSGjHs8D4isUY/mF6mRagt1Y/5b0xDhgUBBw==
   dependencies:
-    "@ionic/core" "8.7.5"
+    "@ionic/core" "8.7.6"
     "@stencil/vue-output-target" "0.10.7"
     ionicons "^8.0.13"
 
@@ -1708,10 +1708,10 @@
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.44.1.tgz#1c982f6a5044ffc2a35cd754a0951bdcb44d5ba0"
   integrity sha512-J8o22LuF0kTe7m+8PvW9wk3/bRq5+mRo5Dqo6+vXb7otCm3TPhYOJqOaQtGU9YMWQSL3krMnoOxMr0+9E6F3Ug==
 
-"@stencil/core@4.36.2":
-  version "4.36.2"
-  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.36.2.tgz#b43cba342c5c5ceba7c09463fdba7edff792496e"
-  integrity sha512-PRFSpxNzX9Oi0Wfh02asztN9Sgev/MacfZwmd+VVyE6ZxW+a/kEpAYZhzGAmE+/aKVOGYuug7R9SulanYGxiDQ==
+"@stencil/core@4.38.0":
+  version "4.38.0"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.38.0.tgz#44ca8bafee9e46842630a42b3ad2546ea73eb95e"
+  integrity sha512-oC3QFKO0X1yXVvETgc8OLY525MNKhn9vISBrbtKnGoPlokJ6rI8Vk1RK22TevnNrHLI4SExNLbcDnqilKR35JQ==
   optionalDependencies:
     "@rollup/rollup-darwin-arm64" "4.34.9"
     "@rollup/rollup-darwin-x64" "4.34.9"
