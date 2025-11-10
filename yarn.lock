@@ -1348,19 +1348,10 @@
     debug "^4.0.0"
     tslib "^2.0.1"
 
-"@ionic/core@8.7.6":
-  version "8.7.6"
-  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-8.7.6.tgz#241df9e4406111cb41613d4ab2ea5ee5ef0d813e"
-  integrity sha512-ufV64Pl0BYSoNla+DaTRXTS3hX6MQZZJPhAR3fJQ4N5Fg/vwMcHADQffstKZeoPqk6mbJoLqoTBjcWvaLRdO0g==
-  dependencies:
-    "@stencil/core" "4.38.0"
-    ionicons "^8.0.13"
-    tslib "^2.1.0"
-
-"@ionic/core@8.7.8":
-  version "8.7.8"
-  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-8.7.8.tgz#ad7661b80b108aead10f767c4dccc85daab11881"
-  integrity sha512-GLWb/lz3kocpzTZTeQQ5xxoWz4CKHD6zpnbwJknTKsncebohAaw2KTe7uOw5toKQEDdohTseFuSGoDDBoRQ1Ug==
+"@ionic/core@8.7.9":
+  version "8.7.9"
+  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-8.7.9.tgz#307cad9159c8e7e10abe7e9d006d4b7f1eaa0d52"
+  integrity sha512-6cYp3LHjCGX32MiYR09l/O+8klkJ27WpKzllvnLRe5bxX3nOuqJvJJIshzT85qTdZNTFu7zJJrjWkgEOXGarzg==
   dependencies:
     "@stencil/core" "4.38.0"
     ionicons "^8.0.13"
@@ -1441,28 +1432,19 @@
     untildify "^4.0.0"
     wrap-ansi "^7.0.0"
 
-"@ionic/vue-router@^8.7.6":
-  version "8.7.6"
-  resolved "https://registry.yarnpkg.com/@ionic/vue-router/-/vue-router-8.7.6.tgz#4ab20f49e7a0fbbff94d470336ea8f10d47cc126"
-  integrity sha512-cGuvhhu5BTyCma2K6vuzis8M969TlA71Umb0n5LdIAPXhkykvhfYAWgS5v58q2hqmzP112zBh64eGvpo8Cfakw==
+"@ionic/vue-router@^8.7.9":
+  version "8.7.9"
+  resolved "https://registry.yarnpkg.com/@ionic/vue-router/-/vue-router-8.7.9.tgz#939bcfecbc75e40583f02bd803368356c76bb821"
+  integrity sha512-kVrYvOyh3rIdNdx8fpxz2vXloZKzbY7K9V9Lm4yw79NMgAN2X8uMIIuXYmQheiAed5j7wU0w1y8DV1BXNb4Rwg==
   dependencies:
-    "@ionic/vue" "8.7.6"
+    "@ionic/vue" "8.7.9"
 
-"@ionic/vue@8.7.6":
-  version "8.7.6"
-  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.7.6.tgz#353d67aa1aaece54c0df64766c67be484d02e3e7"
-  integrity sha512-gK5x5Y0ZpZAW12gjvyBO9oUfwDZxMS7y0xcO0P9qzo++h3ZLcFcSGjHs8D4isUY/mF6mRagt1Y/5b0xDhgUBBw==
+"@ionic/vue@8.7.9", "@ionic/vue@^8.7.8":
+  version "8.7.9"
+  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.7.9.tgz#fe5661b44184939506e7a77a1603b15880a78947"
+  integrity sha512-chpnclhnL8dC+Wi2/Fd/muI4FPzTqyVvFgIKfMDaz00tF8xmhHI9AXwaRvtt7AJh8CWGAw1QCp/FMboFSQ7D7A==
   dependencies:
-    "@ionic/core" "8.7.6"
-    "@stencil/vue-output-target" "0.10.7"
-    ionicons "^8.0.13"
-
-"@ionic/vue@^8.7.8":
-  version "8.7.8"
-  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.7.8.tgz#a26b18c323bd667c561aa940c2743b918aa2d792"
-  integrity sha512-vB8JBfIduHDD8+MnhGX8w3zXB/abNqjqwOjv+0SOrMx1sp9TvpPi2vYGjtSrFlg1PvOv8EGNzVYTbURmwgvcHA==
-  dependencies:
-    "@ionic/core" "8.7.8"
+    "@ionic/core" "8.7.9"
     "@stencil/vue-output-target" "0.10.7"
     ionicons "^8.0.13"
 
