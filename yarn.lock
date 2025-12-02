@@ -973,10 +973,10 @@
   resolved "https://registry.yarnpkg.com/@capacitor/ios/-/ios-6.2.1.tgz#ac18a429072857c0fd88a74d30d6cc60288b7471"
   integrity sha512-tbMlQdQjxe1wyaBvYVU1yTojKJjgluZQsJkALuJxv/6F8QTw5b6vd7X785O/O7cMpIAZfUWo/vtAHzFkRV+kXw==
 
-"@capacitor/keyboard@^6.0.2":
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/@capacitor/keyboard/-/keyboard-6.0.2.tgz#5c8e2a499284dfbfd90142d08c91cb5a13e3c801"
-  integrity sha512-fOfO3rQ0ZXuTHpK03INVTwmBnpqMiH8EHPpNaHjwjKwdrVRWBvtgIFhuyHNXh53rdcXw+uHB+1RIiNabnCrITw==
+"@capacitor/keyboard@^6.0.4":
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/@capacitor/keyboard/-/keyboard-6.0.4.tgz#d6dd05cfe35aa89c6b2e0eba0fc3d4fee52b7a60"
+  integrity sha512-tNeyQGxIOTiSv3g+dTxJ/plVpGMnB4daJuCHz1E2Kelo+jOx+FKlyFY9L1Ow144SCzuXK48NXr8WoxXfXgQEKA==
 
 "@capacitor/status-bar@^6.0.3":
   version "6.0.3"
