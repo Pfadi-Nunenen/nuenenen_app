@@ -963,10 +963,10 @@
   dependencies:
     tslib "^2.1.0"
 
-"@capacitor/haptics@^6.0.2":
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/@capacitor/haptics/-/haptics-6.0.2.tgz#3971a606ff3f436d71c90b5c524993fb684d53ee"
-  integrity sha512-xcFdIH4iIIeW2+1lzmlYMVicqB9ytaiuZ9NE3a9laKFPvMGC7hdj6i6tHFezwPJ/96xkHOwXT2b0F8Mh9xtTWg==
+"@capacitor/haptics@^6.0.3":
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/@capacitor/haptics/-/haptics-6.0.3.tgz#51229f190a282bd2ad59fdff6352c69db8c5e93c"
+  integrity sha512-6yKF0+lRUZEEx1GDFWgnKHia974np7o1OgmRl/btL9cSMZh0TSDZTyDMH/qcy4AM39CfuIeLs4N4h5lwixXLuQ==
 
 "@capacitor/ios@^6.2.1":
   version "6.2.1"
