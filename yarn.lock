@@ -939,10 +939,10 @@
   resolved "https://registry.yarnpkg.com/@capacitor/app/-/app-8.0.0.tgz#47c2a90302919d71cef8a7297fb1d6ee439d1250"
   integrity sha512-OwzIkUs4w433Bu9WWAEbEYngXEfJXZ9Wmdb8eoaqzYBgB0W9/3Ed/mh6sAYPNBAZlpyarmewgP7Nb+d3Vrh+xA==
 
-"@capacitor/cli@^7.4.4":
-  version "7.4.4"
-  resolved "https://registry.yarnpkg.com/@capacitor/cli/-/cli-7.4.4.tgz#bfce7db8b15d6f44c9d58dc338a5e3d662fecfbb"
-  integrity sha512-J7ciBE7GlJ70sr2s8oz1+H4ZdNk4MGG41fsakUlDHWva5UWgFIZYMiEdDvGbYazAYTaxN3lVZpH9zil9FfZj+Q==
+"@capacitor/cli@^8.0.1":
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/@capacitor/cli/-/cli-8.0.1.tgz#34acb86b2920fa6d2ab1abb79e66c061863413fd"
+  integrity sha512-okCNTsL8FNYrtPNeHWFjWb1S+PwBMhx5wFLhDC0MZOIrOLm+2ynMBtKu3BnR0Nv1hozoHcOCi6SuTF1TrRpb3w==
   dependencies:
     "@ionic/cli-framework-output" "^2.2.8"
     "@ionic/utils-subprocess" "^3.0.1"
@@ -952,7 +952,7 @@
     env-paths "^2.2.0"
     fs-extra "^11.2.0"
     kleur "^4.1.5"
-    native-run "^2.0.1"
+    native-run "^2.0.3"
     open "^8.4.0"
     plist "^3.1.0"
     prompts "^2.4.2"
@@ -4096,10 +4096,10 @@ nanoid@^3.3.11:
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.11.tgz#4f4f112cefbe303202f2199838128936266d185b"
   integrity sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==
 
-native-run@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/native-run/-/native-run-2.0.1.tgz#a9b213c32824b007cbdd0279e0edd3c24bcc2f7a"
-  integrity sha512-XfG1FBZLM50J10xH9361whJRC9SHZ0Bub4iNRhhI61C8Jv0e1ud19muex6sNKB51ibQNUJNuYn25MuYET/rE6w==
+native-run@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/native-run/-/native-run-2.0.3.tgz#b1ceb39c8d24abf4916c07ae9aad5a9fbcd31a02"
+  integrity sha512-U1PllBuzW5d1gfan+88L+Hky2eZx+9gv3Pf6rNBxKbORxi7boHzqiA6QFGSnqMem4j0A9tZ08NMIs5+0m/VS1Q==
   dependencies:
     "@ionic/utils-fs" "^3.1.7"
     "@ionic/utils-terminal" "^2.3.4"
