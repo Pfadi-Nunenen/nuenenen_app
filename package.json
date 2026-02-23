@@ -18,7 +18,7 @@
     "@capacitor/haptics": "^8.0.0",
     "@capacitor/ios": "^8.0.2",
     "@capacitor/keyboard": "^8.0.0",
-    "@capacitor/status-bar": "^8.0.0",
+    "@capacitor/status-bar": "^8.0.1",
     "@ionic/vue": "^8.7.17",
     "@ionic/vue-router": "^8.7.17",
     "ionicons": "^8.0.13",
