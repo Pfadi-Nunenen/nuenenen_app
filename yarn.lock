@@ -1390,6 +1390,15 @@
     ionicons "^8.0.13"
     tslib "^2.1.0"
 
+"@ionic/core@8.8.1":
+  version "8.8.1"
+  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-8.8.1.tgz#ff729df45d0440f9bdf6e1b932b6d152413dd1f6"
+  integrity sha512-ksOUHyOEqoyUIVWcwCNSFZVGwNfP1DKrUVeN/Cdk/Xl9Rdd/5MLHGsrOQpWQfoCf3Csdnw+KHHPrXz/2fzMkMA==
+  dependencies:
+    "@stencil/core" "4.43.0"
+    ionicons "^8.0.13"
+    tslib "^2.1.0"
+
 "@ionic/utils-array@2.1.6":
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/@ionic/utils-array/-/utils-array-2.1.6.tgz#eee863be945ee1a28b9a10ff16fdea776fa18c22"
@@ -1472,12 +1481,21 @@
   dependencies:
     "@ionic/vue" "8.7.17"
 
-"@ionic/vue@8.7.17", "@ionic/vue@^8.7.17":
+"@ionic/vue@8.7.17":
   version "8.7.17"
   resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.7.17.tgz#902d9dc5c331ad5a1156d5b49ab3a1364366771a"
   integrity sha512-S/UQc/ytauWxcAtM6cLz1mbpqwv8xuSdTzF8aslPi8zGELdXJSg48QBP6ehhFj+uv8qsblrRd4TjCQYyskyMCQ==
   dependencies:
     "@ionic/core" "8.7.17"
+    "@stencil/vue-output-target" "0.10.7"
+    ionicons "^8.0.13"
+
+"@ionic/vue@^8.8.1":
+  version "8.8.1"
+  resolved "https://registry.yarnpkg.com/@ionic/vue/-/vue-8.8.1.tgz#425992bc735b8d0372c40cafd7ff517124b249a9"
+  integrity sha512-tdNErYs6WrNiDJps1nRRY4UeyLffr2hbdkpawrMYFZxzzMd5yuExWsRAofrk5Uy6rSFObSZrfg7AgqyudDcJpQ==
+  dependencies:
+    "@ionic/core" "8.8.1"
     "@stencil/vue-output-target" "0.10.7"
     ionicons "^8.0.13"
 
@@ -1801,6 +1819,20 @@
   version "4.38.0"
   resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.38.0.tgz#44ca8bafee9e46842630a42b3ad2546ea73eb95e"
   integrity sha512-oC3QFKO0X1yXVvETgc8OLY525MNKhn9vISBrbtKnGoPlokJ6rI8Vk1RK22TevnNrHLI4SExNLbcDnqilKR35JQ==
+  optionalDependencies:
+    "@rollup/rollup-darwin-arm64" "4.34.9"
+    "@rollup/rollup-darwin-x64" "4.34.9"
+    "@rollup/rollup-linux-arm64-gnu" "4.34.9"
+    "@rollup/rollup-linux-arm64-musl" "4.34.9"
+    "@rollup/rollup-linux-x64-gnu" "4.34.9"
+    "@rollup/rollup-linux-x64-musl" "4.34.9"
+    "@rollup/rollup-win32-arm64-msvc" "4.34.9"
+    "@rollup/rollup-win32-x64-msvc" "4.34.9"
+
+"@stencil/core@4.43.0":
+  version "4.43.0"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.43.0.tgz#d78c24f90615efd125a0d6420aad657b2c40201b"
+  integrity sha512-6Uj2Z3lzLuufYAE7asZ6NLKgSwsB9uxl84Eh34PASnUjfj32GkrP4DtKK7fNeh1WFGGyffsTDka3gwtl+4reUg==
   optionalDependencies:
     "@rollup/rollup-darwin-arm64" "4.34.9"
     "@rollup/rollup-darwin-x64" "4.34.9"
