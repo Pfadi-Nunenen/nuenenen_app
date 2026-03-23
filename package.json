@@ -23,7 +23,7 @@
     "@ionic/vue-router": "^8.8.1",
     "ionicons": "^8.0.13",
     "vue": "^3.5.29",
-    "vue-router": "^5.0.2"
+    "vue-router": "^5.0.4"
   },
   "devDependencies": {
     "@capacitor/cli": "^8.2.0",
