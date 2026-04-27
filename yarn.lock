@@ -1001,10 +1001,10 @@
   resolved "https://registry.yarnpkg.com/@capacitor/ios/-/ios-8.2.0.tgz#f346587edf9552d05a1a38d99cfbf469a814e878"
   integrity sha512-X2/VtM4qP/R1SM0VQ5W/VotEc6PS/KTooD33EijsfAHWBdee+xmBapW8SeNLnu16wJ+tsfWlvtipaJEyfKbRKQ==
 
-"@capacitor/keyboard@^8.0.1":
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/@capacitor/keyboard/-/keyboard-8.0.1.tgz#f694a06eca5f140d33d68165b4738df88146f504"
-  integrity sha512-HDf4qrvvhLRMsgBoqeqIld6hP8JMK/WPbCYMvz8ajhY6TaibYt6B+NQyky4oIPCOfHTz5OcVsuHkbb8fQvGDAg==
+"@capacitor/keyboard@^8.0.3":
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/@capacitor/keyboard/-/keyboard-8.0.3.tgz#5dd28e92dcba4643ba0bfa8ccdfed5c5d5d493b8"
+  integrity sha512-27Bv5/2w1Ss2njguBgTS98O0Bb8DRJhAARyzXYib0JlT/n6BrJw/EZ0CokM4C8GFUjFDjJnEKF1Ie01buTMEXQ==
 
 "@capacitor/status-bar@^8.0.2":
   version "8.0.2"
