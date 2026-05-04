@@ -984,10 +984,10 @@
     tslib "^2.8.1"
     xml2js "^0.6.2"
 
-"@capacitor/core@^8.2.0":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@capacitor/core/-/core-8.2.0.tgz#7b9b012f1d34b62d441f557649b755ce451cb81e"
-  integrity sha512-oKaoNeNtH2iIZMDFVrb1atoyRECDGHcfLMunJ5KWN8DtvpVBeeA4c41e20NTuhMxw1cSYbpq2PV2hb+/9CJxlQ==
+"@capacitor/core@^8.3.1":
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/@capacitor/core/-/core-8.3.1.tgz#17fa7b21e0f31268c831466221d3956ab4a0521d"
+  integrity sha512-UF8ItlHguU1Z6GXfPTeT2gakf+ctNI8pAS1kwSBQlsJMlfD4OPoto/SmKnOxKCQvnF4WRcdWeg6C0zREUNaAQg==
   dependencies:
     tslib "^2.1.0"
 
