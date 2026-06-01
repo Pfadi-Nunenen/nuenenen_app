@@ -2184,18 +2184,18 @@
     "@typescript-eslint/parser" "^7.1.1"
     vue-eslint-parser "^9.3.1"
 
-"@vue/language-core@3.2.5":
-  version "3.2.5"
-  resolved "https://registry.yarnpkg.com/@vue/language-core/-/language-core-3.2.5.tgz#f80d8ccfa0492e5edd3763513ac6416327dd4c87"
-  integrity sha512-d3OIxN/+KRedeM5wQ6H6NIpwS3P5gC9nmyaHgBk+rO6dIsjY+tOh4UlPpiZbAh3YtLdCGEX4M16RmsBqPmJV+g==
+"@vue/language-core@3.3.3":
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/@vue/language-core/-/language-core-3.3.3.tgz#d8ee77412cc57e8697d2a07ab92093acb978f083"
+  integrity sha512-X6p+7nfY7vVT6dQwUJ+v0Jfq/lwIfhL2jMi91dQ3ln4hnlGXlxsDu/FNkeyHYgvYtyQy18ZX76IZy7X4diDbiQ==
   dependencies:
     "@volar/language-core" "2.4.28"
     "@vue/compiler-dom" "^3.5.0"
     "@vue/shared" "^3.5.0"
-    alien-signals "^3.0.0"
+    alien-signals "^3.2.0"
     muggle-string "^0.4.1"
     path-browserify "^1.0.1"
-    picomatch "^4.0.2"
+    picomatch "^4.0.4"
 
 "@vue/reactivity@3.5.34":
   version "3.5.34"
@@ -2273,10 +2273,10 @@ ajv@^6.12.4:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-alien-signals@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/alien-signals/-/alien-signals-3.0.0.tgz#e1e5259a3bfcec740a46ee2c67f176184be89457"
-  integrity sha512-JHoRJf18Y6HN4/KZALr3iU+0vW9LKG+8FMThQlbn4+gv8utsLIkwpomjElGPccGeNwh0FI2HN6BLnyFLo6OyLQ==
+alien-signals@^3.2.0:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/alien-signals/-/alien-signals-3.2.1.tgz#eb66256949bce90b7d30d055e2752e62d6930c7c"
+  integrity sha512-I8FjmltrfnDFoZedi5CG8DghVYNhzb/Ijluz7tCSJH0xpd0484Kowhbb1XDYOxfJpU1p5wnM2X54dA+IfGyD1g==
 
 ansi-escapes@^7.0.0:
   version "7.3.0"
@@ -4331,10 +4331,15 @@ picomatch@^2.3.1:
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
-picomatch@^4.0.2, picomatch@^4.0.3:
+picomatch@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-4.0.3.tgz#796c76136d1eead715db1e7bad785dedd695a042"
   integrity sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==
+
+picomatch@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-4.0.4.tgz#fd6f5e00a143086e074dffe4c924b8fb293b0589"
+  integrity sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==
 
 pify@^2.2.0:
   version "2.3.0"
@@ -5328,13 +5333,13 @@ vue-router@^5.0.6:
     unplugin-utils "^0.3.1"
     yaml "^2.8.2"
 
-vue-tsc@^3.2.5:
-  version "3.2.5"
-  resolved "https://registry.yarnpkg.com/vue-tsc/-/vue-tsc-3.2.5.tgz#9bdad91232f4187527d2245883116a56b0b955b7"
-  integrity sha512-/htfTCMluQ+P2FISGAooul8kO4JMheOTCbCy4M6dYnYYjqLe3BExZudAua6MSIKSFYQtFOYAll7XobYwcpokGA==
+vue-tsc@^3.3.3:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/vue-tsc/-/vue-tsc-3.3.3.tgz#3403402fd92ec45bdb2ca967327eb92ed7d9b870"
+  integrity sha512-SWUEG7YRUeDJHT7Xsuhf02elYX2gxPzzAII7OxDAh4KNOr4QHQ0Lls0YfnaO5GNd560CwVa2HTfdqmA5MqvRqQ==
   dependencies:
     "@volar/typescript" "2.4.28"
-    "@vue/language-core" "3.2.5"
+    "@vue/language-core" "3.3.3"
 
 vue@^3.5.34:
   version "3.5.34"
