@@ -958,10 +958,10 @@
   dependencies:
     css-tree "^3.0.0"
 
-"@capacitor/android@^8.0.2":
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-8.0.2.tgz#874eccbc24db2bb6036838d8853760d964568508"
-  integrity sha512-0D7j0YvzjnfCMKLvFkAbx8b3Vwx+QfHFG5NzoXpI9sAl3zWiLsfa+NX4x92Fy+k4MGjLSMAfLThCqILYGDDsgw==
+"@capacitor/android@^8.3.4":
+  version "8.3.4"
+  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-8.3.4.tgz#9719f46d16eeea1c8e00ba57dff55d8cd2a09140"
+  integrity sha512-7gJjrG3X32Am1QMLqgMztWTYMLMVNE+VZwhekNxhvYizH4mOV05vH+rC9B+f17bCkYZfyu/qXQX6hoY7kLeVZw==
 
 "@capacitor/app@^8.0.1":
   version "8.0.1"
